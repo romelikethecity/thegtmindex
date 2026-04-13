@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The GTM Index</title>
+<meta name="description" content="Hand-curated directories of the best newsletters, tools, communities, and content for every go-to-market role. No fluff, no pay-to-play.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thegtmindex.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thegtmindex.com/">
+<meta property="og:title" content="The GTM Index">
+<meta property="og:description" content="Hand-curated directories of the best newsletters, tools, communities, and content for every go-to-market role. No fluff, no pay-to-play.">
+<meta property="og:site_name" content="The GTM Index">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The GTM Index">
+<meta name="twitter:description" content="Hand-curated directories of the best newsletters, tools, communities, and content for every go-to-market role. No fluff, no pay-to-play.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --navy: #1B2838;
+    --navy-deep: #0F1923;
+    --amber: #F59E0B;
+    --amber-light: #FBBF24;
+    --amber-dark: #D97706;
+    --bg: #FAFAFA;
+    --bg-white: #FFFFFF;
+    --text: #1F2937;
+    --text-muted: #6B7280;
+    --text-light: #94A3B8;
+    --border: #E5E7EB;
+    --icon-bg: #FEF3C7;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-hover: 0 4px 12px rgba(245,158,11,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Header */
+.header {
+    background: var(--navy);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+}
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--amber);
+}
+.logo span { color: #fff; }
+.nav { display: flex; gap: 24px; align-items: center; }
+.nav a {
+    color: var(--text-light);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 150ms;
+}
+.nav a:hover { color: #fff; }
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+.menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    margin: 5px 0;
+    transition: 150ms;
+}
+
+/* Hero */
+.hero {
+    padding: 140px 24px 80px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+}
+.hero h1 {
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+}
+.hero h1 em {
+    color: var(--amber);
+    font-style: normal;
+}
+.hero p {
+    font-size: 18px;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+}
+.hero .cta {
+    display: inline-block;
+    background: var(--amber);
+    color: var(--navy);
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background 150ms;
+}
+.hero .cta:hover { background: var(--amber-light); }
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 48px;
+}
+.stat { text-align: center; }
+.stat__number {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--amber);
+}
+.stat__label {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+/* Cards Grid */
+.directories {
+    padding: 64px 24px 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.directories h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+.directories .subtitle {
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    font-size: 15px;
+}
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.card {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: border-color 200ms, box-shadow 200ms;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover {
+    border-color: var(--amber);
+    box-shadow: var(--shadow-hover);
+}
+.card__icon {
+    width: 42px;
+    height: 42px;
+    background: var(--icon-bg);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+.card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+.card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin-bottom: 16px;
+    flex: 1;
+}
+.card__link {
+    font-size: 13px;
+    color: var(--amber-dark);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.card__link:hover { color: var(--amber); }
+
+/* Newsletter CTA */
+.newsletter {
+    padding: 64px 24px;
+    text-align: center;
+    background: var(--bg-white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+.newsletter h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.newsletter p {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    font-size: 15px;
+}
+.newsletter-form {
+    display: flex;
+    max-width: 440px;
+    margin: 0 auto;
+    gap: 8px;
+}
+.newsletter-form input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+}
+.newsletter-form input:focus { border-color: var(--amber); }
+.newsletter-form button {
+    background: var(--amber);
+    color: var(--navy);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 150ms;
+    white-space: nowrap;
+}
+.newsletter-form button:hover { background: var(--amber-light); }
+.newsletter .msg {
+    margin-top: 12px;
+    font-size: 13px;
+}
+.newsletter .msg.success { color: #059669; }
+.newsletter .msg.error { color: #DC2626; }
+
+/* Footer */
+.footer {
+    background: var(--navy);
+    color: var(--text-light);
+    padding: 48px 24px 32px;
+}
+.footer__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__brand {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--amber);
+}
+.footer__brand span { color: #fff; }
+.footer__copy {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+}
+
+/* About page */
+.about {
+    padding: 120px 24px 64px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.about h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.about p {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+.about h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 32px 0 12px;
+}
+.about a { color: var(--amber-dark); }
+.about a:hover { color: var(--amber); }
+
+/* Mobile */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0; right: -100%;
+    width: 260px;
+    height: 100vh;
+    background: var(--navy-deep);
+    z-index: 200;
+    padding: 80px 24px 24px;
+    transition: right 250ms;
+}
+.mobile-nav.active { right: 0; }
+.mobile-nav a {
+    display: block;
+    color: var(--text-light);
+    font-size: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 199;
+}
+.mobile-overlay.active { display: block; }
+
+@media (max-width: 900px) {
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+    .stats { gap: 32px; }
+}
+@media (max-width: 640px) {
+    .card-grid { grid-template-columns: 1fr; }
+    .nav { display: none; }
+    .menu-toggle { display: block; }
+    .hero { padding: 120px 20px 60px; }
+    .hero p { font-size: 16px; }
+    .stats { flex-direction: column; gap: 16px; }
+    .newsletter-form { flex-direction: column; }
+    .footer__inner { flex-direction: column; gap: 12px; text-align: center; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "The GTM Index",
+  "url": "https://thegtmindex.com",
+  "description": "Hand-curated directories of the best newsletters, tools, communities, and content for every go-to-market role.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "The GTM Index"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo">The GTM <span>Index</span></a>
+    <nav class="nav">
+      <a href="/#directories">Browse</a>
+      <a href="/about/">About</a>
+      <a href="/#subscribe">Newsletter</a>
+    </nav>
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('active');document.querySelector('.mobile-overlay').classList.toggle('active');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <a href="/#directories">Browse</a>
+  <a href="/about/">About</a>
+  <a href="/#subscribe">Newsletter</a>
+</nav>
+
+<section class="hero">
+  <h1>The best resources for every <em>go-to-market</em> role.</h1>
+  <p>Hand-curated directories of newsletters, tools, communities, and content. Organized by function. No fluff, no pay-to-play.</p>
+  <a href="#directories" class="cta">Browse All Directories</a>
+  <div class="stats">
+    <div class="stat">
+      <div class="stat__number">18</div>
+      <div class="stat__label">Directories</div>
+    </div>
+    <div class="stat">
+      <div class="stat__number">304+</div>
+      <div class="stat__label">Resources Curated</div>
+    </div>
+    <div class="stat">
+      <div class="stat__number">6</div>
+      <div class="stat__label">Categories per Directory</div>
+    </div>
+  </div>
+</section>
+
+<section class="directories" id="directories">
+  <h2>Browse by Role</h2>
+  <p class="subtitle">Each directory covers newsletters, blogs, tools, communities, podcasts, and courses. Click through to explore.</p>
+  <div class="card-grid">
+    
+    <a href="https://gtmepulse.com/best-gtm-engineer-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#9889;</div>
+      <h3>GTM Engineers</h3>
+      <p>Newsletters, tools, and communities for technical revenue builders who wire together the systems that drive pipeline.</p>
+      <div class="card__link">18 resources curated &rarr;</div>
+    </a>
+    <a href="https://presalespulse.com/best-presales-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#128161;</div>
+      <h3>Pre-Sales / SEs</h3>
+      <p>Blogs, demo platforms, and community hubs for solutions engineers and technical sellers.</p>
+      <div class="card__link">16 resources curated &rarr;</div>
+    </a>
+    <a href="https://fractionalpulse.com/best-fractional-executive-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#128188;</div>
+      <h3>Fractional Executives</h3>
+      <p>Job boards, communities, and playbooks for fractional CROs, CMOs, CTOs, and CFOs.</p>
+      <div class="card__link">15 resources curated &rarr;</div>
+    </a>
+    <a href="https://therevopsreport.com/best-revops-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#9881;</div>
+      <h3>RevOps</h3>
+      <p>Revenue operations tools, newsletters, and career resources for ops professionals.</p>
+      <div class="card__link">20 resources curated &rarr;</div>
+    </a>
+    <a href="https://thecroreport.com/best-cro-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#128640;</div>
+      <h3>Revenue Leaders</h3>
+      <p>CRO and VP Sales resources. Compensation data, market intel, and peer communities.</p>
+      <div class="card__link">18 resources curated &rarr;</div>
+    </a>
+    <a href="https://b2bsalestools.com/best-b2b-sales-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#128202;</div>
+      <h3>B2B Sales</h3>
+      <p>Sales tools, prospecting resources, and career content for account executives and SDRs.</p>
+      <div class="card__link">20 resources curated &rarr;</div>
+    </a>
+    <a href="https://datastackguide.com/best-data-stack-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#128451;</div>
+      <h3>Data Stack</h3>
+      <p>Data engineering tools, architecture guides, and community resources for the modern data stack.</p>
+      <div class="card__link">18 resources curated &rarr;</div>
+    </a>
+    <a href="https://theaimarketpulse.com/best-ai-career-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#129302;</div>
+      <h3>AI Careers</h3>
+      <p>AI engineering job boards, salary data, newsletters, and career resources.</p>
+      <div class="card__link">20 resources curated &rarr;</div>
+    </a>
+    <a href="https://devicepulse.com/best-medical-device-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#127973;</div>
+      <h3>Medical Devices</h3>
+      <p>Equipment intelligence, cost guides, and physician communities for capital device purchasing.</p>
+      <div class="card__link">15 resources curated &rarr;</div>
+    </a>
+    <a href="https://sultanofsaas.com/best-saas-review-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#11088;</div>
+      <h3>SaaS Reviews</h3>
+      <p>Opinionated SaaS review sites, comparison tools, and software evaluation resources.</p>
+      <div class="card__link">16 resources curated &rarr;</div>
+    </a>
+    <a href="https://fdepulse.com/best-fde-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#128296;</div>
+      <h3>Forward Deployed Engineers</h3>
+      <p>Job boards, salary benchmarks, and community resources for forward deployed engineers.</p>
+      <div class="card__link">15 resources curated &rarr;</div>
+    </a>
+    <a href="https://mopsreport.com/best-marketing-ops-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#128231;</div>
+      <h3>Marketing Ops</h3>
+      <p>MOPs newsletters, automation tools, and career resources for marketing operations professionals.</p>
+      <div class="card__link">18 resources curated &rarr;</div>
+    </a>
+    <a href="https://demandgeninsider.com/best-demand-gen-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#128200;</div>
+      <h3>Demand Gen</h3>
+      <p>Demand generation blogs, ABM tools, and community resources for pipeline builders.</p>
+      <div class="card__link">16 resources curated &rarr;</div>
+    </a>
+    <a href="https://theabmpulse.com/best-abm-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#127919;</div>
+      <h3>Account-Based Marketing</h3>
+      <p>ABM platforms, playbooks, and community resources for account-based practitioners.</p>
+      <div class="card__link">15 resources curated &rarr;</div>
+    </a>
+    <a href="https://thecspulse.com/best-customer-success-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#129309;</div>
+      <h3>Customer Success</h3>
+      <p>CS newsletters, career resources, and community hubs for customer success professionals.</p>
+      <div class="card__link">15 resources curated &rarr;</div>
+    </a>
+    <a href="https://sellerreport.com/best-seller-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#128176;</div>
+      <h3>B2B Sellers</h3>
+      <p>Prospecting tools, sales newsletters, and career resources for individual contributors in sales.</p>
+      <div class="card__link">18 resources curated &rarr;</div>
+    </a>
+    <a href="https://partnerchannels.com/best-partner-channel-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#129309;</div>
+      <h3>Partner & Channel</h3>
+      <p>Partner program directories, channel strategy resources, and ecosystem community hubs.</p>
+      <div class="card__link">15 resources curated &rarr;</div>
+    </a>
+    <a href="https://senablers.com/best-sales-enablement-resources/" class="card" target="_blank" rel="noopener">
+      <div class="card__icon">&#128218;</div>
+      <h3>Sales Enablement</h3>
+      <p>Enablement platforms, content management tools, and community resources for enablement pros.</p>
+      <div class="card__link">16 resources curated &rarr;</div>
+    </a>
+  </div>
+</section>
+
+
+<section class="newsletter" id="subscribe">
+  <h2>Stay Updated</h2>
+  <p>Get notified when we add new directories or update existing ones.</p>
+  <form class="newsletter-form" id="signup-form" onsubmit="return handleSignup(event)">
+    <input type="email" name="email" placeholder="you@company.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <div class="msg" id="signup-msg"></div>
+</section>
+<script>
+async function handleSignup(e) {
+  e.preventDefault();
+  const form = e.target;
+  const email = form.email.value;
+  const btn = form.querySelector('button');
+  const msg = document.getElementById('signup-msg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  try {
+    const res = await fetch('https://newsletter-subscribe.rome-workers.workers.dev/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, list: 'gtm-index'})
+    });
+    const data = await res.json();
+    if (data.ok) {
+      msg.className = 'msg success';
+      msg.textContent = 'You\'re in. We\'ll keep you posted.';
+      form.email.value = '';
+    } else {
+      throw new Error(data.error || 'Something went wrong');
+    }
+  } catch(err) {
+    msg.className = 'msg error';
+    msg.textContent = err.message;
+  }
+  btn.disabled = false;
+  btn.textContent = 'Subscribe';
+}
+</script>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">The GTM <span>Index</span></div>
+    <div class="footer__copy">&copy; 2026 The GTM Index. All rights reserved.</div>
+  </div>
+</footer>
+</body>
+</html>
