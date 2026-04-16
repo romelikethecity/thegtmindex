@@ -161,6 +161,10 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .stats { gap: 32px; } }
 @media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } .nav { display: none; } .menu-toggle { display: block; } .hero { padding: 120px 20px 60px; } .hero p { font-size: 16px; } .stats { flex-direction: column; gap: 16px; } .newsletter-form { flex-direction: column; } .footer__inner { flex-direction: column; gap: 12px; text-align: center; } .page { padding: 80px 16px 48px; } .page h1 { font-size: 26px; } }
+.footer ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 150ms; }
+.footer ul li a:hover { color: var(--amber); }
+@media (max-width: 768px) { .footer div[style*="grid-template-columns"] { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 480px) { .footer div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
 </style>
 <!-- GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2GCLCTZHE"></script>
@@ -472,6 +476,8 @@ a { color: inherit; text-decoration: none; }
     <p>Three criteria. First, does this resource teach you something you can't learn from a Google search? Second, is it actively maintained and producing new content? Third, do practitioners in the role actually recommend it to peers? We don't accept payment for listings. We review and update this page quarterly.</p>
   </div>
 
+  <div class="rp-curation" style="margin-top:24px;border-left:3px solid var(--amber);"><h2>Go Deeper: B2B Sales Tools</h2><p>Opinionated reviews of sales software for prospecting, engagement, and closing. Visit <a href="https://b2bsalestools.com">B2B Sales Tools</a> for the full picture.</p></div>
+
   <a href="/" class="rp-back">&larr; Browse all directories</a>
 </div>
 
@@ -517,10 +523,54 @@ async function handleSignup(e) {
 }
 </script>
 
-<footer class="footer">
-  <div class="footer__inner">
-    <div class="footer__brand">The GTM <span>Index</span></div>
-    <div class="footer__copy">&copy; 2026 The GTM Index. All rights reserved.</div>
+<footer class="footer" style="padding:48px 24px 32px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px;font-size:13px;">
+      <div>
+        <div class="footer__brand" style="margin-bottom:16px;">The GTM <span>Index</span></div>
+        <p style="color:rgba(255,255,255,0.5);font-size:12px;line-height:1.5;">Curated directories for every go-to-market role.</p>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Sales & Revenue</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://thecroreport.com">The CRO Report</a></li>
+<li><a href="https://therevopsreport.com">The RevOps Report</a></li>
+<li><a href="https://b2bsalestools.com">B2B Sales Tools</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report</a></li>
+<li><a href="https://presalespulse.com">PreSales Pulse</a></li>
+<li><a href="https://senablers.com">SE Nablers</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Engineering & Data</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://gtmepulse.com">GTME Pulse</a></li>
+<li><a href="https://fdepulse.com">FDE Pulse</a></li>
+<li><a href="https://theaimarketpulse.com">AI Market Pulse</a></li>
+<li><a href="https://datastackguide.com">DataStack Guide</a></li>
+<li><a href="https://mopsreport.com">MOPs Report</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Strategy & Growth</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://fractionalpulse.com">Fractional Pulse</a></li>
+<li><a href="https://theabmpulse.com">The ABM Pulse</a></li>
+<li><a href="https://thecspulse.com">The CS Pulse</a></li>
+<li><a href="https://partnerchannels.com">Partner Channels</a></li>
+<li><a href="https://thedevicepulse.com">Device Pulse</a></li>
+<li><a href="https://sultanofsaas.com">Sultan of SaaS</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="footer__copy">&copy; 2026 The GTM Index. All rights reserved.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);"><a href="/about/" style="color:rgba(255,255,255,0.5);">About</a></div>
+    </div>
   </div>
 </footer>
 </body>
