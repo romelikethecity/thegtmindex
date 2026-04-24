@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Resources for Product Launch Intelligence in 2026 | The GTM Index</title>
+<meta name="description" content="Curated list of the best product launch trackers, market intelligence tools, newsletters, and communities for product researchers and GTM teams.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thegtmindex.com/product-launches/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thegtmindex.com/product-launches/">
+<meta property="og:title" content="Best Resources for Product Launch Intelligence in 2026 | The GTM Index">
+<meta property="og:description" content="Curated list of the best product launch trackers, market intelligence tools, newsletters, and communities for product researchers and GTM teams.">
+<meta property="og:site_name" content="The GTM Index">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Best Resources for Product Launch Intelligence in 2026 | The GTM Index">
+<meta name="twitter:description" content="Curated list of the best product launch trackers, market intelligence tools, newsletters, and communities for product researchers and GTM teams.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --navy: #1B2838;
+    --navy-deep: #0F1923;
+    --amber: #F59E0B;
+    --amber-light: #FBBF24;
+    --amber-dark: #D97706;
+    --bg: #FAFAFA;
+    --bg-white: #FFFFFF;
+    --text: #1F2937;
+    --text-muted: #6B7280;
+    --text-light: #94A3B8;
+    --border: #E5E7EB;
+    --icon-bg: #FEF3C7;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-hover: 0 4px 12px rgba(245,158,11,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Header */
+.header {
+    background: var(--navy);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+}
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo { font-size: 18px; font-weight: 700; color: var(--amber); }
+.logo span { color: #fff; }
+.nav { display: flex; gap: 24px; align-items: center; }
+.nav a { color: var(--text-light); font-size: 14px; font-weight: 500; transition: color 150ms; }
+.nav a:hover { color: #fff; }
+
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.menu-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; transition: 150ms; }
+
+/* Hero */
+.hero {
+    padding: 140px 24px 80px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+}
+.hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.15; }
+.hero h1 em { color: var(--amber); font-style: normal; }
+.hero p { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+.hero .cta { display: inline-block; background: var(--amber); color: var(--navy); padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 15px; transition: background 150ms; }
+.hero .cta:hover { background: var(--amber-light); }
+
+/* Stats */
+.stats { display: flex; justify-content: center; gap: 48px; margin-top: 48px; }
+.stat { text-align: center; }
+.stat__number { font-size: 32px; font-weight: 700; color: var(--amber); }
+.stat__label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+/* Cards Grid */
+.directories { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.directories h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.directories .subtitle { color: var(--text-muted); margin-bottom: 32px; font-size: 15px; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color 200ms, box-shadow 200ms; display: flex; flex-direction: column; }
+.card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.card__icon { width: 42px; height: 42px; background: var(--icon-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+.card h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.card p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; flex: 1; }
+.card__link { font-size: 13px; color: var(--amber-dark); font-weight: 600; }
+.card__link:hover { color: var(--amber); }
+
+/* Newsletter CTA */
+.newsletter { padding: 64px 24px; text-align: center; background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.newsletter h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.newsletter p { color: var(--text-muted); margin-bottom: 24px; font-size: 15px; }
+.newsletter-form { display: flex; max-width: 440px; margin: 0 auto; gap: 8px; }
+.newsletter-form input { flex: 1; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; }
+.newsletter-form input:focus { border-color: var(--amber); }
+.newsletter-form button { background: var(--amber); color: var(--navy); padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; transition: background 150ms; white-space: nowrap; }
+.newsletter-form button:hover { background: var(--amber-light); }
+.newsletter .msg { margin-top: 12px; font-size: 13px; }
+.newsletter .msg.success { color: #059669; }
+.newsletter .msg.error { color: #DC2626; }
+
+/* Footer */
+.footer { background: var(--navy); color: var(--text-light); padding: 48px 24px 32px; }
+.footer__inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer__brand { font-size: 16px; font-weight: 700; color: var(--amber); }
+.footer__brand span { color: #fff; }
+.footer__copy { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+/* About + Resource pages */
+.page { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.page h1 { font-size: 32px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; letter-spacing: -0.5px; }
+.page p { font-size: 16px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.7; }
+.page h2 { font-size: 20px; font-weight: 600; margin: 32px 0 12px; }
+.page a { color: var(--amber-dark); }
+.page a:hover { color: var(--amber); }
+
+/* Resource page specific */
+.rp-breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+.rp-breadcrumb a { text-decoration: none; color: var(--amber-dark); }
+.rp-intro { margin-bottom: 40px; }
+.rp-intro p { font-size: 16px; color: #4B5563; line-height: 1.7; margin-bottom: 12px; }
+.rp-section { margin-bottom: 48px; }
+.rp-section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #F3F4F6; color: var(--text); }
+.rp-item { margin-bottom: 24px; }
+.rp-item-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.rp-item-title a { text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; color: var(--text); }
+.rp-item-title a:hover { text-decoration-color: var(--text-muted); }
+.rp-item-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.rp-badge { display: inline-block; background: var(--icon-bg); color: #92400E; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; vertical-align: middle; margin-left: 4px; }
+.rp-curation { margin-top: 48px; padding: 32px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.rp-curation h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+.rp-curation p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+.rp-back { display: inline-block; margin-top: 32px; font-size: 14px; color: var(--amber-dark); font-weight: 500; }
+
+/* Mobile */
+.mobile-nav { display: none; position: fixed; top: 0; right: -100%; width: 260px; height: 100vh; background: var(--navy-deep); z-index: 200; padding: 80px 24px 24px; transition: right 250ms; }
+.mobile-nav.active { right: 0; }
+.mobile-nav a { display: block; color: var(--text-light); font-size: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mobile-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 199; }
+.mobile-overlay.active { display: block; }
+
+@media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .stats { gap: 32px; } }
+@media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } .nav { display: none; } .menu-toggle { display: block; } .hero { padding: 120px 20px 60px; } .hero p { font-size: 16px; } .stats { flex-direction: column; gap: 16px; } .newsletter-form { flex-direction: column; } .footer__inner { flex-direction: column; gap: 12px; text-align: center; } .page { padding: 80px 16px 48px; } .page h1 { font-size: 26px; } }
+.footer ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 150ms; }
+.footer ul li a:hover { color: var(--amber); }
+@media (max-width: 768px) { .footer div[style*="grid-template-columns"] { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 480px) { .footer div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
+</style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2GCLCTZHE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V2GCLCTZHE');
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "name": "Best Resources for Product Launch Intelligence in 2026",
+      "description": "Curated list of the best product launch trackers, market intelligence tools, newsletters, and communities for product researchers and GTM teams.",
+      "numberOfItems": 18,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "The Launch Index",
+          "url": "https://thelaunchindex.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Product Hunt",
+          "url": "https://www.producthunt.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "BetaList",
+          "url": "https://betalist.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Launching Next",
+          "url": "https://www.launchingnext.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "CB Insights",
+          "url": "https://www.cbinsights.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Crunchbase",
+          "url": "https://www.crunchbase.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "G2 New Products",
+          "url": "https://www.g2.com/categories"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Ben's Bites",
+          "url": "https://bensbites.beehiiv.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "TLDR",
+          "url": "https://tldr.tech/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "There's An AI For That Newsletter",
+          "url": "https://theresanaiforthat.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Indie Hackers",
+          "url": "https://www.indiehackers.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "r/SaaS (Reddit)",
+          "url": "https://www.reddit.com/r/SaaS/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Hacker News (Show HN)",
+          "url": "https://news.ycombinator.com/show"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "SimilarWeb",
+          "url": "https://www.similarweb.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "BuiltWith",
+          "url": "https://builtwith.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Sultan of SaaS",
+          "url": "https://sultanofsaas.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "How I Built This",
+          "url": "https://www.npr.org/series/490248027/how-i-built-this"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "My First Million",
+          "url": "https://www.mfmpod.com/"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thegtmindex.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Best Resources for Product Launch Intelligence in 2026",
+          "item": "https://thegtmindex.com/product-launches/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo">The GTM <span>Index</span></a>
+    <nav class="nav">
+      <a href="/#directories">Browse</a>
+      <a href="/about/">About</a>
+      <a href="/#subscribe">Newsletter</a>
+    </nav>
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('active');document.querySelector('.mobile-overlay').classList.toggle('active');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <a href="/#directories">Browse</a>
+  <a href="/about/">About</a>
+  <a href="/#subscribe">Newsletter</a>
+</nav>
+
+<div class="page">
+  <nav class="rp-breadcrumb">
+    <a href="/">Home</a> &rsaquo; <span>Product Launches</span>
+  </nav>
+
+  <h1>Best Resources for Product Launch Intelligence in 2026</h1>
+
+  <div class="rp-intro">
+            <p>Tracking product launches used to mean refreshing Product Hunt every morning and hoping you caught the right trends. Now there are dedicated trackers, market intelligence platforms, and communities that give you structured data on what's launching, what's gaining traction, and where markets are heading.</p>
+        <p>We curated this list for anyone who needs launch intelligence: product managers scouting competitors, investors tracking markets, and GTM teams timing their moves. Every resource here earned its spot by delivering signal over noise.</p>
+  </div>
+
+  
+      <section class="rp-section">
+        <h2 class="rp-section-title">Launch Trackers & Databases</h2>
+        
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              1. <a href="https://thelaunchindex.com" target="_blank" rel="noopener">The Launch Index</a> <span class="rp-badge">OUR PICK</span>
+            </h3>
+            <p class="rp-item-desc">Product launch data and market trends. 42,000+ launches tracked since 2021 with category breakdowns and trend analysis.</p>
+          </div>
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              2. <a href="https://www.producthunt.com/" target="_blank" rel="noopener">Product Hunt</a>
+            </h3>
+            <p class="rp-item-desc">The original product launch platform. Daily curated launches with community voting, maker profiles, and launch analytics.</p>
+          </div>
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              3. <a href="https://betalist.com/" target="_blank" rel="noopener">BetaList</a>
+            </h3>
+            <p class="rp-item-desc">Discover and get early access to tomorrow's startups. Curated list of upcoming products from indie makers and funded teams.</p>
+          </div>
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              4. <a href="https://www.launchingnext.com/" target="_blank" rel="noopener">Launching Next</a>
+            </h3>
+            <p class="rp-item-desc">Startup directory featuring new product launches with category filtering and submission tracking.</p>
+          </div>
+      </section>
+      <section class="rp-section">
+        <h2 class="rp-section-title">Market Intelligence</h2>
+        
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              1. <a href="https://www.cbinsights.com/" target="_blank" rel="noopener">CB Insights</a>
+            </h3>
+            <p class="rp-item-desc">AI-powered market intelligence platform tracking company launches, funding, and technology trends across industries.</p>
+          </div>
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              2. <a href="https://www.crunchbase.com/" target="_blank" rel="noopener">Crunchbase</a>
+            </h3>
+            <p class="rp-item-desc">Company database with launch dates, funding rounds, and growth signals for 1M+ companies.</p>
+          </div>
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              3. <a href="https://www.g2.com/categories" target="_blank" rel="noopener">G2 New Products</a>
+            </h3>
+            <p class="rp-item-desc">Software review platform that tracks new product entries, category movements, and buyer intent signals.</p>
+          </div>
+      </section>
+      <section class="rp-section">
+        <h2 class="rp-section-title">Newsletters</h2>
+        
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              1. <a href="https://bensbites.beehiiv.com/" target="_blank" rel="noopener">Ben's Bites</a>
+            </h3>
+            <p class="rp-item-desc">Daily AI product launch roundup with 100K+ subscribers. Covers new tools, funding, and market shifts.</p>
+          </div>
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              2. <a href="https://tldr.tech/" target="_blank" rel="noopener">TLDR</a>
+            </h3>
+            <p class="rp-item-desc">Daily newsletter covering tech launches, startup news, and developer tools. 1.25M+ subscribers.</p>
+          </div>
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              3. <a href="https://theresanaiforthat.com/" target="_blank" rel="noopener">There's An AI For That Newsletter</a>
+            </h3>
+            <p class="rp-item-desc">AI tool launch tracker with 10,000+ tools cataloged. Daily digest of new AI product launches.</p>
+          </div>
+      </section>
+      <section class="rp-section">
+        <h2 class="rp-section-title">Communities</h2>
+        
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              1. <a href="https://www.indiehackers.com/" target="_blank" rel="noopener">Indie Hackers</a>
+            </h3>
+            <p class="rp-item-desc">Community of bootstrapped founders sharing launch stories, revenue milestones, and product-market fit learnings.</p>
+          </div>
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              2. <a href="https://www.reddit.com/r/SaaS/" target="_blank" rel="noopener">r/SaaS (Reddit)</a>
+            </h3>
+            <p class="rp-item-desc">Active subreddit for SaaS founders discussing launches, growth tactics, and competitive intelligence.</p>
+          </div>
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              3. <a href="https://news.ycombinator.com/show" target="_blank" rel="noopener">Hacker News (Show HN)</a>
+            </h3>
+            <p class="rp-item-desc">The Show HN section where makers launch products to the technical community. High-signal feedback loop.</p>
+          </div>
+      </section>
+      <section class="rp-section">
+        <h2 class="rp-section-title">Tools Worth Knowing</h2>
+        
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              1. <a href="https://www.similarweb.com/" target="_blank" rel="noopener">SimilarWeb</a>
+            </h3>
+            <p class="rp-item-desc">Digital market intelligence platform for tracking competitor launches, traffic shifts, and market trends.</p>
+          </div>
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              2. <a href="https://builtwith.com/" target="_blank" rel="noopener">BuiltWith</a>
+            </h3>
+            <p class="rp-item-desc">Technology adoption tracker showing what tools companies launch with and switch to over time.</p>
+          </div>
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              3. <a href="https://sultanofsaas.com/" target="_blank" rel="noopener">Sultan of SaaS</a> <span class="rp-badge">OUR PICK</span>
+            </h3>
+            <p class="rp-item-desc">Opinionated SaaS reviews for SMBs and founders. Cuts through launch hype to pick category winners.</p>
+          </div>
+      </section>
+      <section class="rp-section">
+        <h2 class="rp-section-title">Podcasts</h2>
+        
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              1. <a href="https://www.npr.org/series/490248027/how-i-built-this" target="_blank" rel="noopener">How I Built This</a>
+            </h3>
+            <p class="rp-item-desc">NPR podcast featuring founders telling the stories behind their product launches and company origins.</p>
+          </div>
+          <div class="rp-item">
+            <h3 class="rp-item-title">
+              2. <a href="https://www.mfmpod.com/" target="_blank" rel="noopener">My First Million</a>
+            </h3>
+            <p class="rp-item-desc">Sam Parr and Shaan Puri brainstorm product ideas and analyze recent launches for business opportunities.</p>
+          </div>
+      </section>
+
+  <div class="rp-curation">
+    <h2>How We Curated This List</h2>
+    <p>Three criteria. First, does this resource teach you something you can't learn from a Google search? Second, is it actively maintained and producing new content? Third, do practitioners in the role actually recommend it to peers? We don't accept payment for listings. We review and update this page quarterly.</p>
+  </div>
+
+  <div class="rp-curation" style="margin-top:24px;border-left:3px solid var(--amber);"><h2>Go Deeper: The Launch Index</h2><p>Product launch data and market trends from 42,000+ launches tracked since 2021. Visit <a href="https://thelaunchindex.com">The Launch Index</a> for the full picture.</p></div>
+
+  <a href="/" class="rp-back">&larr; Browse all directories</a>
+</div>
+
+
+<section class="newsletter" id="subscribe">
+  <h2>Stay Updated</h2>
+  <p>Get notified when we add new directories or update existing ones.</p>
+  <form class="newsletter-form" id="signup-form" onsubmit="return handleSignup(event)">
+    <input type="email" name="email" placeholder="you@company.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <div class="msg" id="signup-msg"></div>
+</section>
+<script>
+async function handleSignup(e) {
+  e.preventDefault();
+  const form = e.target;
+  const email = form.email.value;
+  const btn = form.querySelector('button');
+  const msg = document.getElementById('signup-msg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  try {
+    const res = await fetch('https://newsletter-subscribe.rome-workers.workers.dev/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, list: 'gtm-index'})
+    });
+    const data = await res.json();
+    if (data.ok) {
+      msg.className = 'msg success';
+      msg.textContent = 'You\'re in. We\'ll keep you posted.';
+      form.email.value = '';
+    } else {
+      throw new Error(data.error || 'Something went wrong');
+    }
+  } catch(err) {
+    msg.className = 'msg error';
+    msg.textContent = err.message;
+  }
+  btn.disabled = false;
+  btn.textContent = 'Subscribe';
+}
+</script>
+
+<footer class="footer" style="padding:48px 24px 32px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px;font-size:13px;">
+      <div>
+        <div class="footer__brand" style="margin-bottom:16px;">The GTM <span>Index</span></div>
+        <p style="color:rgba(255,255,255,0.5);font-size:12px;line-height:1.5;">Curated directories for every go-to-market role.</p>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Sales & Revenue</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://thecroreport.com">The CRO Report</a></li>
+<li><a href="https://therevopsreport.com">The RevOps Report</a></li>
+<li><a href="https://b2bsalestools.com">B2B Sales Tools</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report</a></li>
+<li><a href="https://presalespulse.com">PreSales Pulse</a></li>
+<li><a href="https://senablers.com">SE Nablers</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Engineering & Data</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://gtmepulse.com">GTME Pulse</a></li>
+<li><a href="https://fdepulse.com">FDE Pulse</a></li>
+<li><a href="https://theaimarketpulse.com">AI Market Pulse</a></li>
+<li><a href="https://datastackguide.com">DataStack Guide</a></li>
+<li><a href="https://mopsreport.com">MOPs Report</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Strategy & Growth</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://fractionalpulse.com">Fractional Pulse</a></li>
+<li><a href="https://theabmpulse.com">The ABM Pulse</a></li>
+<li><a href="https://thecspulse.com">The CS Pulse</a></li>
+<li><a href="https://partnerchannels.com">Partner Channels</a></li>
+<li><a href="https://thedevicepulse.com">Device Pulse</a></li>
+<li><a href="https://sultanofsaas.com">Sultan of SaaS</a></li>
+<li><a href="https://thelaunchindex.com">The Launch Index</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="footer__copy">&copy; 2026 The GTM Index. All rights reserved.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);"><a href="/about/" style="color:rgba(255,255,255,0.5);">About</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
