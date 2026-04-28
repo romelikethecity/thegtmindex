@@ -42,6 +42,7 @@ CONTENT_SITES = {
     "sellers": {"name": "The Seller Report", "url": "https://thesellerreport.com", "desc": "Sales career intelligence for SDRs and AEs — comp data, tools, and market trends"},
     "partner-channel": {"name": "Partner Channels", "url": "https://partnerchannels.com", "desc": "Channel sales and partner program directories, strategy resources, and community hubs"},
     "sales-enablement": {"name": "SE Nablers", "url": "https://senablers.com", "desc": "Sales enablement platform reviews, career resources, and practitioner communities"},
+    "product-launches": {"name": "The Launch Index", "url": "https://thelaunchindex.com", "desc": "Product launch data and market trends from 42,000+ launches tracked since 2021"},
 }
 
 # =============================================================================
@@ -67,6 +68,7 @@ DIRECTORIES = [
     {"id": "sellers", "title": "B2B Sellers", "icon": "&#128176;", "description": "Prospecting tools, sales newsletters, and career resources for individual contributors in sales.", "niche": "sellers"},
     {"id": "partner-channel", "title": "Partner & Channel", "icon": "&#129309;", "description": "Partner program directories, channel strategy resources, and ecosystem community hubs.", "niche": "partner-channel"},
     {"id": "sales-enablement", "title": "Sales Enablement", "icon": "&#128218;", "description": "Enablement platforms, content management tools, and community resources for enablement pros.", "niche": "sales-enablement"},
+    {"id": "product-launches", "title": "Product Launches", "icon": "&#128506;", "description": "Launch trackers, market intelligence tools, and communities for product researchers and GTM teams.", "niche": "product-launches"},
 ]
 
 # =============================================================================
@@ -290,7 +292,7 @@ def get_footer():
     # Build site links grouped into columns
     col1_sites = ["revenue-leaders", "revops", "b2b-sales", "sellers", "presales", "sales-enablement"]
     col2_sites = ["gtm-engineers", "fde", "ai-careers", "data-stack", "marketing-ops", "demand-gen"]
-    col3_sites = ["fractional", "abm", "customer-success", "partner-channel", "medical-devices", "saas-reviews"]
+    col3_sites = ["fractional", "abm", "customer-success", "partner-channel", "medical-devices", "saas-reviews", "product-launches"]
 
     def site_links(keys):
         links = ""
@@ -506,7 +508,25 @@ def build_resource_page(directory):
             {"@type": "BreadcrumbList", "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL},
                 {"@type": "ListItem", "position": 2, "name": title, "item": f"{BASE_URL}{canonical}"}
-            ]}
+            ]},
+            {
+                "@type": "Article",
+                "headline": title,
+                "description": description,
+                "url": f"{BASE_URL}{canonical}",
+                "datePublished": "2026-04-13",
+                "dateModified": "2026-04-28",
+                "author": {
+                    "@type": "Person",
+                    "name": "Rome Thorndike",
+                    "url": "https://www.linkedin.com/in/romethorndike/"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": SITE_NAME,
+                    "url": BASE_URL
+                }
+            }
         ]
     }, indent=2)
 
@@ -521,6 +541,7 @@ def build_resource_page(directory):
   </nav>
 
   <h1>{title}</h1>
+  <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener" style="color: var(--amber-dark); text-decoration: none;">Rome Thorndike</a></div>
 
   <div class="rp-intro">
     {intro_html}
