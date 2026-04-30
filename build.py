@@ -59,6 +59,7 @@ DIRECTORIES = [
     {"id": "data-stack", "title": "Data Stack", "icon": "&#128451;", "description": "Data engineering tools, architecture guides, and community resources for the modern data stack.", "niche": "data-stack"},
     {"id": "ai-careers", "title": "AI Careers", "icon": "&#129302;", "description": "AI engineering job boards, salary data, newsletters, and career resources.", "niche": "ai-careers"},
     {"id": "geo", "title": "GEO & AEO", "icon": "&#128270;", "description": "Tools, newsletters, and communities for getting your brand cited in ChatGPT, Perplexity, Claude, and Google AI Overviews.", "niche": "geo"},
+    {"id": "ai-sdr", "title": "AI SDR & Outbound", "icon": "&#128233;", "description": "Autonomous AI SDRs, outbound engines, email personalization, and signal-based prospecting tools for modern B2B sales teams.", "niche": "ai-sdr"},
     {"id": "medical-devices", "title": "Medical Devices", "icon": "&#127973;", "description": "Equipment intelligence, cost guides, and physician communities for capital device purchasing.", "niche": "medical-devices"},
     {"id": "saas-reviews", "title": "SaaS Reviews", "icon": "&#11088;", "description": "Opinionated SaaS review sites, comparison tools, and software evaluation resources.", "niche": "saas-reviews"},
     {"id": "fde", "title": "Forward Deployed Engineers", "icon": "&#128296;", "description": "Job boards, salary benchmarks, and community resources for forward deployed engineers.", "niche": "fde"},
