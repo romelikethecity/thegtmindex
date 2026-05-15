@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Account Manager vs Account Executive: Role Differences | The GTM Index</title>
+<meta name="description" content="Account manager vs account executive in B2B SaaS. Quota, comp structure, segment fit, and how the two roles overlap on cross-sell and renewal motions.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thegtmindex.com/guides/account-manager-vs-account-executive/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thegtmindex.com/guides/account-manager-vs-account-executive/">
+<meta property="og:title" content="Account Manager vs Account Executive: Role Differences | The GTM Index">
+<meta property="og:description" content="Account manager vs account executive in B2B SaaS. Quota, comp structure, segment fit, and how the two roles overlap on cross-sell and renewal motions.">
+<meta property="og:site_name" content="The GTM Index">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Account Manager vs Account Executive: Role Differences | The GTM Index">
+<meta name="twitter:description" content="Account manager vs account executive in B2B SaaS. Quota, comp structure, segment fit, and how the two roles overlap on cross-sell and renewal motions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --navy: #1B2838;
+    --navy-deep: #0F1923;
+    --amber: #F59E0B;
+    --amber-light: #FBBF24;
+    --amber-dark: #D97706;
+    --bg: #FAFAFA;
+    --bg-white: #FFFFFF;
+    --text: #1F2937;
+    --text-muted: #6B7280;
+    --text-light: #94A3B8;
+    --border: #E5E7EB;
+    --icon-bg: #FEF3C7;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-hover: 0 4px 12px rgba(245,158,11,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Header */
+.header {
+    background: var(--navy);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+}
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo { font-size: 18px; font-weight: 700; color: var(--amber); }
+.logo span { color: #fff; }
+.nav { display: flex; gap: 24px; align-items: center; }
+.nav a { color: var(--text-light); font-size: 14px; font-weight: 500; transition: color 150ms; }
+.nav a:hover { color: #fff; }
+
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.menu-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; transition: 150ms; }
+
+/* Hero */
+.hero {
+    padding: 140px 24px 80px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+}
+.hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.15; }
+.hero h1 em { color: var(--amber); font-style: normal; }
+.hero p { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+.hero .cta { display: inline-block; background: var(--amber); color: var(--navy); padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 15px; transition: background 150ms; }
+.hero .cta:hover { background: var(--amber-light); }
+
+/* Stats */
+.stats { display: flex; justify-content: center; gap: 48px; margin-top: 48px; }
+.stat { text-align: center; }
+.stat__number { font-size: 32px; font-weight: 700; color: var(--amber); }
+.stat__label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+/* Cards Grid */
+.directories { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.directories h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.directories .subtitle { color: var(--text-muted); margin-bottom: 32px; font-size: 15px; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color 200ms, box-shadow 200ms; display: flex; flex-direction: column; }
+.card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.card__icon { width: 42px; height: 42px; background: var(--icon-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+.card h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.card p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; flex: 1; }
+.card__link { font-size: 13px; color: var(--amber-dark); font-weight: 600; }
+.card__link:hover { color: var(--amber); }
+
+/* Newsletter CTA */
+.newsletter { padding: 64px 24px; text-align: center; background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.newsletter h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.newsletter p { color: var(--text-muted); margin-bottom: 24px; font-size: 15px; }
+.newsletter-form { display: flex; max-width: 440px; margin: 0 auto; gap: 8px; }
+.newsletter-form input { flex: 1; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; }
+.newsletter-form input:focus { border-color: var(--amber); }
+.newsletter-form button { background: var(--amber); color: var(--navy); padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; transition: background 150ms; white-space: nowrap; }
+.newsletter-form button:hover { background: var(--amber-light); }
+.newsletter .msg { margin-top: 12px; font-size: 13px; }
+.newsletter .msg.success { color: #059669; }
+.newsletter .msg.error { color: #DC2626; }
+
+/* Footer */
+.footer { background: var(--navy); color: var(--text-light); padding: 48px 24px 32px; }
+.footer__inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer__brand { font-size: 16px; font-weight: 700; color: var(--amber); }
+.footer__brand span { color: #fff; }
+.footer__copy { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+/* About + Resource pages */
+.page { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.page h1 { font-size: 32px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; letter-spacing: -0.5px; }
+.page p { font-size: 16px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.7; }
+.page h2 { font-size: 20px; font-weight: 600; margin: 32px 0 12px; }
+.page a { color: var(--amber-dark); }
+.page a:hover { color: var(--amber); }
+
+/* Resource page specific */
+.rp-breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+.rp-breadcrumb a { text-decoration: none; color: var(--amber-dark); }
+.rp-intro { margin-bottom: 40px; }
+.rp-intro p { font-size: 16px; color: #4B5563; line-height: 1.7; margin-bottom: 12px; }
+.rp-section { margin-bottom: 48px; }
+.rp-section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #F3F4F6; color: var(--text); }
+.rp-item { margin-bottom: 24px; }
+.rp-item-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.rp-item-title a { text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; color: var(--text); }
+.rp-item-title a:hover { text-decoration-color: var(--text-muted); }
+.rp-item-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.rp-badge { display: inline-block; background: var(--icon-bg); color: #92400E; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; vertical-align: middle; margin-left: 4px; }
+.rp-curation { margin-top: 48px; padding: 32px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.rp-curation h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+.rp-curation p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+.rp-back { display: inline-block; margin-top: 32px; font-size: 14px; color: var(--amber-dark); font-weight: 500; }
+
+/* Mobile */
+.mobile-nav { display: none; position: fixed; top: 0; right: -100%; width: 260px; height: 100vh; background: var(--navy-deep); z-index: 200; padding: 80px 24px 24px; transition: right 250ms; }
+.mobile-nav.active { right: 0; }
+.mobile-nav a { display: block; color: var(--text-light); font-size: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mobile-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 199; }
+.mobile-overlay.active { display: block; }
+
+@media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .stats { gap: 32px; } }
+@media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } .nav { display: none; } .menu-toggle { display: block; } .hero { padding: 120px 20px 60px; } .hero p { font-size: 16px; } .stats { flex-direction: column; gap: 16px; } .newsletter-form { flex-direction: column; } .footer__inner { flex-direction: column; gap: 12px; text-align: center; } .page { padding: 80px 16px 48px; } .page h1 { font-size: 26px; } }
+.footer ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 150ms; }
+.footer ul li a:hover { color: var(--amber); }
+@media (max-width: 768px) { .footer div[style*="grid-template-columns"] { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 480px) { .footer div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
+</style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2GCLCTZHE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V2GCLCTZHE');
+</script>
+<style>
+/* Guide article styles */
+.guide-wrap { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.guide-wrap h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.5px; color: var(--text); }
+.guide-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; }
+.guide-meta a { color: var(--amber-dark); }
+.guide-wrap h2 { font-size: 24px; font-weight: 700; margin: 40px 0 12px; color: var(--text); letter-spacing: -0.3px; }
+.guide-wrap h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: var(--text); }
+.guide-wrap p { font-size: 16px; color: #374151; margin-bottom: 16px; line-height: 1.75; }
+.guide-wrap ul, .guide-wrap ol { margin: 0 0 20px 22px; color: #374151; }
+.guide-wrap li { font-size: 16px; line-height: 1.7; margin-bottom: 8px; }
+.guide-wrap a { color: var(--amber-dark); text-decoration: underline; text-decoration-color: #FCD34D; text-underline-offset: 3px; }
+.guide-wrap a:hover { color: var(--amber); }
+.guide-wrap blockquote { border-left: 3px solid var(--amber); padding: 4px 18px; margin: 20px 0; color: var(--text-muted); font-size: 15px; }
+.guide-table-wrap { overflow-x: auto; margin: 16px 0 24px; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.guide-table th, .guide-table td { padding: 10px 12px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+.guide-table th { background: #F9FAFB; font-weight: 600; }
+.guide-callout { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 10px; padding: 20px 22px; margin: 24px 0; }
+.guide-callout p { margin-bottom: 0; font-size: 15px; }
+.guide-faq { margin-top: 32px; }
+.guide-faq details { border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; background: var(--bg-white); }
+.guide-faq summary { font-weight: 600; cursor: pointer; font-size: 15px; color: var(--text); }
+.guide-faq details[open] summary { margin-bottom: 8px; }
+.guide-faq p { font-size: 15px; color: #4B5563; margin-bottom: 0; }
+.guide-related { margin-top: 48px; padding: 28px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.guide-related h2 { font-size: 18px; margin-top: 0; margin-bottom: 12px; }
+.guide-related ul { list-style: none; margin: 0; padding: 0; }
+.guide-related li { font-size: 14px; margin-bottom: 8px; }
+.guide-related a { color: var(--amber-dark); text-decoration: none; font-weight: 500; }
+.guide-related a:hover { text-decoration: underline; }
+.guides-grid { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.guides-grid h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 12px; letter-spacing: -0.5px; }
+.guides-grid .sub { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; }
+.guides-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.guide-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 10px; padding: 24px; transition: border-color 200ms, box-shadow 200ms; display: block; }
+.guide-card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.guide-card h3 { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.guide-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px; }
+.guide-card .date { font-size: 12px; color: var(--text-light); }
+@media (max-width: 700px) { .guides-list { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Account Manager vs Account Executive: Role Differences",
+  "description": "Account manager vs account executive in B2B SaaS. Quota, comp structure, segment fit, and how the two roles overlap on cross-sell and renewal motions.",
+  "url": "https://thegtmindex.com/guides/account-manager-vs-account-executive/",
+  "datePublished": "2026-05-15",
+  "dateModified": "2026-05-15",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The GTM Index",
+    "url": "https://thegtmindex.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thegtmindex.com/guides/account-manager-vs-account-executive/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://thegtmindex.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://thegtmindex.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Account Manager vs Account Executive: Role Differences",
+      "item": "https://thegtmindex.com/guides/account-manager-vs-account-executive/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between an AE and an AM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AEs close new logos and carry a net new bookings quota. AMs grow existing accounts and carry an expansion and renewal quota. The cycles, the seller profiles, and the comp structures all differ. AEs run quarterly with strong end-of-quarter pushes. AMs run on each account's renewal calendar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should an AE also manage their own renewals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not in most B2B SaaS companies past SMB. AEs who farm their own accounts post-sale tend to under-invest in net new pipeline because the existing book pays better. The cleaner setup is to hand off to an AM 60 to 90 days after contract signature, once onboarding is complete."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do AMs earn less than AEs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On average, yes. AE OTE runs slightly higher because the new logo cycle is harder to predict and the accelerators are steeper. Strategic AMs at large enterprise SaaS companies sometimes earn more than AEs in absolute dollars because the expansion potential of a strategic account book is massive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where should account management report?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Roughly 60 percent of B2B SaaS companies place AMs under sales and 40 percent under customer success. Reporting into sales aligns with companies that treat expansion as a sales motion. Reporting into customer success aligns with companies that treat expansion as a service motion. Either pattern works with the right comp plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most common mistake in this split?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Treating AM as a junior AE role with junior accounts and no career path. The setup loses senior AM talent and produces an AM bench that cannot run expansion at scale. Companies that take expansion seriously hire AMs with comp, scope, and career paths that match the strategic value of the existing book."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo">The GTM <span>Index</span></a>
+    <nav class="nav">
+      <a href="/#directories">Browse</a>
+      <a href="/about/">About</a>
+      <a href="/#subscribe">Newsletter</a>
+    </nav>
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('active');document.querySelector('.mobile-overlay').classList.toggle('active');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <a href="/#directories">Browse</a>
+  <a href="/about/">About</a>
+  <a href="/#subscribe">Newsletter</a>
+</nav>
+
+<div class="guide-wrap">
+  <nav class="rp-breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; <span>Account Manager vs Account Executive: Role Differences</span>
+  </nav>
+
+  <h1>Account Manager vs Account Executive: Role Differences</h1>
+  <div class="guide-meta">By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; Published May 15, 2026</div>
+
+  
+<p>Account manager and account executive sit at opposite ends of the same revenue motion. AEs close new business. AMs grow it. The titles are sometimes confused, especially at companies where both roles carry quota and both manage book of business relationships. The work, the cycle, and the seller profile differ.</p>
+
+<p>The shortest distinction is that AEs hunt and AMs farm. AEs source new logos, run the deal cycle from first meeting to close, and earn commission on net new bookings. AMs own existing accounts, run renewals and expansion conversations, and earn commission on upsell and renewal premium.</p>
+
+<h2>What account executives own</h2>
+
+<p>Account executives own the new logo motion. The role runs the deal cycle from sales-accepted lead to closed-won, owns the multi-stakeholder negotiation, and carries a new bookings quota. The cycle time varies by segment: 14 to 45 days for SMB, 45 to 120 days for mid-market, and 4 to 12 months for enterprise.</p>
+
+<p>AE comp is structured with a 50/50 or 60/40 base-to-variable split, with accelerators above plan. Bridge Group and RepVue data place mid-market AE OTE between 200K and 320K US dollars at venture-backed B2B SaaS companies, with enterprise AE OTE running 280K to 450K. The <a href="/sellers/">sellers directory</a> and <a href="https://thesellerreport.com">The Seller Report</a> track the benchmarks.</p>
+
+<h2>What account managers own</h2>
+
+<p>Account managers own the existing book of business. The role runs renewal cycles, identifies expansion opportunities, executes upsell and cross-sell motions, and manages the multi-stakeholder relationship across long-term accounts. AMs typically cover fewer accounts than AEs cover in pipeline at any given time, but the relationship depth is greater.</p>
+
+<p>AM comp is structured similarly to AE comp at most B2B SaaS companies, with a 50/50 or 60/40 split between base and variable. The variable component ties to a mix of expansion bookings, renewal premium, and net retention. Senior AM OTE runs 180K to 280K at most venture-backed companies, slightly below AE OTE because the cycle is more predictable.</p>
+
+<h2>Where the roles overlap</h2>
+
+<p>The overlap is the cross-sell motion at expanding accounts. An AM who closes a new buying center inside an existing account is doing AE work, and an AE who closes a multi-year deal with built-in expansion is doing AM work. The cleanest companies define a clear rule for which role handles which case, usually based on whether the expansion crosses a department, a product line, or an executive sponsor boundary.</p>
+
+<p>The companies that struggle with this overlap leave it ambiguous and let the two roles negotiate. The result is internal politics and lost deals. The fix is to write the rule into the account assignment model and the comp plan, with the deal desk arbitrating edge cases.</p>
+
+<h2>Cycle differences</h2>
+
+<p>The AE cycle starts with discovery and ends with a signed contract. The AM cycle starts with a signed contract and ends with renewal or churn. The two cycles run on different rhythms. AEs run quarterly, with a strong push at end of quarter. AMs run on the renewal calendar of each account, with churn risk peaking at the 90-day window before renewal.</p>
+
+<p>The seller profile differs as a result. AEs tend toward urgency, deal-closing instincts, and competitive deal management. AMs tend toward patience, relationship depth, and strategic account planning. The two profiles can overlap in one person, but most senior reps in either role have a clear dominant tendency.</p>
+
+<h2>Segment fit</h2>
+
+<div class="guide-table-wrap"><table class="guide-table">
+<thead><tr><th>Segment</th><th>AE Focus</th><th>AM Focus</th><th>Typical Setup</th></tr></thead>
+<tbody>
+<tr><td>SMB</td><td>Net new logos, high volume</td><td>Often blended into CSM or AE</td><td>One role covers both</td></tr>
+<tr><td>Mid-market</td><td>Net new logos, hybrid coverage</td><td>Dedicated AM at expanding accounts</td><td>Split with handoff at year one</td></tr>
+<tr><td>Enterprise</td><td>Net new logos, multi-quarter cycles</td><td>Dedicated AM, often paired with CSM</td><td>Always split</td></tr>
+<tr><td>Strategic</td><td>Dedicated AE, single account or pod</td><td>Multi-person AM coverage</td><td>Always split, dual coverage</td></tr>
+</tbody>
+</table></div>
+
+<h2>Handoff timing</h2>
+
+<p>The handoff from AE to AM is one of the most underdocumented operational moments in B2B SaaS. The cleanest companies define the handoff to happen 60 to 90 days after contract signature, after onboarding is complete and the CSM has a working adoption motion. The AE retains the relationship through the handoff window and then transfers to the AM with documented account history.</p>
+
+<p>Companies that skip the handoff documentation lose deal context, lose customer relationships, and produce AMs who arrive at year two without knowing why the deal closed. The <a href="/guides/customer-success-vs-account-management/">CSM vs AM</a> guide walks through where customer success fits inside the same handoff.</p>
+
+<h2>Comp comparison</h2>
+
+<p>AE and AM OTE bands overlap at most companies, with AE comp running slightly higher because the new logo cycle is harder to predict. The most important comp structure difference is the accelerator design. AE accelerators kick in above plan and scale aggressively at 150 to 200 percent of quota. AM accelerators tend to be flatter because the underlying revenue base is more predictable and the upside is structurally smaller.</p>
+
+<p>Strategic AMs at large enterprise SaaS companies sometimes earn more than AEs at the same company in absolute dollars, because the strategic account book carries massive expansion potential. The differential at most companies, however, runs in favor of the AE.</p>
+
+<h2>Reporting structure</h2>
+
+<p>AEs almost always report to a sales manager who reports to a VP Sales who reports to the CRO. AMs sometimes report into the same sales line and sometimes report into customer success. The choice depends on whether the company treats expansion as a sales motion or a service motion.</p>
+
+<p>Bessemer and ICONIQ data show roughly 60 percent of B2B SaaS companies place AMs under sales and 40 percent under customer success. The split has held for the past five years and is largely driven by leadership philosophy rather than by motion economics.</p>
+
+<h2>Career paths</h2>
+
+<p>AEs move into senior AE, sales manager, director of sales, and VP Sales roles. Some move into solutions consulting or revenue enablement. The <a href="/guides/path-from-ae-to-sales-leader/">AE to sales leader</a> guide covers the path.</p>
+
+<p>AMs move into senior AM, AM team lead, head of account management, and VP Account Management roles. Some move into customer success leadership or strategic accounts. The path is less standardized than the AE path because the function is younger as a named title at most companies.</p>
+
+<h2>Common mistakes</h2>
+
+<p>Four patterns recur. The first is treating AM as a junior AE role, with junior comp, junior accounts, and no real career path. The setup loses senior AM talent and produces an AM bench that cannot run expansion at scale. The second is loading AMs with retention work that belongs to CSMs, which produces AMs who do service work without the comp structure to match.</p>
+
+<p>The third is asking AEs to also farm their accounts post-sale, which produces AEs who under-invest in net new pipeline because the existing book pays better. The fourth is splitting AE and AM without clear handoff documentation, which produces lost context and customer frustration. The fix to all four is the same: write the scope, the comp plan, and the handoff model before scaling either role.</p>
+
+
+  <h2>Frequently asked questions</h2>
+  <div class="guide-faq">
+<details><summary>What is the difference between an AE and an AM?</summary><p>AEs close new logos and carry a net new bookings quota. AMs grow existing accounts and carry an expansion and renewal quota. The cycles, the seller profiles, and the comp structures all differ. AEs run quarterly with strong end-of-quarter pushes. AMs run on each account's renewal calendar.</p></details>
+<details><summary>Should an AE also manage their own renewals?</summary><p>Not in most B2B SaaS companies past SMB. AEs who farm their own accounts post-sale tend to under-invest in net new pipeline because the existing book pays better. The cleaner setup is to hand off to an AM 60 to 90 days after contract signature, once onboarding is complete.</p></details>
+<details><summary>Do AMs earn less than AEs?</summary><p>On average, yes. AE OTE runs slightly higher because the new logo cycle is harder to predict and the accelerators are steeper. Strategic AMs at large enterprise SaaS companies sometimes earn more than AEs in absolute dollars because the expansion potential of a strategic account book is massive.</p></details>
+<details><summary>Where should account management report?</summary><p>Roughly 60 percent of B2B SaaS companies place AMs under sales and 40 percent under customer success. Reporting into sales aligns with companies that treat expansion as a sales motion. Reporting into customer success aligns with companies that treat expansion as a service motion. Either pattern works with the right comp plan.</p></details>
+<details><summary>What is the most common mistake in this split?</summary><p>Treating AM as a junior AE role with junior accounts and no career path. The setup loses senior AM talent and produces an AM bench that cannot run expansion at scale. Companies that take expansion seriously hire AMs with comp, scope, and career paths that match the strategic value of the existing book.</p></details>
+</div>
+
+  <div class="guide-related"><h2>Keep reading</h2><ul>
+<li><a href="/sellers/">B2B sellers directory</a></li>
+<li><a href="/customer-success/">Customer success directory</a></li>
+<li><a href="/revenue-leaders/">Revenue leaders directory</a></li>
+<li><a href="/sales-enablement/">Sales enablement directory</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report (comp data)</a></li>
+<li><a href="https://thecspulse.com">The CS Pulse (CS comp)</a></li>
+</ul></div>
+</div>
+
+
+<section class="newsletter" id="subscribe">
+  <h2>Stay Updated</h2>
+  <p>Get notified when we add new directories or update existing ones.</p>
+  <form class="newsletter-form" id="signup-form" onsubmit="return handleSignup(event)">
+    <input type="email" name="email" placeholder="you@company.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <div class="msg" id="signup-msg"></div>
+</section>
+<script>
+async function handleSignup(e) {
+  e.preventDefault();
+  const form = e.target;
+  const email = form.email.value;
+  const btn = form.querySelector('button');
+  const msg = document.getElementById('signup-msg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  try {
+    const res = await fetch('https://newsletter-subscribe.rome-workers.workers.dev/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, list: 'gtm-index'})
+    });
+    const data = await res.json();
+    if (data.ok) {
+      msg.className = 'msg success';
+      msg.textContent = 'You\'re in. We\'ll keep you posted.';
+      form.email.value = '';
+    } else {
+      throw new Error(data.error || 'Something went wrong');
+    }
+  } catch(err) {
+    msg.className = 'msg error';
+    msg.textContent = err.message;
+  }
+  btn.disabled = false;
+  btn.textContent = 'Subscribe';
+}
+</script>
+
+<footer class="footer" style="padding:48px 24px 32px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px;font-size:13px;">
+      <div>
+        <div class="footer__brand" style="margin-bottom:16px;">The GTM <span>Index</span></div>
+        <p style="color:rgba(255,255,255,0.5);font-size:12px;line-height:1.5;">Curated directories for every go-to-market role.</p>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Sales & Revenue</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://thecroreport.com">The CRO Report</a></li>
+<li><a href="https://therevopsreport.com">The RevOps Report</a></li>
+<li><a href="https://b2bsalestools.com">B2B Sales Tools</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report</a></li>
+<li><a href="https://presalespulse.com">PreSales Pulse</a></li>
+<li><a href="https://senablers.com">SE Nablers</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Engineering & Data</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://gtmepulse.com">GTME Pulse</a></li>
+<li><a href="https://fdepulse.com">FDE Pulse</a></li>
+<li><a href="https://theaimarketpulse.com">AI Market Pulse</a></li>
+<li><a href="https://datastackguide.com">DataStack Guide</a></li>
+<li><a href="https://mopsreport.com">MOPs Report</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Strategy & Growth</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://fractionalpulse.com">Fractional Pulse</a></li>
+<li><a href="https://theabmpulse.com">The ABM Pulse</a></li>
+<li><a href="https://thecspulse.com">The CS Pulse</a></li>
+<li><a href="https://partnerchannels.com">Partner Channels</a></li>
+<li><a href="https://thedevicepulse.com">Device Pulse</a></li>
+<li><a href="https://sultanofsaas.com">Sultan of SaaS</a></li>
+<li><a href="https://thelaunchindex.com">The Launch Index</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="footer__copy">&copy; 2026 The GTM Index. All rights reserved.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);"><a href="/about/" style="color:rgba(255,255,255,0.5);">About</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

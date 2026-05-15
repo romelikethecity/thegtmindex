@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Ops vs RevOps: Scope, Tools, and Reporting | The GTM Index</title>
+<meta name="description" content="Marketing ops vs RevOps in B2B SaaS. Tool stack, reporting lines, comp benchmarks, and when to split MOps off into a standalone function from RevOps.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thegtmindex.com/guides/marketing-ops-vs-revops/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thegtmindex.com/guides/marketing-ops-vs-revops/">
+<meta property="og:title" content="Marketing Ops vs RevOps: Scope, Tools, and Reporting | The GTM Index">
+<meta property="og:description" content="Marketing ops vs RevOps in B2B SaaS. Tool stack, reporting lines, comp benchmarks, and when to split MOps off into a standalone function from RevOps.">
+<meta property="og:site_name" content="The GTM Index">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Marketing Ops vs RevOps: Scope, Tools, and Reporting | The GTM Index">
+<meta name="twitter:description" content="Marketing ops vs RevOps in B2B SaaS. Tool stack, reporting lines, comp benchmarks, and when to split MOps off into a standalone function from RevOps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --navy: #1B2838;
+    --navy-deep: #0F1923;
+    --amber: #F59E0B;
+    --amber-light: #FBBF24;
+    --amber-dark: #D97706;
+    --bg: #FAFAFA;
+    --bg-white: #FFFFFF;
+    --text: #1F2937;
+    --text-muted: #6B7280;
+    --text-light: #94A3B8;
+    --border: #E5E7EB;
+    --icon-bg: #FEF3C7;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-hover: 0 4px 12px rgba(245,158,11,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Header */
+.header {
+    background: var(--navy);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+}
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo { font-size: 18px; font-weight: 700; color: var(--amber); }
+.logo span { color: #fff; }
+.nav { display: flex; gap: 24px; align-items: center; }
+.nav a { color: var(--text-light); font-size: 14px; font-weight: 500; transition: color 150ms; }
+.nav a:hover { color: #fff; }
+
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.menu-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; transition: 150ms; }
+
+/* Hero */
+.hero {
+    padding: 140px 24px 80px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+}
+.hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.15; }
+.hero h1 em { color: var(--amber); font-style: normal; }
+.hero p { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+.hero .cta { display: inline-block; background: var(--amber); color: var(--navy); padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 15px; transition: background 150ms; }
+.hero .cta:hover { background: var(--amber-light); }
+
+/* Stats */
+.stats { display: flex; justify-content: center; gap: 48px; margin-top: 48px; }
+.stat { text-align: center; }
+.stat__number { font-size: 32px; font-weight: 700; color: var(--amber); }
+.stat__label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+/* Cards Grid */
+.directories { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.directories h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.directories .subtitle { color: var(--text-muted); margin-bottom: 32px; font-size: 15px; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color 200ms, box-shadow 200ms; display: flex; flex-direction: column; }
+.card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.card__icon { width: 42px; height: 42px; background: var(--icon-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+.card h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.card p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; flex: 1; }
+.card__link { font-size: 13px; color: var(--amber-dark); font-weight: 600; }
+.card__link:hover { color: var(--amber); }
+
+/* Newsletter CTA */
+.newsletter { padding: 64px 24px; text-align: center; background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.newsletter h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.newsletter p { color: var(--text-muted); margin-bottom: 24px; font-size: 15px; }
+.newsletter-form { display: flex; max-width: 440px; margin: 0 auto; gap: 8px; }
+.newsletter-form input { flex: 1; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; }
+.newsletter-form input:focus { border-color: var(--amber); }
+.newsletter-form button { background: var(--amber); color: var(--navy); padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; transition: background 150ms; white-space: nowrap; }
+.newsletter-form button:hover { background: var(--amber-light); }
+.newsletter .msg { margin-top: 12px; font-size: 13px; }
+.newsletter .msg.success { color: #059669; }
+.newsletter .msg.error { color: #DC2626; }
+
+/* Footer */
+.footer { background: var(--navy); color: var(--text-light); padding: 48px 24px 32px; }
+.footer__inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer__brand { font-size: 16px; font-weight: 700; color: var(--amber); }
+.footer__brand span { color: #fff; }
+.footer__copy { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+/* About + Resource pages */
+.page { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.page h1 { font-size: 32px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; letter-spacing: -0.5px; }
+.page p { font-size: 16px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.7; }
+.page h2 { font-size: 20px; font-weight: 600; margin: 32px 0 12px; }
+.page a { color: var(--amber-dark); }
+.page a:hover { color: var(--amber); }
+
+/* Resource page specific */
+.rp-breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+.rp-breadcrumb a { text-decoration: none; color: var(--amber-dark); }
+.rp-intro { margin-bottom: 40px; }
+.rp-intro p { font-size: 16px; color: #4B5563; line-height: 1.7; margin-bottom: 12px; }
+.rp-section { margin-bottom: 48px; }
+.rp-section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #F3F4F6; color: var(--text); }
+.rp-item { margin-bottom: 24px; }
+.rp-item-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.rp-item-title a { text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; color: var(--text); }
+.rp-item-title a:hover { text-decoration-color: var(--text-muted); }
+.rp-item-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.rp-badge { display: inline-block; background: var(--icon-bg); color: #92400E; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; vertical-align: middle; margin-left: 4px; }
+.rp-curation { margin-top: 48px; padding: 32px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.rp-curation h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+.rp-curation p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+.rp-back { display: inline-block; margin-top: 32px; font-size: 14px; color: var(--amber-dark); font-weight: 500; }
+
+/* Mobile */
+.mobile-nav { display: none; position: fixed; top: 0; right: -100%; width: 260px; height: 100vh; background: var(--navy-deep); z-index: 200; padding: 80px 24px 24px; transition: right 250ms; }
+.mobile-nav.active { right: 0; }
+.mobile-nav a { display: block; color: var(--text-light); font-size: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mobile-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 199; }
+.mobile-overlay.active { display: block; }
+
+@media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .stats { gap: 32px; } }
+@media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } .nav { display: none; } .menu-toggle { display: block; } .hero { padding: 120px 20px 60px; } .hero p { font-size: 16px; } .stats { flex-direction: column; gap: 16px; } .newsletter-form { flex-direction: column; } .footer__inner { flex-direction: column; gap: 12px; text-align: center; } .page { padding: 80px 16px 48px; } .page h1 { font-size: 26px; } }
+.footer ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 150ms; }
+.footer ul li a:hover { color: var(--amber); }
+@media (max-width: 768px) { .footer div[style*="grid-template-columns"] { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 480px) { .footer div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
+</style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2GCLCTZHE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V2GCLCTZHE');
+</script>
+<style>
+/* Guide article styles */
+.guide-wrap { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.guide-wrap h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.5px; color: var(--text); }
+.guide-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; }
+.guide-meta a { color: var(--amber-dark); }
+.guide-wrap h2 { font-size: 24px; font-weight: 700; margin: 40px 0 12px; color: var(--text); letter-spacing: -0.3px; }
+.guide-wrap h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: var(--text); }
+.guide-wrap p { font-size: 16px; color: #374151; margin-bottom: 16px; line-height: 1.75; }
+.guide-wrap ul, .guide-wrap ol { margin: 0 0 20px 22px; color: #374151; }
+.guide-wrap li { font-size: 16px; line-height: 1.7; margin-bottom: 8px; }
+.guide-wrap a { color: var(--amber-dark); text-decoration: underline; text-decoration-color: #FCD34D; text-underline-offset: 3px; }
+.guide-wrap a:hover { color: var(--amber); }
+.guide-wrap blockquote { border-left: 3px solid var(--amber); padding: 4px 18px; margin: 20px 0; color: var(--text-muted); font-size: 15px; }
+.guide-table-wrap { overflow-x: auto; margin: 16px 0 24px; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.guide-table th, .guide-table td { padding: 10px 12px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+.guide-table th { background: #F9FAFB; font-weight: 600; }
+.guide-callout { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 10px; padding: 20px 22px; margin: 24px 0; }
+.guide-callout p { margin-bottom: 0; font-size: 15px; }
+.guide-faq { margin-top: 32px; }
+.guide-faq details { border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; background: var(--bg-white); }
+.guide-faq summary { font-weight: 600; cursor: pointer; font-size: 15px; color: var(--text); }
+.guide-faq details[open] summary { margin-bottom: 8px; }
+.guide-faq p { font-size: 15px; color: #4B5563; margin-bottom: 0; }
+.guide-related { margin-top: 48px; padding: 28px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.guide-related h2 { font-size: 18px; margin-top: 0; margin-bottom: 12px; }
+.guide-related ul { list-style: none; margin: 0; padding: 0; }
+.guide-related li { font-size: 14px; margin-bottom: 8px; }
+.guide-related a { color: var(--amber-dark); text-decoration: none; font-weight: 500; }
+.guide-related a:hover { text-decoration: underline; }
+.guides-grid { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.guides-grid h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 12px; letter-spacing: -0.5px; }
+.guides-grid .sub { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; }
+.guides-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.guide-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 10px; padding: 24px; transition: border-color 200ms, box-shadow 200ms; display: block; }
+.guide-card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.guide-card h3 { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.guide-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px; }
+.guide-card .date { font-size: 12px; color: var(--text-light); }
+@media (max-width: 700px) { .guides-list { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Marketing Ops vs RevOps: Scope, Tools, and Reporting",
+  "description": "Marketing ops vs RevOps in B2B SaaS. Tool stack, reporting lines, comp benchmarks, and when to split MOps off into a standalone function from RevOps.",
+  "url": "https://thegtmindex.com/guides/marketing-ops-vs-revops/",
+  "datePublished": "2026-05-15",
+  "dateModified": "2026-05-15",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The GTM Index",
+    "url": "https://thegtmindex.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thegtmindex.com/guides/marketing-ops-vs-revops/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://thegtmindex.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://thegtmindex.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Marketing Ops vs RevOps: Scope, Tools, and Reporting",
+      "item": "https://thegtmindex.com/guides/marketing-ops-vs-revops/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is RevOps the senior version of marketing ops?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The two are distinct functions with different scope and reporting lines. RevOps covers the cross-functional revenue process across sales, marketing, and customer success. MOps covers the marketing automation platform, lead lifecycle, and marketing systems. Treating one as a tier of the other produces hiring mistakes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where should marketing ops report?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Inside marketing, to the CMO or VP Marketing, in roughly 90 percent of cases. Reporting MOps into RevOps or into IT happens at some companies, but the work is paced by marketing campaigns and tends to suffer outside the marketing reporting line."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who owns the attribution model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both functions touch it. The cleanest setup is for MOps to own the model construction inside the marketing automation platform, with RevOps reviewing and signing off on the cross-functional view. Single-owner attribution tends to produce a number that one function trusts and the other rejects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can one person do both MOps and RevOps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At companies under about 5M ARR, often yes. A single ops hire usually handles both the marketing automation platform and the CRM. The setup breaks under workload past that ARR band, at which point the company hires a second person and splits the functions formally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which function pays more?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At similar seniority, RevOps base salaries run 10 to 20 percent higher than MOps because the scope is broader. The equity differential at director and VP levels is larger, because RevOps influences the planning models and forecast that the board reviews."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo">The GTM <span>Index</span></a>
+    <nav class="nav">
+      <a href="/#directories">Browse</a>
+      <a href="/about/">About</a>
+      <a href="/#subscribe">Newsletter</a>
+    </nav>
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('active');document.querySelector('.mobile-overlay').classList.toggle('active');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <a href="/#directories">Browse</a>
+  <a href="/about/">About</a>
+  <a href="/#subscribe">Newsletter</a>
+</nav>
+
+<div class="guide-wrap">
+  <nav class="rp-breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; <span>Marketing Ops vs RevOps: Scope, Tools, and Reporting</span>
+  </nav>
+
+  <h1>Marketing Ops vs RevOps: Scope, Tools, and Reporting</h1>
+  <div class="guide-meta">By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; Published May 15, 2026</div>
+
+  
+<p>Marketing operations and revenue operations both sit at the operations layer underneath the revenue org. Both own data, both own systems, and both work cross-functionally. The titles are sometimes used as if they were tiers of the same role, with RevOps being treated as the senior version of MOps. That framing is wrong and produces hiring mistakes.</p>
+
+<p>MOps and RevOps are distinct functions with overlapping toolsets. MOps owns the marketing automation platform, lead lifecycle, and the systems and reporting under the marketing org. RevOps owns the cross-functional revenue process across sales, marketing, and customer success, the CRM, the planning models, and the forecast.</p>
+
+<h2>What marketing ops owns</h2>
+
+<p>Marketing ops owns the marketing automation platform, the lead lifecycle, lead scoring, lead routing, attribution, and the campaign infrastructure that demand gen depends on. The function lives inside marketing and reports to the CMO or VP Marketing in almost all B2B SaaS companies.</p>
+
+<p>Senior MOps leaders run the lead-to-revenue process from form fill through MQL to sales acceptance. They own Marketo, HubSpot, Pardot, or whatever marketing automation platform the company runs on. They own the attribution model and the marketing source reporting. The <a href="/marketing-ops/">marketing operations directory</a> and <a href="https://mopsreport.com">MOPs Report</a> track the platforms and practitioner communities.</p>
+
+<h2>What RevOps owns</h2>
+
+<p>RevOps owns the revenue process across sales, marketing, and customer success. The function owns the CRM, quarterly planning, quota and territory design, the lead-to-cash process, the forecast, and the cross-functional reporting that leadership consumes. The function reports to the CRO at companies past Series B, or to the CEO or COO earlier.</p>
+
+<p>A senior RevOps leader runs the planning models, the forecast call, the deal desk, the comp plan analysis, and the cross-functional dashboards that anchor the revenue function. The <a href="/revops/">RevOps directory</a> and <a href="https://therevopsreport.com">The RevOps Report</a> track the function in detail.</p>
+
+<h2>Where the overlap lives</h2>
+
+<p>The overlap is the handoff between marketing and sales. Both functions touch the lead lifecycle. Both functions touch the attribution model. Both functions need clean data flowing from the marketing automation platform into the CRM. The two functions either work well together or fight constantly over data ownership and reporting interpretations.</p>
+
+<p>The cleanest division is to have MOps own everything inside the marketing automation platform and the lead routing rules, with RevOps owning everything inside the CRM and the cross-functional process. The handoff lives in the field mapping and the data sync between the two systems. When that handoff is well documented and stable, the two functions cooperate. When it is unstable, the two functions blame each other.</p>
+
+<h2>Reporting structure</h2>
+
+<p>MOps reports to marketing in 90 percent of cases. RevOps reports to revenue or operations. The two functions do not typically share a manager, which is a feature rather than a bug. A shared manager would force one function to subordinate to the other and would lose the cross-functional perspective that RevOps brings.</p>
+
+<p>The exception is small companies where one person covers both functions. A single ops hire at 3M to 5M ARR often runs both the marketing automation platform and the CRM. The setup works for a year or two and then breaks under workload, at which point the company hires a second person and the two functions split formally.</p>
+
+<h2>Comp benchmarks</h2>
+
+<p>Pavilion and RepVue data place senior MOps manager base salaries in a 130K to 180K US dollar band at venture-backed B2B SaaS companies, with directors at 160K to 220K and VPs at 200K to 280K. RevOps salaries run slightly higher at the same seniority because the scope is broader. Senior RevOps managers earn 140K to 200K base, directors 170K to 240K, and VPs 240K to 350K.</p>
+
+<p>The pay differential is real but smaller than the title would suggest. The bigger differential is in equity, where RevOps leaders tend to earn more because the scope influences the planning models and forecast that the board reviews.</p>
+
+<h2>Hiring order</h2>
+
+<p>The hiring order depends on company motion. PLG-led companies usually hire MOps first because the marketing automation platform is the central system. Sales-led companies usually hire RevOps first because the CRM and forecast are the central systems. Companies with balanced motions often hire both within a year of each other, typically at 3M to 8M ARR.</p>
+
+<p>A common founder mistake is hiring a RevOps lead and expecting them to also run the marketing automation platform. The senior RevOps profile rarely has deep Marketo or HubSpot configuration experience. The mistake produces a brittle marketing automation setup and a frustrated RevOps lead doing work outside their scope.</p>
+
+<h2>Tool stack ownership</h2>
+
+<div class="guide-table-wrap"><table class="guide-table">
+<thead><tr><th>System</th><th>MOps</th><th>RevOps</th></tr></thead>
+<tbody>
+<tr><td>Marketing automation</td><td>Owner</td><td>Consumer</td></tr>
+<tr><td>CRM</td><td>Consumer</td><td>Owner</td></tr>
+<tr><td>Lead scoring and routing</td><td>Owner</td><td>Process partner</td></tr>
+<tr><td>Attribution model</td><td>Joint, MOps leads</td><td>Joint, RevOps reviews</td></tr>
+<tr><td>Forecast and planning</td><td>Consumer</td><td>Owner</td></tr>
+<tr><td>Quota and territory</td><td>Consumer</td><td>Owner</td></tr>
+<tr><td>Quarterly business review</td><td>Marketing portion</td><td>Revenue portion</td></tr>
+<tr><td>Data warehouse and BI</td><td>Marketing surfaces</td><td>Revenue and cross-functional</td></tr>
+</tbody>
+</table></div>
+
+<h2>Common mistakes</h2>
+
+<p>Four patterns recur in MOps and RevOps hiring. The first is the title creep mistake, where a company hires a MOps manager and renames them RevOps without expanding scope. The new title sets expectations the role cannot meet and produces a planning gap at the CRO level.</p>
+
+<p>The second is the reverse: hiring a RevOps lead and assigning them MOps work because the CMO has not hired a MOps person yet. The RevOps lead does the MOps work poorly and resents the assignment, and the actual RevOps work goes unowned. The third is letting both functions report into the same VP at scale, which produces a single point of failure and limits the cross-functional perspective.</p>
+
+<p>The fourth is treating the attribution model as a MOps deliverable rather than a joint output. Attribution is the artifact where the two functions either align or fight. Treating it as a single-owner output produces an attribution view that one function trusts and the other rejects.</p>
+
+<h2>Career path differences</h2>
+
+<p>The two roles also lead to different next jobs. Senior MOps leaders move into VP Marketing or head of revenue operations roles, with the latter being a real scope expansion. RevOps leaders move into VP RevOps, chief of staff, COO, and head of strategy roles. Some RevOps leaders move into VP Sales roles, though the move is less common than the reverse.</p>
+
+<p>The <a href="/guides/path-to-vp-revops/">path to VP RevOps</a> guide covers the career steps in detail. The <a href="https://mopsreport.com">MOPs Report</a> tracks the marketing ops side of the career market.</p>
+
+
+  <h2>Frequently asked questions</h2>
+  <div class="guide-faq">
+<details><summary>Is RevOps the senior version of marketing ops?</summary><p>No. The two are distinct functions with different scope and reporting lines. RevOps covers the cross-functional revenue process across sales, marketing, and customer success. MOps covers the marketing automation platform, lead lifecycle, and marketing systems. Treating one as a tier of the other produces hiring mistakes.</p></details>
+<details><summary>Where should marketing ops report?</summary><p>Inside marketing, to the CMO or VP Marketing, in roughly 90 percent of cases. Reporting MOps into RevOps or into IT happens at some companies, but the work is paced by marketing campaigns and tends to suffer outside the marketing reporting line.</p></details>
+<details><summary>Who owns the attribution model?</summary><p>Both functions touch it. The cleanest setup is for MOps to own the model construction inside the marketing automation platform, with RevOps reviewing and signing off on the cross-functional view. Single-owner attribution tends to produce a number that one function trusts and the other rejects.</p></details>
+<details><summary>Can one person do both MOps and RevOps?</summary><p>At companies under about 5M ARR, often yes. A single ops hire usually handles both the marketing automation platform and the CRM. The setup breaks under workload past that ARR band, at which point the company hires a second person and splits the functions formally.</p></details>
+<details><summary>Which function pays more?</summary><p>At similar seniority, RevOps base salaries run 10 to 20 percent higher than MOps because the scope is broader. The equity differential at director and VP levels is larger, because RevOps influences the planning models and forecast that the board reviews.</p></details>
+</div>
+
+  <div class="guide-related"><h2>Keep reading</h2><ul>
+<li><a href="/marketing-ops/">Marketing operations directory</a></li>
+<li><a href="/revops/">RevOps directory</a></li>
+<li><a href="/demand-gen/">Demand generation directory</a></li>
+<li><a href="/revenue-leaders/">Revenue leaders directory</a></li>
+<li><a href="https://mopsreport.com">MOPs Report (MOps salary data)</a></li>
+<li><a href="https://therevopsreport.com">The RevOps Report (RevOps benchmarks)</a></li>
+</ul></div>
+</div>
+
+
+<section class="newsletter" id="subscribe">
+  <h2>Stay Updated</h2>
+  <p>Get notified when we add new directories or update existing ones.</p>
+  <form class="newsletter-form" id="signup-form" onsubmit="return handleSignup(event)">
+    <input type="email" name="email" placeholder="you@company.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <div class="msg" id="signup-msg"></div>
+</section>
+<script>
+async function handleSignup(e) {
+  e.preventDefault();
+  const form = e.target;
+  const email = form.email.value;
+  const btn = form.querySelector('button');
+  const msg = document.getElementById('signup-msg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  try {
+    const res = await fetch('https://newsletter-subscribe.rome-workers.workers.dev/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, list: 'gtm-index'})
+    });
+    const data = await res.json();
+    if (data.ok) {
+      msg.className = 'msg success';
+      msg.textContent = 'You\'re in. We\'ll keep you posted.';
+      form.email.value = '';
+    } else {
+      throw new Error(data.error || 'Something went wrong');
+    }
+  } catch(err) {
+    msg.className = 'msg error';
+    msg.textContent = err.message;
+  }
+  btn.disabled = false;
+  btn.textContent = 'Subscribe';
+}
+</script>
+
+<footer class="footer" style="padding:48px 24px 32px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px;font-size:13px;">
+      <div>
+        <div class="footer__brand" style="margin-bottom:16px;">The GTM <span>Index</span></div>
+        <p style="color:rgba(255,255,255,0.5);font-size:12px;line-height:1.5;">Curated directories for every go-to-market role.</p>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Sales & Revenue</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://thecroreport.com">The CRO Report</a></li>
+<li><a href="https://therevopsreport.com">The RevOps Report</a></li>
+<li><a href="https://b2bsalestools.com">B2B Sales Tools</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report</a></li>
+<li><a href="https://presalespulse.com">PreSales Pulse</a></li>
+<li><a href="https://senablers.com">SE Nablers</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Engineering & Data</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://gtmepulse.com">GTME Pulse</a></li>
+<li><a href="https://fdepulse.com">FDE Pulse</a></li>
+<li><a href="https://theaimarketpulse.com">AI Market Pulse</a></li>
+<li><a href="https://datastackguide.com">DataStack Guide</a></li>
+<li><a href="https://mopsreport.com">MOPs Report</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Strategy & Growth</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://fractionalpulse.com">Fractional Pulse</a></li>
+<li><a href="https://theabmpulse.com">The ABM Pulse</a></li>
+<li><a href="https://thecspulse.com">The CS Pulse</a></li>
+<li><a href="https://partnerchannels.com">Partner Channels</a></li>
+<li><a href="https://thedevicepulse.com">Device Pulse</a></li>
+<li><a href="https://sultanofsaas.com">Sultan of SaaS</a></li>
+<li><a href="https://thelaunchindex.com">The Launch Index</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="footer__copy">&copy; 2026 The GTM Index. All rights reserved.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);"><a href="/about/" style="color:rgba(255,255,255,0.5);">About</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

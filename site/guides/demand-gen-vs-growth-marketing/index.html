@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demand Gen vs Growth Marketing: How They Differ | The GTM Index</title>
+<meta name="description" content="Demand gen and growth marketing compared. Scope, KPIs, reporting lines, and how to decide which function your B2B SaaS company should hire first.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thegtmindex.com/guides/demand-gen-vs-growth-marketing/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thegtmindex.com/guides/demand-gen-vs-growth-marketing/">
+<meta property="og:title" content="Demand Gen vs Growth Marketing: How They Differ | The GTM Index">
+<meta property="og:description" content="Demand gen and growth marketing compared. Scope, KPIs, reporting lines, and how to decide which function your B2B SaaS company should hire first.">
+<meta property="og:site_name" content="The GTM Index">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Demand Gen vs Growth Marketing: How They Differ | The GTM Index">
+<meta name="twitter:description" content="Demand gen and growth marketing compared. Scope, KPIs, reporting lines, and how to decide which function your B2B SaaS company should hire first.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --navy: #1B2838;
+    --navy-deep: #0F1923;
+    --amber: #F59E0B;
+    --amber-light: #FBBF24;
+    --amber-dark: #D97706;
+    --bg: #FAFAFA;
+    --bg-white: #FFFFFF;
+    --text: #1F2937;
+    --text-muted: #6B7280;
+    --text-light: #94A3B8;
+    --border: #E5E7EB;
+    --icon-bg: #FEF3C7;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-hover: 0 4px 12px rgba(245,158,11,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Header */
+.header {
+    background: var(--navy);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+}
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo { font-size: 18px; font-weight: 700; color: var(--amber); }
+.logo span { color: #fff; }
+.nav { display: flex; gap: 24px; align-items: center; }
+.nav a { color: var(--text-light); font-size: 14px; font-weight: 500; transition: color 150ms; }
+.nav a:hover { color: #fff; }
+
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.menu-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; transition: 150ms; }
+
+/* Hero */
+.hero {
+    padding: 140px 24px 80px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+}
+.hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.15; }
+.hero h1 em { color: var(--amber); font-style: normal; }
+.hero p { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+.hero .cta { display: inline-block; background: var(--amber); color: var(--navy); padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 15px; transition: background 150ms; }
+.hero .cta:hover { background: var(--amber-light); }
+
+/* Stats */
+.stats { display: flex; justify-content: center; gap: 48px; margin-top: 48px; }
+.stat { text-align: center; }
+.stat__number { font-size: 32px; font-weight: 700; color: var(--amber); }
+.stat__label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+/* Cards Grid */
+.directories { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.directories h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.directories .subtitle { color: var(--text-muted); margin-bottom: 32px; font-size: 15px; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color 200ms, box-shadow 200ms; display: flex; flex-direction: column; }
+.card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.card__icon { width: 42px; height: 42px; background: var(--icon-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+.card h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.card p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; flex: 1; }
+.card__link { font-size: 13px; color: var(--amber-dark); font-weight: 600; }
+.card__link:hover { color: var(--amber); }
+
+/* Newsletter CTA */
+.newsletter { padding: 64px 24px; text-align: center; background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.newsletter h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.newsletter p { color: var(--text-muted); margin-bottom: 24px; font-size: 15px; }
+.newsletter-form { display: flex; max-width: 440px; margin: 0 auto; gap: 8px; }
+.newsletter-form input { flex: 1; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; }
+.newsletter-form input:focus { border-color: var(--amber); }
+.newsletter-form button { background: var(--amber); color: var(--navy); padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; transition: background 150ms; white-space: nowrap; }
+.newsletter-form button:hover { background: var(--amber-light); }
+.newsletter .msg { margin-top: 12px; font-size: 13px; }
+.newsletter .msg.success { color: #059669; }
+.newsletter .msg.error { color: #DC2626; }
+
+/* Footer */
+.footer { background: var(--navy); color: var(--text-light); padding: 48px 24px 32px; }
+.footer__inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer__brand { font-size: 16px; font-weight: 700; color: var(--amber); }
+.footer__brand span { color: #fff; }
+.footer__copy { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+/* About + Resource pages */
+.page { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.page h1 { font-size: 32px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; letter-spacing: -0.5px; }
+.page p { font-size: 16px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.7; }
+.page h2 { font-size: 20px; font-weight: 600; margin: 32px 0 12px; }
+.page a { color: var(--amber-dark); }
+.page a:hover { color: var(--amber); }
+
+/* Resource page specific */
+.rp-breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+.rp-breadcrumb a { text-decoration: none; color: var(--amber-dark); }
+.rp-intro { margin-bottom: 40px; }
+.rp-intro p { font-size: 16px; color: #4B5563; line-height: 1.7; margin-bottom: 12px; }
+.rp-section { margin-bottom: 48px; }
+.rp-section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #F3F4F6; color: var(--text); }
+.rp-item { margin-bottom: 24px; }
+.rp-item-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.rp-item-title a { text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; color: var(--text); }
+.rp-item-title a:hover { text-decoration-color: var(--text-muted); }
+.rp-item-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.rp-badge { display: inline-block; background: var(--icon-bg); color: #92400E; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; vertical-align: middle; margin-left: 4px; }
+.rp-curation { margin-top: 48px; padding: 32px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.rp-curation h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+.rp-curation p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+.rp-back { display: inline-block; margin-top: 32px; font-size: 14px; color: var(--amber-dark); font-weight: 500; }
+
+/* Mobile */
+.mobile-nav { display: none; position: fixed; top: 0; right: -100%; width: 260px; height: 100vh; background: var(--navy-deep); z-index: 200; padding: 80px 24px 24px; transition: right 250ms; }
+.mobile-nav.active { right: 0; }
+.mobile-nav a { display: block; color: var(--text-light); font-size: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mobile-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 199; }
+.mobile-overlay.active { display: block; }
+
+@media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .stats { gap: 32px; } }
+@media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } .nav { display: none; } .menu-toggle { display: block; } .hero { padding: 120px 20px 60px; } .hero p { font-size: 16px; } .stats { flex-direction: column; gap: 16px; } .newsletter-form { flex-direction: column; } .footer__inner { flex-direction: column; gap: 12px; text-align: center; } .page { padding: 80px 16px 48px; } .page h1 { font-size: 26px; } }
+.footer ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 150ms; }
+.footer ul li a:hover { color: var(--amber); }
+@media (max-width: 768px) { .footer div[style*="grid-template-columns"] { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 480px) { .footer div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
+</style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2GCLCTZHE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V2GCLCTZHE');
+</script>
+<style>
+/* Guide article styles */
+.guide-wrap { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.guide-wrap h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.5px; color: var(--text); }
+.guide-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; }
+.guide-meta a { color: var(--amber-dark); }
+.guide-wrap h2 { font-size: 24px; font-weight: 700; margin: 40px 0 12px; color: var(--text); letter-spacing: -0.3px; }
+.guide-wrap h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: var(--text); }
+.guide-wrap p { font-size: 16px; color: #374151; margin-bottom: 16px; line-height: 1.75; }
+.guide-wrap ul, .guide-wrap ol { margin: 0 0 20px 22px; color: #374151; }
+.guide-wrap li { font-size: 16px; line-height: 1.7; margin-bottom: 8px; }
+.guide-wrap a { color: var(--amber-dark); text-decoration: underline; text-decoration-color: #FCD34D; text-underline-offset: 3px; }
+.guide-wrap a:hover { color: var(--amber); }
+.guide-wrap blockquote { border-left: 3px solid var(--amber); padding: 4px 18px; margin: 20px 0; color: var(--text-muted); font-size: 15px; }
+.guide-table-wrap { overflow-x: auto; margin: 16px 0 24px; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.guide-table th, .guide-table td { padding: 10px 12px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+.guide-table th { background: #F9FAFB; font-weight: 600; }
+.guide-callout { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 10px; padding: 20px 22px; margin: 24px 0; }
+.guide-callout p { margin-bottom: 0; font-size: 15px; }
+.guide-faq { margin-top: 32px; }
+.guide-faq details { border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; background: var(--bg-white); }
+.guide-faq summary { font-weight: 600; cursor: pointer; font-size: 15px; color: var(--text); }
+.guide-faq details[open] summary { margin-bottom: 8px; }
+.guide-faq p { font-size: 15px; color: #4B5563; margin-bottom: 0; }
+.guide-related { margin-top: 48px; padding: 28px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.guide-related h2 { font-size: 18px; margin-top: 0; margin-bottom: 12px; }
+.guide-related ul { list-style: none; margin: 0; padding: 0; }
+.guide-related li { font-size: 14px; margin-bottom: 8px; }
+.guide-related a { color: var(--amber-dark); text-decoration: none; font-weight: 500; }
+.guide-related a:hover { text-decoration: underline; }
+.guides-grid { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.guides-grid h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 12px; letter-spacing: -0.5px; }
+.guides-grid .sub { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; }
+.guides-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.guide-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 10px; padding: 24px; transition: border-color 200ms, box-shadow 200ms; display: block; }
+.guide-card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.guide-card h3 { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.guide-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px; }
+.guide-card .date { font-size: 12px; color: var(--text-light); }
+@media (max-width: 700px) { .guides-list { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Demand Gen vs Growth Marketing: How They Differ",
+  "description": "Demand gen and growth marketing compared. Scope, KPIs, reporting lines, and how to decide which function your B2B SaaS company should hire first.",
+  "url": "https://thegtmindex.com/guides/demand-gen-vs-growth-marketing/",
+  "datePublished": "2026-05-15",
+  "dateModified": "2026-05-15",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The GTM Index",
+    "url": "https://thegtmindex.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thegtmindex.com/guides/demand-gen-vs-growth-marketing/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://thegtmindex.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://thegtmindex.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Demand Gen vs Growth Marketing: How They Differ",
+      "item": "https://thegtmindex.com/guides/demand-gen-vs-growth-marketing/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are demand gen and growth marketing the same thing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Demand gen owns the pipeline number for the sales team. Growth marketing owns experimentation and product-driven acquisition. The tactics overlap, but the success metrics differ: demand gen reports on pipeline and bookings, growth marketing reports on experiment velocity and product revenue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which function should a B2B SaaS company hire first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Demand gen. The first demand gen hire typically arrives at 1M to 3M ARR and produces pipeline within two quarters. Growth marketing only makes sense once there is a real product signup or PLG surface to optimize, usually past 5M ARR."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does growth marketing report?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the strength of the company's PLG motion. Companies with a strong product-led motion place growth inside product under the CPO. Companies with weak PLG place growth inside marketing under the CMO. A small number of companies place growth inside revenue under the CRO."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is growth marketing compensated differently?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At PLG companies with direct revenue accountability, senior growth marketers earn more than senior demand gen ICs. At sales-led companies, the two roles compensate similarly. Bonus structures also differ, with demand gen tied to pipeline and growth tied to experiment-driven revenue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Has AI changed the split between the two roles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI tooling has narrowed the day-to-day tactical overlap, with demand gen teams now able to run growth-style experiments at low cost. The strategic distinction in reporting line and success metric still holds, and most B2B SaaS companies keep both functions even as the tooling converges."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo">The GTM <span>Index</span></a>
+    <nav class="nav">
+      <a href="/#directories">Browse</a>
+      <a href="/about/">About</a>
+      <a href="/#subscribe">Newsletter</a>
+    </nav>
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('active');document.querySelector('.mobile-overlay').classList.toggle('active');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <a href="/#directories">Browse</a>
+  <a href="/about/">About</a>
+  <a href="/#subscribe">Newsletter</a>
+</nav>
+
+<div class="guide-wrap">
+  <nav class="rp-breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; <span>Demand Gen vs Growth Marketing: How They Differ</span>
+  </nav>
+
+  <h1>Demand Gen vs Growth Marketing: How They Differ</h1>
+  <div class="guide-meta">By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; Published May 15, 2026</div>
+
+  
+<p>Demand generation and growth marketing are two of the most commonly confused functions in B2B SaaS. Some teams use the titles as synonyms. Other teams treat them as separate functions reporting to different VPs. The lack of consistent definitions across the industry has produced real confusion in hiring, scoping, and headcount planning.</p>
+
+<p>The clearest distinction is that demand gen owns the pipeline number for the sales team. Growth marketing owns experiments and product-driven acquisition that may or may not produce sales-ready pipeline. The functions overlap on tactics but answer to different success metrics.</p>
+
+<h2>What demand gen owns</h2>
+
+<p>Demand gen owns the pipeline number. The function builds and runs the programs that produce marketing-qualified leads, opportunities, and pipeline dollars at a measurable cost per stage. Paid acquisition, content syndication, email nurture, webinars, field events, and partner-sourced pipeline all live inside demand gen at most B2B SaaS companies.</p>
+
+<p>The function is paced by the sales pipeline coverage target, usually 3x to 4x the quarterly bookings goal. Demand gen leaders spend their week on funnel conversion analysis, channel mix decisions, lead handoff with sales, and pipeline forecast reviews. The <a href="/demand-gen/">demand gen directory</a> and <a href="https://demandgeninsider.com">Demand Gen Insider</a> track the resources practitioners use.</p>
+
+<h2>What growth marketing owns</h2>
+
+<p>Growth marketing owns the experimentation and product-driven acquisition motion. The function runs A/B tests on landing pages, signup flows, pricing pages, and product-led growth surfaces. At companies with a free trial or freemium tier, growth marketing also owns activation, conversion to paid, and the early stages of expansion that happen inside the product.</p>
+
+<p>The function is paced by experiment velocity and learning rate rather than by pipeline coverage. Growth marketing leaders spend their week on experiment design, statistical analysis, and product partnerships with engineering and product. The role has roots in consumer growth teams at Facebook, Dropbox, and Pinterest, and most senior growth marketers came up through those motions before moving to B2B.</p>
+
+<h2>The handoff problem</h2>
+
+<p>The hardest scope question is what happens to inbound product signups. At companies with a clean PLG motion, growth marketing owns the signup flow, activation, and conversion to paid. At companies with a hybrid PLG plus sales-led motion, the handoff between growth-driven activation and sales-driven expansion lives in a gray zone. The <a href="/guides/product-led-growth-vs-sales-led-growth/">PLG vs SLG</a> guide walks through how teams resolve it.</p>
+
+<p>The cleanest resolution is to assign accounts above a usage or fit threshold to sales, with growth marketing keeping ownership of the long tail and the activation surfaces. The messier resolution is to share ownership across both functions, which works for two quarters and then breaks under attribution disputes. The best version of this assignment is documented in a shared playbook between the VP Marketing or CMO and the head of growth.</p>
+
+<h2>Comp benchmarks</h2>
+
+<p>OpenView, Pavilion, and ICONIQ Growth benchmarks place senior demand gen IC base salaries in a 140K to 200K US dollar band at venture-backed B2B SaaS companies, with directors at 180K to 240K and VPs at 230K to 320K. Bonus structures typically tie 15 to 25 percent of total comp to pipeline and bookings goals.</p>
+
+<p>Growth marketing comp runs slightly higher at senior levels at companies with a real PLG motion, where the function carries direct revenue accountability. At sales-led companies without a strong product growth surface, growth marketing comp tends to align with demand gen. The benchmark data is tracked at <a href="https://demandgeninsider.com">Demand Gen Insider</a> and across the <a href="/demand-gen/">demand gen</a> directory.</p>
+
+<h2>Reporting structure</h2>
+
+<p>Demand gen almost always reports to the CMO or VP Marketing. Some early-stage companies place it under a head of growth or head of revenue, but the standard at scale is inside marketing. Growth marketing splits more, with some companies placing it inside marketing under the CMO, others inside product under the CPO, and a few inside revenue under the CRO at companies with strong PLG-to-sales handoff.</p>
+
+<p>Bessemer Cloud Index and ChiefMartec data show the reporting line for growth marketing tracks the strength of the company's product-led motion. Companies with a strong PLG motion put growth marketing closer to product. Companies with weak PLG and strong sales put growth marketing inside marketing.</p>
+
+<h2>Hiring order</h2>
+
+<p>Most B2B SaaS companies hire demand gen first. The first demand gen hire typically arrives at 1M to 3M ARR, runs the inbound and outbound paid mix, and produces measurable pipeline within two quarters. The first growth marketing hire arrives later, usually at 5M to 15M ARR, and only at companies with a real product signup surface.</p>
+
+<p>Companies that hire growth marketing before demand gen often regret it. The growth function struggles to produce pipeline without a working marketing engine to layer on, and the first growth hire ends up doing demand gen work under a different title. The reverse mistake, hiring demand gen first and then expecting them to also run product experiments, often works in the short term and then breaks at scale.</p>
+
+<h2>Tool stack differences</h2>
+
+<p>The two functions share a marketing automation platform, a CRM, and a CDP at most companies. Where the stacks diverge is in the experimentation and product analytics layer. Growth marketing depends on tools like Amplitude, Mixpanel, and Heap for product analytics, on Statsig or Optimizely for experimentation, and on tight integration with the engineering org. Demand gen depends on tools like LinkedIn, paid search platforms, ABM platforms, and the <a href="/marketing-ops/">marketing operations</a> stack.</p>
+
+<p>The overlap is the marketing automation platform and the CRM, which both functions need access to. The split is everything below those two systems. The <a href="https://mopsreport.com">MOPs Report</a> tracks the marketing operations side of the stack in detail.</p>
+
+<h2>Common org mistakes</h2>
+
+<p>Three patterns recur. The first is treating growth marketing as a label upgrade for demand gen, which produces a team paid like growth that delivers demand gen results, and a CMO who cannot tell which function is underperforming. The second is splitting demand gen and growth across two reporting lines without a shared funnel definition, which produces attribution disputes and a sales team that does not know who to call.</p>
+
+<p>The third is hiring a senior growth marketer at a company without a PLG surface, which leaves the new hire running experiments that have no path to revenue. The fix to all three is to write the funnel definition, the channel ownership matrix, and the experiment-to-revenue path before posting the role. The label can be either one. What matters is whether the team can describe what they own without overlapping with each other.</p>
+
+<h2>Where the two functions are converging</h2>
+
+<p>AI tooling has narrowed the gap between demand gen and growth marketing in the past 18 months. AI-assisted landing page generation, automated A/B testing, and conversion analysis tools have lowered the cost of experimentation enough that demand gen teams can run growth-style work without a dedicated growth hire. At the same time, growth marketing teams now use paid acquisition tools that look identical to the ones demand gen has always used.</p>
+
+<p>The functions are unlikely to merge into one, because the reporting line and the success metric still differ. They are likely to share more day-to-day tooling and to overlap more on tactical execution, while continuing to answer to different KPIs.</p>
+
+
+  <h2>Frequently asked questions</h2>
+  <div class="guide-faq">
+<details><summary>Are demand gen and growth marketing the same thing?</summary><p>No. Demand gen owns the pipeline number for the sales team. Growth marketing owns experimentation and product-driven acquisition. The tactics overlap, but the success metrics differ: demand gen reports on pipeline and bookings, growth marketing reports on experiment velocity and product revenue.</p></details>
+<details><summary>Which function should a B2B SaaS company hire first?</summary><p>Demand gen. The first demand gen hire typically arrives at 1M to 3M ARR and produces pipeline within two quarters. Growth marketing only makes sense once there is a real product signup or PLG surface to optimize, usually past 5M ARR.</p></details>
+<details><summary>Where does growth marketing report?</summary><p>It depends on the strength of the company's PLG motion. Companies with a strong product-led motion place growth inside product under the CPO. Companies with weak PLG place growth inside marketing under the CMO. A small number of companies place growth inside revenue under the CRO.</p></details>
+<details><summary>How is growth marketing compensated differently?</summary><p>At PLG companies with direct revenue accountability, senior growth marketers earn more than senior demand gen ICs. At sales-led companies, the two roles compensate similarly. Bonus structures also differ, with demand gen tied to pipeline and growth tied to experiment-driven revenue.</p></details>
+<details><summary>Has AI changed the split between the two roles?</summary><p>AI tooling has narrowed the day-to-day tactical overlap, with demand gen teams now able to run growth-style experiments at low cost. The strategic distinction in reporting line and success metric still holds, and most B2B SaaS companies keep both functions even as the tooling converges.</p></details>
+</div>
+
+  <div class="guide-related"><h2>Keep reading</h2><ul>
+<li><a href="/demand-gen/">Demand generation directory</a></li>
+<li><a href="/marketing-ops/">Marketing operations directory</a></li>
+<li><a href="/abm/">ABM platforms and resources</a></li>
+<li><a href="/revops/">RevOps directory</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider (benchmarks)</a></li>
+<li><a href="https://mopsreport.com">MOPs Report (marketing ops salary)</a></li>
+</ul></div>
+</div>
+
+
+<section class="newsletter" id="subscribe">
+  <h2>Stay Updated</h2>
+  <p>Get notified when we add new directories or update existing ones.</p>
+  <form class="newsletter-form" id="signup-form" onsubmit="return handleSignup(event)">
+    <input type="email" name="email" placeholder="you@company.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <div class="msg" id="signup-msg"></div>
+</section>
+<script>
+async function handleSignup(e) {
+  e.preventDefault();
+  const form = e.target;
+  const email = form.email.value;
+  const btn = form.querySelector('button');
+  const msg = document.getElementById('signup-msg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  try {
+    const res = await fetch('https://newsletter-subscribe.rome-workers.workers.dev/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, list: 'gtm-index'})
+    });
+    const data = await res.json();
+    if (data.ok) {
+      msg.className = 'msg success';
+      msg.textContent = 'You\'re in. We\'ll keep you posted.';
+      form.email.value = '';
+    } else {
+      throw new Error(data.error || 'Something went wrong');
+    }
+  } catch(err) {
+    msg.className = 'msg error';
+    msg.textContent = err.message;
+  }
+  btn.disabled = false;
+  btn.textContent = 'Subscribe';
+}
+</script>
+
+<footer class="footer" style="padding:48px 24px 32px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px;font-size:13px;">
+      <div>
+        <div class="footer__brand" style="margin-bottom:16px;">The GTM <span>Index</span></div>
+        <p style="color:rgba(255,255,255,0.5);font-size:12px;line-height:1.5;">Curated directories for every go-to-market role.</p>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Sales & Revenue</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://thecroreport.com">The CRO Report</a></li>
+<li><a href="https://therevopsreport.com">The RevOps Report</a></li>
+<li><a href="https://b2bsalestools.com">B2B Sales Tools</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report</a></li>
+<li><a href="https://presalespulse.com">PreSales Pulse</a></li>
+<li><a href="https://senablers.com">SE Nablers</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Engineering & Data</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://gtmepulse.com">GTME Pulse</a></li>
+<li><a href="https://fdepulse.com">FDE Pulse</a></li>
+<li><a href="https://theaimarketpulse.com">AI Market Pulse</a></li>
+<li><a href="https://datastackguide.com">DataStack Guide</a></li>
+<li><a href="https://mopsreport.com">MOPs Report</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Strategy & Growth</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://fractionalpulse.com">Fractional Pulse</a></li>
+<li><a href="https://theabmpulse.com">The ABM Pulse</a></li>
+<li><a href="https://thecspulse.com">The CS Pulse</a></li>
+<li><a href="https://partnerchannels.com">Partner Channels</a></li>
+<li><a href="https://thedevicepulse.com">Device Pulse</a></li>
+<li><a href="https://sultanofsaas.com">Sultan of SaaS</a></li>
+<li><a href="https://thelaunchindex.com">The Launch Index</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="footer__copy">&copy; 2026 The GTM Index. All rights reserved.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);"><a href="/about/" style="color:rgba(255,255,255,0.5);">About</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

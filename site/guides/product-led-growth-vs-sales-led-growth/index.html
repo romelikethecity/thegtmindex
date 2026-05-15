@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PLG vs Sales-Led Growth: A B2B SaaS Comparison | The GTM Index</title>
+<meta name="description" content="Product-led growth vs sales-led growth in B2B SaaS. Unit economics, headcount math, segment fit, and how hybrid PLG plus SLG motions work in practice.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thegtmindex.com/guides/product-led-growth-vs-sales-led-growth/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thegtmindex.com/guides/product-led-growth-vs-sales-led-growth/">
+<meta property="og:title" content="PLG vs Sales-Led Growth: A B2B SaaS Comparison | The GTM Index">
+<meta property="og:description" content="Product-led growth vs sales-led growth in B2B SaaS. Unit economics, headcount math, segment fit, and how hybrid PLG plus SLG motions work in practice.">
+<meta property="og:site_name" content="The GTM Index">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PLG vs Sales-Led Growth: A B2B SaaS Comparison | The GTM Index">
+<meta name="twitter:description" content="Product-led growth vs sales-led growth in B2B SaaS. Unit economics, headcount math, segment fit, and how hybrid PLG plus SLG motions work in practice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --navy: #1B2838;
+    --navy-deep: #0F1923;
+    --amber: #F59E0B;
+    --amber-light: #FBBF24;
+    --amber-dark: #D97706;
+    --bg: #FAFAFA;
+    --bg-white: #FFFFFF;
+    --text: #1F2937;
+    --text-muted: #6B7280;
+    --text-light: #94A3B8;
+    --border: #E5E7EB;
+    --icon-bg: #FEF3C7;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-hover: 0 4px 12px rgba(245,158,11,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Header */
+.header {
+    background: var(--navy);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+}
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo { font-size: 18px; font-weight: 700; color: var(--amber); }
+.logo span { color: #fff; }
+.nav { display: flex; gap: 24px; align-items: center; }
+.nav a { color: var(--text-light); font-size: 14px; font-weight: 500; transition: color 150ms; }
+.nav a:hover { color: #fff; }
+
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.menu-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; transition: 150ms; }
+
+/* Hero */
+.hero {
+    padding: 140px 24px 80px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+}
+.hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.15; }
+.hero h1 em { color: var(--amber); font-style: normal; }
+.hero p { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+.hero .cta { display: inline-block; background: var(--amber); color: var(--navy); padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 15px; transition: background 150ms; }
+.hero .cta:hover { background: var(--amber-light); }
+
+/* Stats */
+.stats { display: flex; justify-content: center; gap: 48px; margin-top: 48px; }
+.stat { text-align: center; }
+.stat__number { font-size: 32px; font-weight: 700; color: var(--amber); }
+.stat__label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+/* Cards Grid */
+.directories { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.directories h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.directories .subtitle { color: var(--text-muted); margin-bottom: 32px; font-size: 15px; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color 200ms, box-shadow 200ms; display: flex; flex-direction: column; }
+.card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.card__icon { width: 42px; height: 42px; background: var(--icon-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+.card h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.card p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; flex: 1; }
+.card__link { font-size: 13px; color: var(--amber-dark); font-weight: 600; }
+.card__link:hover { color: var(--amber); }
+
+/* Newsletter CTA */
+.newsletter { padding: 64px 24px; text-align: center; background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.newsletter h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.newsletter p { color: var(--text-muted); margin-bottom: 24px; font-size: 15px; }
+.newsletter-form { display: flex; max-width: 440px; margin: 0 auto; gap: 8px; }
+.newsletter-form input { flex: 1; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; }
+.newsletter-form input:focus { border-color: var(--amber); }
+.newsletter-form button { background: var(--amber); color: var(--navy); padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; transition: background 150ms; white-space: nowrap; }
+.newsletter-form button:hover { background: var(--amber-light); }
+.newsletter .msg { margin-top: 12px; font-size: 13px; }
+.newsletter .msg.success { color: #059669; }
+.newsletter .msg.error { color: #DC2626; }
+
+/* Footer */
+.footer { background: var(--navy); color: var(--text-light); padding: 48px 24px 32px; }
+.footer__inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer__brand { font-size: 16px; font-weight: 700; color: var(--amber); }
+.footer__brand span { color: #fff; }
+.footer__copy { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+/* About + Resource pages */
+.page { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.page h1 { font-size: 32px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; letter-spacing: -0.5px; }
+.page p { font-size: 16px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.7; }
+.page h2 { font-size: 20px; font-weight: 600; margin: 32px 0 12px; }
+.page a { color: var(--amber-dark); }
+.page a:hover { color: var(--amber); }
+
+/* Resource page specific */
+.rp-breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+.rp-breadcrumb a { text-decoration: none; color: var(--amber-dark); }
+.rp-intro { margin-bottom: 40px; }
+.rp-intro p { font-size: 16px; color: #4B5563; line-height: 1.7; margin-bottom: 12px; }
+.rp-section { margin-bottom: 48px; }
+.rp-section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #F3F4F6; color: var(--text); }
+.rp-item { margin-bottom: 24px; }
+.rp-item-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.rp-item-title a { text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; color: var(--text); }
+.rp-item-title a:hover { text-decoration-color: var(--text-muted); }
+.rp-item-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.rp-badge { display: inline-block; background: var(--icon-bg); color: #92400E; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; vertical-align: middle; margin-left: 4px; }
+.rp-curation { margin-top: 48px; padding: 32px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.rp-curation h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+.rp-curation p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+.rp-back { display: inline-block; margin-top: 32px; font-size: 14px; color: var(--amber-dark); font-weight: 500; }
+
+/* Mobile */
+.mobile-nav { display: none; position: fixed; top: 0; right: -100%; width: 260px; height: 100vh; background: var(--navy-deep); z-index: 200; padding: 80px 24px 24px; transition: right 250ms; }
+.mobile-nav.active { right: 0; }
+.mobile-nav a { display: block; color: var(--text-light); font-size: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mobile-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 199; }
+.mobile-overlay.active { display: block; }
+
+@media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .stats { gap: 32px; } }
+@media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } .nav { display: none; } .menu-toggle { display: block; } .hero { padding: 120px 20px 60px; } .hero p { font-size: 16px; } .stats { flex-direction: column; gap: 16px; } .newsletter-form { flex-direction: column; } .footer__inner { flex-direction: column; gap: 12px; text-align: center; } .page { padding: 80px 16px 48px; } .page h1 { font-size: 26px; } }
+.footer ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 150ms; }
+.footer ul li a:hover { color: var(--amber); }
+@media (max-width: 768px) { .footer div[style*="grid-template-columns"] { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 480px) { .footer div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
+</style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2GCLCTZHE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V2GCLCTZHE');
+</script>
+<style>
+/* Guide article styles */
+.guide-wrap { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.guide-wrap h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.5px; color: var(--text); }
+.guide-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; }
+.guide-meta a { color: var(--amber-dark); }
+.guide-wrap h2 { font-size: 24px; font-weight: 700; margin: 40px 0 12px; color: var(--text); letter-spacing: -0.3px; }
+.guide-wrap h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: var(--text); }
+.guide-wrap p { font-size: 16px; color: #374151; margin-bottom: 16px; line-height: 1.75; }
+.guide-wrap ul, .guide-wrap ol { margin: 0 0 20px 22px; color: #374151; }
+.guide-wrap li { font-size: 16px; line-height: 1.7; margin-bottom: 8px; }
+.guide-wrap a { color: var(--amber-dark); text-decoration: underline; text-decoration-color: #FCD34D; text-underline-offset: 3px; }
+.guide-wrap a:hover { color: var(--amber); }
+.guide-wrap blockquote { border-left: 3px solid var(--amber); padding: 4px 18px; margin: 20px 0; color: var(--text-muted); font-size: 15px; }
+.guide-table-wrap { overflow-x: auto; margin: 16px 0 24px; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.guide-table th, .guide-table td { padding: 10px 12px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+.guide-table th { background: #F9FAFB; font-weight: 600; }
+.guide-callout { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 10px; padding: 20px 22px; margin: 24px 0; }
+.guide-callout p { margin-bottom: 0; font-size: 15px; }
+.guide-faq { margin-top: 32px; }
+.guide-faq details { border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; background: var(--bg-white); }
+.guide-faq summary { font-weight: 600; cursor: pointer; font-size: 15px; color: var(--text); }
+.guide-faq details[open] summary { margin-bottom: 8px; }
+.guide-faq p { font-size: 15px; color: #4B5563; margin-bottom: 0; }
+.guide-related { margin-top: 48px; padding: 28px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.guide-related h2 { font-size: 18px; margin-top: 0; margin-bottom: 12px; }
+.guide-related ul { list-style: none; margin: 0; padding: 0; }
+.guide-related li { font-size: 14px; margin-bottom: 8px; }
+.guide-related a { color: var(--amber-dark); text-decoration: none; font-weight: 500; }
+.guide-related a:hover { text-decoration: underline; }
+.guides-grid { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.guides-grid h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 12px; letter-spacing: -0.5px; }
+.guides-grid .sub { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; }
+.guides-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.guide-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 10px; padding: 24px; transition: border-color 200ms, box-shadow 200ms; display: block; }
+.guide-card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.guide-card h3 { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.guide-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px; }
+.guide-card .date { font-size: 12px; color: var(--text-light); }
+@media (max-width: 700px) { .guides-list { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "PLG vs Sales-Led Growth: A B2B SaaS Comparison",
+  "description": "Product-led growth vs sales-led growth in B2B SaaS. Unit economics, headcount math, segment fit, and how hybrid PLG plus SLG motions work in practice.",
+  "url": "https://thegtmindex.com/guides/product-led-growth-vs-sales-led-growth/",
+  "datePublished": "2026-05-15",
+  "dateModified": "2026-05-15",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The GTM Index",
+    "url": "https://thegtmindex.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thegtmindex.com/guides/product-led-growth-vs-sales-led-growth/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://thegtmindex.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://thegtmindex.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "PLG vs Sales-Led Growth: A B2B SaaS Comparison",
+      "item": "https://thegtmindex.com/guides/product-led-growth-vs-sales-led-growth/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is product-led growth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An acquisition motion where the product itself drives signup, activation, and conversion to paid without a salesperson involved in most deals. Classic examples include Atlassian, Slack, Calendly, Notion, and Figma. The pattern requires a free or freemium tier, a strong activation surface, and a self-service buying flow."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is sales-led growth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An acquisition motion where a sales team drives the acquisition, activation, and expansion of customers through a structured cycle: lead, outreach, discovery, demo, proof of concept, negotiation, close. The motion produces higher CAC, faster paths to enterprise revenue, and deeper enterprise capability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which motion is better?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Neither is universally better. PLG fits individual prosumers and SMB team buyers. SLG fits enterprise and strategic accounts. Most successful B2B SaaS companies past 20M ARR run a hybrid motion with PLG for adoption and SLG for negotiated enterprise deals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do hybrid PLG plus SLG motions work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The PLG side handles individual and small-team adoption. The SLG side handles negotiated enterprise deals. The two share a product, share data, and share customer success. The biggest operational question is the PLG-to-SLG handoff threshold, which routes accounts from self-serve to sales coverage based on usage and account size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should a company transition between motions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most PLG companies add SLG between 10M and 30M ARR, when enterprise opportunities materialize that the founding team is leaving on the table. Most SLG companies add PLG between 30M and 100M ARR, when bottom-up signal becomes a meaningful acquisition lever they had ignored."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo">The GTM <span>Index</span></a>
+    <nav class="nav">
+      <a href="/#directories">Browse</a>
+      <a href="/about/">About</a>
+      <a href="/#subscribe">Newsletter</a>
+    </nav>
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('active');document.querySelector('.mobile-overlay').classList.toggle('active');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <a href="/#directories">Browse</a>
+  <a href="/about/">About</a>
+  <a href="/#subscribe">Newsletter</a>
+</nav>
+
+<div class="guide-wrap">
+  <nav class="rp-breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; <span>PLG vs Sales-Led Growth: A B2B SaaS Comparison</span>
+  </nav>
+
+  <h1>PLG vs Sales-Led Growth: A B2B SaaS Comparison</h1>
+  <div class="guide-meta">By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; Published May 15, 2026</div>
+
+  
+<p>Product-led growth and sales-led growth are the two dominant motion archetypes in B2B SaaS. Most companies eventually run some version of both. The choice of which to start with, how to structure the org around it, and when to transition between them is one of the most consequential strategic decisions a B2B SaaS founder makes.</p>
+
+<p>This guide covers the unit economics, the headcount math, the segment fit, and how hybrid PLG plus SLG motions work in practice. The benchmarks come from OpenView Partners, Bessemer Cloud Index, ICONIQ Growth, and the practitioner data tracked across <a href="/demand-gen/">demand generation</a> and <a href="/sellers/">sellers</a> directories.</p>
+
+<h2>What PLG means in practice</h2>
+
+<p>Product-led growth means the product itself is the primary acquisition, activation, and expansion mechanism. Buyers find the product, sign up, get value, and convert to paid without a salesperson touching the deal. The model produces low customer acquisition cost when it works, high product investment, and a heavy reliance on the product team to ship features that drive growth.</p>
+
+<p>The classic PLG examples include Atlassian, Slack, Calendly, Notion, and Figma. The common pattern is a free or freemium tier, a strong activation surface, a clear path to paid value, and a self-service buying flow that converts without intervention. The <a href="/guides/demand-gen-vs-growth-marketing/">demand gen vs growth marketing</a> guide covers how the marketing org structures itself around a PLG motion.</p>
+
+<h2>What SLG means in practice</h2>
+
+<p>Sales-led growth means a sales team drives the acquisition, activation, and expansion of new customers. Buyers go through a structured sales cycle: marketing-sourced lead, SDR or AE outreach, discovery, demo, proof of concept, negotiation, close. The model produces higher customer acquisition cost when it works, deeper enterprise capability, and a heavy reliance on the sales team's execution.</p>
+
+<p>The classic SLG examples include Salesforce, Workday, Snowflake, and most enterprise software. The common pattern is a complex product, a long sales cycle, multi-stakeholder buying, and significant deal customization. The <a href="/sellers/">sellers directory</a> covers the AE and SDR resources at the heart of the motion.</p>
+
+<h2>Unit economics</h2>
+
+<p>The unit economics differ structurally. PLG produces lower CAC per customer, longer paths to revenue per individual customer (because users typically expand into paid over time rather than buying upfront), and tighter margins on lower-tier accounts. SLG produces higher CAC, faster paths to meaningful revenue per individual customer, and stronger margins on enterprise accounts.</p>
+
+<p>OpenView's PLG benchmarks place PLG-led companies at a median CAC payback period of 12 to 18 months on the bottom-up motion and 18 to 24 months on the resulting top-down expansion. SLG benchmarks from Bessemer Cloud Index place CAC payback at 18 to 30 months on mid-market and enterprise SaaS. The PLG payback is faster on average but with more variance across the customer base.</p>
+
+<h2>Headcount math</h2>
+
+<p>The headcount math differs even more sharply than the unit economics. A 50M ARR PLG company typically runs with 20 to 60 sales-adjacent headcount (mostly customer success and a small AE bench). A 50M ARR SLG company typically runs with 80 to 150 sales-adjacent headcount across SDR, AE, SE, AM, and CSM benches.</p>
+
+<p>The differential comes from where the work lives. PLG companies invest heavily in product engineering, product analytics, and growth marketing. SLG companies invest heavily in the sales bench, the pre-sales bench, and the customer success bench. The total headcount difference is smaller than the function mix difference would suggest, but the cost structure shifts noticeably.</p>
+
+<h2>Segment fit</h2>
+
+<div class="guide-table-wrap"><table class="guide-table">
+<thead><tr><th>Buyer Profile</th><th>Best Motion</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Individual prosumer</td><td>Pure PLG</td><td>Low ACV, fast decision, no procurement</td></tr>
+<tr><td>SMB team buyer</td><td>PLG with light sales touch</td><td>Self-serve up to a point, sales for expansion</td></tr>
+<tr><td>Mid-market</td><td>Hybrid PLG plus SLG</td><td>Free tier for adoption, sales for negotiated deals</td></tr>
+<tr><td>Enterprise</td><td>SLG with PLG signal</td><td>Long cycle requires sales, but bottom-up signal helps</td></tr>
+<tr><td>Strategic government or regulated</td><td>Pure SLG</td><td>Procurement complexity blocks PLG self-serve</td></tr>
+</tbody>
+</table></div>
+
+<h2>The hybrid model</h2>
+
+<p>Most successful B2B SaaS companies past 20M ARR run a hybrid motion. The PLG side handles individual and small-team adoption. The SLG side handles negotiated enterprise deals. The two motions share a product, share data, and share customer success but operate distinct go-to-market plays.</p>
+
+<p>The hybrid model produces operational complexity that pure PLG or pure SLG companies do not face. The biggest operational question is when an account graduates from PLG to SLG handoff. The cleanest companies define usage and account size thresholds that automatically route an account from PLG self-serve to AE coverage. The thresholds matter because letting accounts buy upmarket through self-serve leaves enterprise revenue on the table, while routing too aggressively to sales creates friction for accounts that would have converted on their own.</p>
+
+<h2>Where PLG fails</h2>
+
+<p>PLG fails predictably under three conditions. The first is when the product is too complex to onboard without human help, which produces low activation rates and weak free-to-paid conversion. The second is when the buyer is enterprise and procurement forces a structured sales cycle, regardless of how strong the product signal is.</p>
+
+<p>The third is when the product economics depend on multi-product or multi-team deployments that require sales-led account planning to land. PLG can produce adoption in these cases but cannot consistently produce the deal sizes the unit economics require. The <a href="/guides/founder-led-sales-when-to-graduate/">founder-led sales graduation</a> guide covers some of the same transitions.</p>
+
+<h2>Where SLG fails</h2>
+
+<p>SLG fails predictably under three conditions. The first is when the ACV is too low to support the sales bench. A 10K ACV product cannot sustain a 200K OTE AE bench. The second is when the buyer is increasingly individual and bottom-up, which produces buyer frustration when forced through a long sales cycle for a product they could have signed up for in minutes.</p>
+
+<p>The third is when the competitive set has shifted to PLG, which forces SLG-only companies to compete on procurement-friendly contracts rather than on product experience. The PLG competitor wins because the product reaches end users faster, even when the SLG sales team has stronger executive relationships.</p>
+
+<h2>Transition timing</h2>
+
+<p>Most B2B SaaS companies make the PLG-to-SLG transition between 10M and 30M ARR, when individual adoption produces enterprise opportunities that the founding team realizes they are leaving on the table. Most SLG companies add PLG between 30M and 100M ARR, when the bottom-up signal from individual users becomes a meaningful acquisition lever they had been ignoring.</p>
+
+<p>The transition is hard in both directions. PLG companies adding sales benches often struggle with the operating cadence that SLG companies take for granted. SLG companies adding PLG often struggle with the product investment and activation work that PLG companies build into their roadmap.</p>
+
+<h2>Common strategic mistakes</h2>
+
+<p>Four patterns recur. The first is trying to run a PLG motion with an SLG-shaped product, where the product is too complex to convert self-serve. The second is trying to run an SLG motion with a PLG-shaped product, where the ACV is too low to support the sales bench.</p>
+
+<p>The third is failing to define the PLG-to-SLG handoff threshold in a hybrid motion, which produces lost enterprise revenue and friction-laden conversions. The fourth is treating the transition between motions as a binary switch rather than a multi-year journey. Most successful transitions take 18 to 36 months and require sustained investment in the new motion's tooling, hiring, and operating cadence.</p>
+
+<h2>How AI changes the picture</h2>
+
+<p>AI tooling has shifted both motions. PLG companies are using AI-assisted onboarding and AI agents inside the product to lower the activation barrier on complex products, which expands the segment where PLG can work. SLG companies are using AI SDRs and AI-augmented outbound to lower the sales cost on lower-ACV deals, which expands the segment where SLG can profitably operate.</p>
+
+<p>The net effect is that the segment overlap where both motions can work has grown. The <a href="/guides/ai-impact-b2b-gtm-stack-2026/">AI impact on the B2B GTM stack</a> guide covers the broader trends.</p>
+
+
+  <h2>Frequently asked questions</h2>
+  <div class="guide-faq">
+<details><summary>What is product-led growth?</summary><p>An acquisition motion where the product itself drives signup, activation, and conversion to paid without a salesperson involved in most deals. Classic examples include Atlassian, Slack, Calendly, Notion, and Figma. The pattern requires a free or freemium tier, a strong activation surface, and a self-service buying flow.</p></details>
+<details><summary>What is sales-led growth?</summary><p>An acquisition motion where a sales team drives the acquisition, activation, and expansion of customers through a structured cycle: lead, outreach, discovery, demo, proof of concept, negotiation, close. The motion produces higher CAC, faster paths to enterprise revenue, and deeper enterprise capability.</p></details>
+<details><summary>Which motion is better?</summary><p>Neither is universally better. PLG fits individual prosumers and SMB team buyers. SLG fits enterprise and strategic accounts. Most successful B2B SaaS companies past 20M ARR run a hybrid motion with PLG for adoption and SLG for negotiated enterprise deals.</p></details>
+<details><summary>How do hybrid PLG plus SLG motions work?</summary><p>The PLG side handles individual and small-team adoption. The SLG side handles negotiated enterprise deals. The two share a product, share data, and share customer success. The biggest operational question is the PLG-to-SLG handoff threshold, which routes accounts from self-serve to sales coverage based on usage and account size.</p></details>
+<details><summary>When should a company transition between motions?</summary><p>Most PLG companies add SLG between 10M and 30M ARR, when enterprise opportunities materialize that the founding team is leaving on the table. Most SLG companies add PLG between 30M and 100M ARR, when bottom-up signal becomes a meaningful acquisition lever they had ignored.</p></details>
+</div>
+
+  <div class="guide-related"><h2>Keep reading</h2><ul>
+<li><a href="/demand-gen/">Demand generation directory</a></li>
+<li><a href="/sellers/">B2B sellers directory</a></li>
+<li><a href="/customer-success/">Customer success directory</a></li>
+<li><a href="/gtm-engineers/">GTM engineers directory</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider (channel benchmarks)</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report (sales comp data)</a></li>
+</ul></div>
+</div>
+
+
+<section class="newsletter" id="subscribe">
+  <h2>Stay Updated</h2>
+  <p>Get notified when we add new directories or update existing ones.</p>
+  <form class="newsletter-form" id="signup-form" onsubmit="return handleSignup(event)">
+    <input type="email" name="email" placeholder="you@company.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <div class="msg" id="signup-msg"></div>
+</section>
+<script>
+async function handleSignup(e) {
+  e.preventDefault();
+  const form = e.target;
+  const email = form.email.value;
+  const btn = form.querySelector('button');
+  const msg = document.getElementById('signup-msg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  try {
+    const res = await fetch('https://newsletter-subscribe.rome-workers.workers.dev/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, list: 'gtm-index'})
+    });
+    const data = await res.json();
+    if (data.ok) {
+      msg.className = 'msg success';
+      msg.textContent = 'You\'re in. We\'ll keep you posted.';
+      form.email.value = '';
+    } else {
+      throw new Error(data.error || 'Something went wrong');
+    }
+  } catch(err) {
+    msg.className = 'msg error';
+    msg.textContent = err.message;
+  }
+  btn.disabled = false;
+  btn.textContent = 'Subscribe';
+}
+</script>
+
+<footer class="footer" style="padding:48px 24px 32px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px;font-size:13px;">
+      <div>
+        <div class="footer__brand" style="margin-bottom:16px;">The GTM <span>Index</span></div>
+        <p style="color:rgba(255,255,255,0.5);font-size:12px;line-height:1.5;">Curated directories for every go-to-market role.</p>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Sales & Revenue</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://thecroreport.com">The CRO Report</a></li>
+<li><a href="https://therevopsreport.com">The RevOps Report</a></li>
+<li><a href="https://b2bsalestools.com">B2B Sales Tools</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report</a></li>
+<li><a href="https://presalespulse.com">PreSales Pulse</a></li>
+<li><a href="https://senablers.com">SE Nablers</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Engineering & Data</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://gtmepulse.com">GTME Pulse</a></li>
+<li><a href="https://fdepulse.com">FDE Pulse</a></li>
+<li><a href="https://theaimarketpulse.com">AI Market Pulse</a></li>
+<li><a href="https://datastackguide.com">DataStack Guide</a></li>
+<li><a href="https://mopsreport.com">MOPs Report</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Strategy & Growth</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://fractionalpulse.com">Fractional Pulse</a></li>
+<li><a href="https://theabmpulse.com">The ABM Pulse</a></li>
+<li><a href="https://thecspulse.com">The CS Pulse</a></li>
+<li><a href="https://partnerchannels.com">Partner Channels</a></li>
+<li><a href="https://thedevicepulse.com">Device Pulse</a></li>
+<li><a href="https://sultanofsaas.com">Sultan of SaaS</a></li>
+<li><a href="https://thelaunchindex.com">The Launch Index</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="footer__copy">&copy; 2026 The GTM Index. All rights reserved.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);"><a href="/about/" style="color:rgba(255,255,255,0.5);">About</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

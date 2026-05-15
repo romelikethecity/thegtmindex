@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Hire a VP of Sales: The Founder Playbook | The GTM Index</title>
+<meta name="description" content="How to hire a VP of Sales in B2B SaaS. Timing signals by ARR, scorecard, interview loop, comp targets, and the most common first-VP-Sales hiring mistakes.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thegtmindex.com/guides/how-to-hire-a-vp-of-sales/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thegtmindex.com/guides/how-to-hire-a-vp-of-sales/">
+<meta property="og:title" content="How to Hire a VP of Sales: The Founder Playbook | The GTM Index">
+<meta property="og:description" content="How to hire a VP of Sales in B2B SaaS. Timing signals by ARR, scorecard, interview loop, comp targets, and the most common first-VP-Sales hiring mistakes.">
+<meta property="og:site_name" content="The GTM Index">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Hire a VP of Sales: The Founder Playbook | The GTM Index">
+<meta name="twitter:description" content="How to hire a VP of Sales in B2B SaaS. Timing signals by ARR, scorecard, interview loop, comp targets, and the most common first-VP-Sales hiring mistakes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --navy: #1B2838;
+    --navy-deep: #0F1923;
+    --amber: #F59E0B;
+    --amber-light: #FBBF24;
+    --amber-dark: #D97706;
+    --bg: #FAFAFA;
+    --bg-white: #FFFFFF;
+    --text: #1F2937;
+    --text-muted: #6B7280;
+    --text-light: #94A3B8;
+    --border: #E5E7EB;
+    --icon-bg: #FEF3C7;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-hover: 0 4px 12px rgba(245,158,11,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Header */
+.header {
+    background: var(--navy);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+}
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo { font-size: 18px; font-weight: 700; color: var(--amber); }
+.logo span { color: #fff; }
+.nav { display: flex; gap: 24px; align-items: center; }
+.nav a { color: var(--text-light); font-size: 14px; font-weight: 500; transition: color 150ms; }
+.nav a:hover { color: #fff; }
+
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.menu-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; transition: 150ms; }
+
+/* Hero */
+.hero {
+    padding: 140px 24px 80px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+}
+.hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.15; }
+.hero h1 em { color: var(--amber); font-style: normal; }
+.hero p { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+.hero .cta { display: inline-block; background: var(--amber); color: var(--navy); padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 15px; transition: background 150ms; }
+.hero .cta:hover { background: var(--amber-light); }
+
+/* Stats */
+.stats { display: flex; justify-content: center; gap: 48px; margin-top: 48px; }
+.stat { text-align: center; }
+.stat__number { font-size: 32px; font-weight: 700; color: var(--amber); }
+.stat__label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+/* Cards Grid */
+.directories { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.directories h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.directories .subtitle { color: var(--text-muted); margin-bottom: 32px; font-size: 15px; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color 200ms, box-shadow 200ms; display: flex; flex-direction: column; }
+.card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.card__icon { width: 42px; height: 42px; background: var(--icon-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+.card h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.card p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; flex: 1; }
+.card__link { font-size: 13px; color: var(--amber-dark); font-weight: 600; }
+.card__link:hover { color: var(--amber); }
+
+/* Newsletter CTA */
+.newsletter { padding: 64px 24px; text-align: center; background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.newsletter h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.newsletter p { color: var(--text-muted); margin-bottom: 24px; font-size: 15px; }
+.newsletter-form { display: flex; max-width: 440px; margin: 0 auto; gap: 8px; }
+.newsletter-form input { flex: 1; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; }
+.newsletter-form input:focus { border-color: var(--amber); }
+.newsletter-form button { background: var(--amber); color: var(--navy); padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; transition: background 150ms; white-space: nowrap; }
+.newsletter-form button:hover { background: var(--amber-light); }
+.newsletter .msg { margin-top: 12px; font-size: 13px; }
+.newsletter .msg.success { color: #059669; }
+.newsletter .msg.error { color: #DC2626; }
+
+/* Footer */
+.footer { background: var(--navy); color: var(--text-light); padding: 48px 24px 32px; }
+.footer__inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer__brand { font-size: 16px; font-weight: 700; color: var(--amber); }
+.footer__brand span { color: #fff; }
+.footer__copy { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+/* About + Resource pages */
+.page { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.page h1 { font-size: 32px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; letter-spacing: -0.5px; }
+.page p { font-size: 16px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.7; }
+.page h2 { font-size: 20px; font-weight: 600; margin: 32px 0 12px; }
+.page a { color: var(--amber-dark); }
+.page a:hover { color: var(--amber); }
+
+/* Resource page specific */
+.rp-breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+.rp-breadcrumb a { text-decoration: none; color: var(--amber-dark); }
+.rp-intro { margin-bottom: 40px; }
+.rp-intro p { font-size: 16px; color: #4B5563; line-height: 1.7; margin-bottom: 12px; }
+.rp-section { margin-bottom: 48px; }
+.rp-section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #F3F4F6; color: var(--text); }
+.rp-item { margin-bottom: 24px; }
+.rp-item-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.rp-item-title a { text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; color: var(--text); }
+.rp-item-title a:hover { text-decoration-color: var(--text-muted); }
+.rp-item-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.rp-badge { display: inline-block; background: var(--icon-bg); color: #92400E; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; vertical-align: middle; margin-left: 4px; }
+.rp-curation { margin-top: 48px; padding: 32px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.rp-curation h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+.rp-curation p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+.rp-back { display: inline-block; margin-top: 32px; font-size: 14px; color: var(--amber-dark); font-weight: 500; }
+
+/* Mobile */
+.mobile-nav { display: none; position: fixed; top: 0; right: -100%; width: 260px; height: 100vh; background: var(--navy-deep); z-index: 200; padding: 80px 24px 24px; transition: right 250ms; }
+.mobile-nav.active { right: 0; }
+.mobile-nav a { display: block; color: var(--text-light); font-size: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mobile-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 199; }
+.mobile-overlay.active { display: block; }
+
+@media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .stats { gap: 32px; } }
+@media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } .nav { display: none; } .menu-toggle { display: block; } .hero { padding: 120px 20px 60px; } .hero p { font-size: 16px; } .stats { flex-direction: column; gap: 16px; } .newsletter-form { flex-direction: column; } .footer__inner { flex-direction: column; gap: 12px; text-align: center; } .page { padding: 80px 16px 48px; } .page h1 { font-size: 26px; } }
+.footer ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 150ms; }
+.footer ul li a:hover { color: var(--amber); }
+@media (max-width: 768px) { .footer div[style*="grid-template-columns"] { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 480px) { .footer div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
+</style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2GCLCTZHE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V2GCLCTZHE');
+</script>
+<style>
+/* Guide article styles */
+.guide-wrap { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.guide-wrap h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.5px; color: var(--text); }
+.guide-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; }
+.guide-meta a { color: var(--amber-dark); }
+.guide-wrap h2 { font-size: 24px; font-weight: 700; margin: 40px 0 12px; color: var(--text); letter-spacing: -0.3px; }
+.guide-wrap h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: var(--text); }
+.guide-wrap p { font-size: 16px; color: #374151; margin-bottom: 16px; line-height: 1.75; }
+.guide-wrap ul, .guide-wrap ol { margin: 0 0 20px 22px; color: #374151; }
+.guide-wrap li { font-size: 16px; line-height: 1.7; margin-bottom: 8px; }
+.guide-wrap a { color: var(--amber-dark); text-decoration: underline; text-decoration-color: #FCD34D; text-underline-offset: 3px; }
+.guide-wrap a:hover { color: var(--amber); }
+.guide-wrap blockquote { border-left: 3px solid var(--amber); padding: 4px 18px; margin: 20px 0; color: var(--text-muted); font-size: 15px; }
+.guide-table-wrap { overflow-x: auto; margin: 16px 0 24px; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.guide-table th, .guide-table td { padding: 10px 12px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+.guide-table th { background: #F9FAFB; font-weight: 600; }
+.guide-callout { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 10px; padding: 20px 22px; margin: 24px 0; }
+.guide-callout p { margin-bottom: 0; font-size: 15px; }
+.guide-faq { margin-top: 32px; }
+.guide-faq details { border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; background: var(--bg-white); }
+.guide-faq summary { font-weight: 600; cursor: pointer; font-size: 15px; color: var(--text); }
+.guide-faq details[open] summary { margin-bottom: 8px; }
+.guide-faq p { font-size: 15px; color: #4B5563; margin-bottom: 0; }
+.guide-related { margin-top: 48px; padding: 28px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.guide-related h2 { font-size: 18px; margin-top: 0; margin-bottom: 12px; }
+.guide-related ul { list-style: none; margin: 0; padding: 0; }
+.guide-related li { font-size: 14px; margin-bottom: 8px; }
+.guide-related a { color: var(--amber-dark); text-decoration: none; font-weight: 500; }
+.guide-related a:hover { text-decoration: underline; }
+.guides-grid { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.guides-grid h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 12px; letter-spacing: -0.5px; }
+.guides-grid .sub { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; }
+.guides-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.guide-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 10px; padding: 24px; transition: border-color 200ms, box-shadow 200ms; display: block; }
+.guide-card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.guide-card h3 { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.guide-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px; }
+.guide-card .date { font-size: 12px; color: var(--text-light); }
+@media (max-width: 700px) { .guides-list { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Hire a VP of Sales: The Founder Playbook",
+  "description": "How to hire a VP of Sales in B2B SaaS. Timing signals by ARR, scorecard, interview loop, comp targets, and the most common first-VP-Sales hiring mistakes.",
+  "url": "https://thegtmindex.com/guides/how-to-hire-a-vp-of-sales/",
+  "datePublished": "2026-05-15",
+  "dateModified": "2026-05-15",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The GTM Index",
+    "url": "https://thegtmindex.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thegtmindex.com/guides/how-to-hire-a-vp-of-sales/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://thegtmindex.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://thegtmindex.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Hire a VP of Sales: The Founder Playbook",
+      "item": "https://thegtmindex.com/guides/how-to-hire-a-vp-of-sales/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When should a SaaS company hire the first VP Sales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When the AE bench reaches three to five reps and the founder is the bottleneck on coaching, forecast, and operating cadence. Most commonly at 2.5M to 5M ARR. The latest reasonable time is 5M to 8M ARR, after which the operating model decays without senior leadership."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should the VP Sales be a player-coach?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A VP Sales who is also the top AE is a tax on the team's growth. The role's job is to make every AE more productive, not to be the top closer. Founders who hire a player-coach get strong personal numbers and weak team performance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the right first VP Sales comp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RepVue and Pavilion data place first VP Sales OTE between 350K and 600K US dollars at venture-backed B2B SaaS companies. Equity ranges widely, with first VP Sales hires at Series A or B companies often negotiating 0.5 to 2 percent of fully diluted equity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Internal promotion or external hire?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Roughly 40 percent of first VP Sales hires come from internal promotion. Promotion works when the candidate has cross-functional credibility and is ready to delegate their personal book. External hires work when the company has a gap in operating experience or no promotion-ready internal leader."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most common first VP Sales mistake?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hiring a VP Sales with the wrong segment background. A VP Sales who came from a 50-person enterprise sales org often struggles at a 5-person Series A startup. The chaos tolerance and segment fit are the highest-variance hiring criteria."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo">The GTM <span>Index</span></a>
+    <nav class="nav">
+      <a href="/#directories">Browse</a>
+      <a href="/about/">About</a>
+      <a href="/#subscribe">Newsletter</a>
+    </nav>
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('active');document.querySelector('.mobile-overlay').classList.toggle('active');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <a href="/#directories">Browse</a>
+  <a href="/about/">About</a>
+  <a href="/#subscribe">Newsletter</a>
+</nav>
+
+<div class="guide-wrap">
+  <nav class="rp-breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; <span>How to Hire a VP of Sales: The Founder Playbook</span>
+  </nav>
+
+  <h1>How to Hire a VP of Sales: The Founder Playbook</h1>
+  <div class="guide-meta">By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; Published May 15, 2026</div>
+
+  
+<p>The VP Sales hire is the second most important executive hire a B2B SaaS founder makes, after the first AE. The hire moves the company from founder-led plus single-AE selling to a managed sales team with a working operating cadence. Done well, the hire compounds for years. Done poorly, the hire stalls the company for 12 to 18 months.</p>
+
+<p>This guide covers the timing, the scorecard, the interview loop, the comp targets, and the most common founder mistakes. The benchmarks come from Bridge Group, Pavilion, OpenView, SaaStr, and the practitioner data at <a href="https://thecroreport.com">The CRO Report</a>.</p>
+
+<h2>When the hire makes sense</h2>
+
+<p>The earliest reasonable time to hire is when the AE bench reaches three to five reps and the founder is the bottleneck on coaching, forecasting, and operating cadence. The latest reasonable time is at 5M to 8M ARR. Past that, the company is running a sales team without a senior leader, and the operating model decays.</p>
+
+<p>OpenView and SaaStr surveys place the median first VP Sales hire at 2.5M to 5M ARR at venture-backed B2B SaaS companies. The variance is driven mostly by ACV: high-ACV enterprise companies often delay because each AE produces more revenue and the bench is smaller. Low-ACV SMB companies often hire earlier because the bench grows faster and management overhead exceeds founder capacity sooner.</p>
+
+<h2>What a VP Sales does</h2>
+
+<p>The role covers four core responsibilities:</p>
+
+<ol>
+<li>Sales team management: hiring, coaching, performance management, retention.</li>
+<li>Forecast and pipeline: weekly pipeline review, monthly forecast call, quarterly business review.</li>
+<li>Sales process and operating cadence: documenting the playbook, running deal reviews, partnering with RevOps on the comp plan.</li>
+<li>Cross-functional partnership: marketing on pipeline, customer success on handoff, product on roadmap input.</li>
+</ol>
+
+<p>What the role does not include is closing deals personally. A VP Sales who is also the top AE on the team is a tax on the team's growth. The role's job is to make every AE more productive, not to be the top closer.</p>
+
+<h2>The candidate profile</h2>
+
+<p>The right first VP Sales has three things on their resume. The first is operating experience as a sales manager and ideally a director of sales at a B2B SaaS company in a similar segment and ACV. The second is a documented track record of hiring AEs, building operating cadence, and producing a clean forecast.</p>
+
+<p>The third is the ability to do their job in the company's current chaos. A first VP Sales who came from a 50-person sales org at a public company often struggles at a 5-person org at a Series A startup. The chaos tolerance is the highest-variance hiring criterion. The <a href="/revenue-leaders/">revenue leaders directory</a> covers the senior sales community resources.</p>
+
+<h2>Comp benchmarks</h2>
+
+<p>RepVue, Pavilion, and ICONIQ Growth data place first VP Sales OTE between 350K and 600K US dollars at venture-backed B2B SaaS companies, with a 50/50 or 60/40 base-to-variable split. Equity ranges widely depending on stage, with first VP Sales hires at Series A or B companies often negotiating 0.5 to 2 percent of fully diluted equity.</p>
+
+<p>The Bessemer Cloud Index and the <a href="https://thecroreport.com">CRO Report</a> both track how the comp band shifts by stage. The clearest pattern is that equity dominates total comp at well-funded scale-ups, while cash dominates at slower-growing companies.</p>
+
+<h2>The scorecard</h2>
+
+<p>A working scorecard for a first VP Sales covers six criteria:</p>
+
+<ol>
+<li>Operating cadence design and execution.</li>
+<li>Hiring track record and bench-building capability.</li>
+<li>Forecast accuracy and pipeline discipline.</li>
+<li>AE coaching depth and rep development.</li>
+<li>Cross-functional partnership with marketing and customer success.</li>
+<li>Chaos tolerance and willingness to do unglamorous work.</li>
+</ol>
+
+<p>The scorecard should be written before the search starts. Founders who skip the scorecard step end up evaluating candidates on charisma and prior logos, which produces poor hiring decisions.</p>
+
+<h2>The interview loop</h2>
+
+<p>A six-stage loop runs well for a first VP Sales:</p>
+
+<ol>
+<li>Founder screen, 45 minutes.</li>
+<li>Deep dive into prior operating experience with structured behavioral questions, 90 minutes with the founder.</li>
+<li>Forecast and pipeline exercise: candidate walks through how they would run a forecast on a fictitious pipeline data set.</li>
+<li>Hiring exercise: candidate walks through how they would build the AE bench over the next 12 months given the comp plan and headcount budget.</li>
+<li>Reference calls with at least one peer, one direct report, and one manager from the prior role.</li>
+<li>Final founder conversation focused on culture, motivation, and the offer.</li>
+</ol>
+
+<p>The forecast exercise is the highest-signal stage. A candidate who can read a pipeline data set, identify the inflection points, and produce a credible forecast is dramatically more likely to ramp quickly than a candidate who interviews well but cannot operate the forecast.</p>
+
+<h2>Onboarding plan</h2>
+
+<p>The first 90 days for a new VP Sales should produce three artifacts: a documented operating cadence, a 12-month hiring plan, and a first clean forecast. The plan should look like:</p>
+
+<ul>
+<li>Days 1 to 30: deep listening, customer calls, AE shadowing, pipeline review.</li>
+<li>Days 31 to 60: operating cadence design, scorecard documentation, forecast build.</li>
+<li>Days 61 to 90: hiring plan, first AE hires posted, full forecast ownership.</li>
+</ul>
+
+<p>Founders who skip the listening period produce a VP Sales who arrives with answers before they have heard the questions. The first 30 days should focus on understanding before changing.</p>
+
+<h2>Common founder mistakes</h2>
+
+<p>Five patterns recur. The first is hiring a VP Sales with the wrong segment background, which produces a strategic mismatch within two quarters. The second is hiring before the AE bench is large enough to manage, which produces a VP Sales doing AE work because the team is too small.</p>
+
+<p>The third is hiring a VP Sales who is also a strong closer and using them as a player-coach, which produces a VP who closes deals personally and never builds the team. The fourth is failing to align on the forecast and pipeline cadence in advance, which produces conflict between the new VP and the founder over what counts as pipeline.</p>
+
+<p>The fifth is firing the VP Sales at month four when the bench is still ramping, before the cycle has had time to produce closed-won data. The cleanest founders commit to a six to nine month evaluation window with clear success criteria before the hire starts.</p>
+
+<h2>Internal promotion vs external hire</h2>
+
+<p>About 40 percent of first VP Sales hires at venture-backed B2B SaaS companies come from internal promotion of an existing AE or sales manager. The other 60 percent are external hires. The promotion path works when the internal candidate has cross-functional credibility, has been coaching peers informally, and is ready to delegate their personal book to a peer.</p>
+
+<p>The external hire path works when the company has a gap in operating experience, when the founder wants a candidate with prior VP Sales experience, or when the existing AE bench does not have a promotion-ready leader. Both paths produce strong outcomes when matched to the situation.</p>
+
+<h2>The transition to CRO</h2>
+
+<p>The successful VP Sales hire is often the candidate for the eventual CRO role. The <a href="/guides/vp-sales-vs-cro/">VP Sales vs CRO</a> guide walks through the transition. The cleanest companies promote the VP Sales into the CRO scope as the function expands, rather than firing the VP and hiring externally. The promotion path works when the VP Sales has built strong partnerships with marketing and customer success during the VP Sales tenure.</p>
+
+
+  <h2>Frequently asked questions</h2>
+  <div class="guide-faq">
+<details><summary>When should a SaaS company hire the first VP Sales?</summary><p>When the AE bench reaches three to five reps and the founder is the bottleneck on coaching, forecast, and operating cadence. Most commonly at 2.5M to 5M ARR. The latest reasonable time is 5M to 8M ARR, after which the operating model decays without senior leadership.</p></details>
+<details><summary>Should the VP Sales be a player-coach?</summary><p>No. A VP Sales who is also the top AE is a tax on the team's growth. The role's job is to make every AE more productive, not to be the top closer. Founders who hire a player-coach get strong personal numbers and weak team performance.</p></details>
+<details><summary>What is the right first VP Sales comp?</summary><p>RepVue and Pavilion data place first VP Sales OTE between 350K and 600K US dollars at venture-backed B2B SaaS companies. Equity ranges widely, with first VP Sales hires at Series A or B companies often negotiating 0.5 to 2 percent of fully diluted equity.</p></details>
+<details><summary>Internal promotion or external hire?</summary><p>Roughly 40 percent of first VP Sales hires come from internal promotion. Promotion works when the candidate has cross-functional credibility and is ready to delegate their personal book. External hires work when the company has a gap in operating experience or no promotion-ready internal leader.</p></details>
+<details><summary>What is the most common first VP Sales mistake?</summary><p>Hiring a VP Sales with the wrong segment background. A VP Sales who came from a 50-person enterprise sales org often struggles at a 5-person Series A startup. The chaos tolerance and segment fit are the highest-variance hiring criteria.</p></details>
+</div>
+
+  <div class="guide-related"><h2>Keep reading</h2><ul>
+<li><a href="/revenue-leaders/">Revenue leaders directory</a></li>
+<li><a href="/sellers/">B2B sellers directory</a></li>
+<li><a href="/revops/">RevOps directory</a></li>
+<li><a href="/sales-enablement/">Sales enablement directory</a></li>
+<li><a href="https://thecroreport.com">The CRO Report (VP Sales comp)</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report (sales comp)</a></li>
+</ul></div>
+</div>
+
+
+<section class="newsletter" id="subscribe">
+  <h2>Stay Updated</h2>
+  <p>Get notified when we add new directories or update existing ones.</p>
+  <form class="newsletter-form" id="signup-form" onsubmit="return handleSignup(event)">
+    <input type="email" name="email" placeholder="you@company.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <div class="msg" id="signup-msg"></div>
+</section>
+<script>
+async function handleSignup(e) {
+  e.preventDefault();
+  const form = e.target;
+  const email = form.email.value;
+  const btn = form.querySelector('button');
+  const msg = document.getElementById('signup-msg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  try {
+    const res = await fetch('https://newsletter-subscribe.rome-workers.workers.dev/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, list: 'gtm-index'})
+    });
+    const data = await res.json();
+    if (data.ok) {
+      msg.className = 'msg success';
+      msg.textContent = 'You\'re in. We\'ll keep you posted.';
+      form.email.value = '';
+    } else {
+      throw new Error(data.error || 'Something went wrong');
+    }
+  } catch(err) {
+    msg.className = 'msg error';
+    msg.textContent = err.message;
+  }
+  btn.disabled = false;
+  btn.textContent = 'Subscribe';
+}
+</script>
+
+<footer class="footer" style="padding:48px 24px 32px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px;font-size:13px;">
+      <div>
+        <div class="footer__brand" style="margin-bottom:16px;">The GTM <span>Index</span></div>
+        <p style="color:rgba(255,255,255,0.5);font-size:12px;line-height:1.5;">Curated directories for every go-to-market role.</p>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Sales & Revenue</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://thecroreport.com">The CRO Report</a></li>
+<li><a href="https://therevopsreport.com">The RevOps Report</a></li>
+<li><a href="https://b2bsalestools.com">B2B Sales Tools</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report</a></li>
+<li><a href="https://presalespulse.com">PreSales Pulse</a></li>
+<li><a href="https://senablers.com">SE Nablers</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Engineering & Data</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://gtmepulse.com">GTME Pulse</a></li>
+<li><a href="https://fdepulse.com">FDE Pulse</a></li>
+<li><a href="https://theaimarketpulse.com">AI Market Pulse</a></li>
+<li><a href="https://datastackguide.com">DataStack Guide</a></li>
+<li><a href="https://mopsreport.com">MOPs Report</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Strategy & Growth</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://fractionalpulse.com">Fractional Pulse</a></li>
+<li><a href="https://theabmpulse.com">The ABM Pulse</a></li>
+<li><a href="https://thecspulse.com">The CS Pulse</a></li>
+<li><a href="https://partnerchannels.com">Partner Channels</a></li>
+<li><a href="https://thedevicepulse.com">Device Pulse</a></li>
+<li><a href="https://sultanofsaas.com">Sultan of SaaS</a></li>
+<li><a href="https://thelaunchindex.com">The Launch Index</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="footer__copy">&copy; 2026 The GTM Index. All rights reserved.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);"><a href="/about/" style="color:rgba(255,255,255,0.5);">About</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When to Promote an SDR to AE: Signals and Pitfalls | The GTM Index</title>
+<meta name="description" content="When to promote an SDR to AE in B2B SaaS. Tenure benchmarks, promotion scorecard, ramp expectations, and the most common promotion mistakes inside sales teams.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thegtmindex.com/guides/when-to-promote-an-sdr-to-ae/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thegtmindex.com/guides/when-to-promote-an-sdr-to-ae/">
+<meta property="og:title" content="When to Promote an SDR to AE: Signals and Pitfalls | The GTM Index">
+<meta property="og:description" content="When to promote an SDR to AE in B2B SaaS. Tenure benchmarks, promotion scorecard, ramp expectations, and the most common promotion mistakes inside sales teams.">
+<meta property="og:site_name" content="The GTM Index">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="When to Promote an SDR to AE: Signals and Pitfalls | The GTM Index">
+<meta name="twitter:description" content="When to promote an SDR to AE in B2B SaaS. Tenure benchmarks, promotion scorecard, ramp expectations, and the most common promotion mistakes inside sales teams.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --navy: #1B2838;
+    --navy-deep: #0F1923;
+    --amber: #F59E0B;
+    --amber-light: #FBBF24;
+    --amber-dark: #D97706;
+    --bg: #FAFAFA;
+    --bg-white: #FFFFFF;
+    --text: #1F2937;
+    --text-muted: #6B7280;
+    --text-light: #94A3B8;
+    --border: #E5E7EB;
+    --icon-bg: #FEF3C7;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-hover: 0 4px 12px rgba(245,158,11,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Header */
+.header {
+    background: var(--navy);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+}
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo { font-size: 18px; font-weight: 700; color: var(--amber); }
+.logo span { color: #fff; }
+.nav { display: flex; gap: 24px; align-items: center; }
+.nav a { color: var(--text-light); font-size: 14px; font-weight: 500; transition: color 150ms; }
+.nav a:hover { color: #fff; }
+
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.menu-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; transition: 150ms; }
+
+/* Hero */
+.hero {
+    padding: 140px 24px 80px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+}
+.hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.15; }
+.hero h1 em { color: var(--amber); font-style: normal; }
+.hero p { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+.hero .cta { display: inline-block; background: var(--amber); color: var(--navy); padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 15px; transition: background 150ms; }
+.hero .cta:hover { background: var(--amber-light); }
+
+/* Stats */
+.stats { display: flex; justify-content: center; gap: 48px; margin-top: 48px; }
+.stat { text-align: center; }
+.stat__number { font-size: 32px; font-weight: 700; color: var(--amber); }
+.stat__label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+/* Cards Grid */
+.directories { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.directories h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.directories .subtitle { color: var(--text-muted); margin-bottom: 32px; font-size: 15px; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color 200ms, box-shadow 200ms; display: flex; flex-direction: column; }
+.card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.card__icon { width: 42px; height: 42px; background: var(--icon-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+.card h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.card p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; flex: 1; }
+.card__link { font-size: 13px; color: var(--amber-dark); font-weight: 600; }
+.card__link:hover { color: var(--amber); }
+
+/* Newsletter CTA */
+.newsletter { padding: 64px 24px; text-align: center; background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.newsletter h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.newsletter p { color: var(--text-muted); margin-bottom: 24px; font-size: 15px; }
+.newsletter-form { display: flex; max-width: 440px; margin: 0 auto; gap: 8px; }
+.newsletter-form input { flex: 1; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; }
+.newsletter-form input:focus { border-color: var(--amber); }
+.newsletter-form button { background: var(--amber); color: var(--navy); padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; transition: background 150ms; white-space: nowrap; }
+.newsletter-form button:hover { background: var(--amber-light); }
+.newsletter .msg { margin-top: 12px; font-size: 13px; }
+.newsletter .msg.success { color: #059669; }
+.newsletter .msg.error { color: #DC2626; }
+
+/* Footer */
+.footer { background: var(--navy); color: var(--text-light); padding: 48px 24px 32px; }
+.footer__inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer__brand { font-size: 16px; font-weight: 700; color: var(--amber); }
+.footer__brand span { color: #fff; }
+.footer__copy { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+/* About + Resource pages */
+.page { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.page h1 { font-size: 32px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; letter-spacing: -0.5px; }
+.page p { font-size: 16px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.7; }
+.page h2 { font-size: 20px; font-weight: 600; margin: 32px 0 12px; }
+.page a { color: var(--amber-dark); }
+.page a:hover { color: var(--amber); }
+
+/* Resource page specific */
+.rp-breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+.rp-breadcrumb a { text-decoration: none; color: var(--amber-dark); }
+.rp-intro { margin-bottom: 40px; }
+.rp-intro p { font-size: 16px; color: #4B5563; line-height: 1.7; margin-bottom: 12px; }
+.rp-section { margin-bottom: 48px; }
+.rp-section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #F3F4F6; color: var(--text); }
+.rp-item { margin-bottom: 24px; }
+.rp-item-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.rp-item-title a { text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; color: var(--text); }
+.rp-item-title a:hover { text-decoration-color: var(--text-muted); }
+.rp-item-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.rp-badge { display: inline-block; background: var(--icon-bg); color: #92400E; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; vertical-align: middle; margin-left: 4px; }
+.rp-curation { margin-top: 48px; padding: 32px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.rp-curation h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+.rp-curation p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+.rp-back { display: inline-block; margin-top: 32px; font-size: 14px; color: var(--amber-dark); font-weight: 500; }
+
+/* Mobile */
+.mobile-nav { display: none; position: fixed; top: 0; right: -100%; width: 260px; height: 100vh; background: var(--navy-deep); z-index: 200; padding: 80px 24px 24px; transition: right 250ms; }
+.mobile-nav.active { right: 0; }
+.mobile-nav a { display: block; color: var(--text-light); font-size: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mobile-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 199; }
+.mobile-overlay.active { display: block; }
+
+@media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .stats { gap: 32px; } }
+@media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } .nav { display: none; } .menu-toggle { display: block; } .hero { padding: 120px 20px 60px; } .hero p { font-size: 16px; } .stats { flex-direction: column; gap: 16px; } .newsletter-form { flex-direction: column; } .footer__inner { flex-direction: column; gap: 12px; text-align: center; } .page { padding: 80px 16px 48px; } .page h1 { font-size: 26px; } }
+.footer ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 150ms; }
+.footer ul li a:hover { color: var(--amber); }
+@media (max-width: 768px) { .footer div[style*="grid-template-columns"] { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 480px) { .footer div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
+</style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2GCLCTZHE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V2GCLCTZHE');
+</script>
+<style>
+/* Guide article styles */
+.guide-wrap { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.guide-wrap h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.5px; color: var(--text); }
+.guide-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; }
+.guide-meta a { color: var(--amber-dark); }
+.guide-wrap h2 { font-size: 24px; font-weight: 700; margin: 40px 0 12px; color: var(--text); letter-spacing: -0.3px; }
+.guide-wrap h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: var(--text); }
+.guide-wrap p { font-size: 16px; color: #374151; margin-bottom: 16px; line-height: 1.75; }
+.guide-wrap ul, .guide-wrap ol { margin: 0 0 20px 22px; color: #374151; }
+.guide-wrap li { font-size: 16px; line-height: 1.7; margin-bottom: 8px; }
+.guide-wrap a { color: var(--amber-dark); text-decoration: underline; text-decoration-color: #FCD34D; text-underline-offset: 3px; }
+.guide-wrap a:hover { color: var(--amber); }
+.guide-wrap blockquote { border-left: 3px solid var(--amber); padding: 4px 18px; margin: 20px 0; color: var(--text-muted); font-size: 15px; }
+.guide-table-wrap { overflow-x: auto; margin: 16px 0 24px; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.guide-table th, .guide-table td { padding: 10px 12px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+.guide-table th { background: #F9FAFB; font-weight: 600; }
+.guide-callout { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 10px; padding: 20px 22px; margin: 24px 0; }
+.guide-callout p { margin-bottom: 0; font-size: 15px; }
+.guide-faq { margin-top: 32px; }
+.guide-faq details { border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; background: var(--bg-white); }
+.guide-faq summary { font-weight: 600; cursor: pointer; font-size: 15px; color: var(--text); }
+.guide-faq details[open] summary { margin-bottom: 8px; }
+.guide-faq p { font-size: 15px; color: #4B5563; margin-bottom: 0; }
+.guide-related { margin-top: 48px; padding: 28px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.guide-related h2 { font-size: 18px; margin-top: 0; margin-bottom: 12px; }
+.guide-related ul { list-style: none; margin: 0; padding: 0; }
+.guide-related li { font-size: 14px; margin-bottom: 8px; }
+.guide-related a { color: var(--amber-dark); text-decoration: none; font-weight: 500; }
+.guide-related a:hover { text-decoration: underline; }
+.guides-grid { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.guides-grid h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 12px; letter-spacing: -0.5px; }
+.guides-grid .sub { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; }
+.guides-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.guide-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 10px; padding: 24px; transition: border-color 200ms, box-shadow 200ms; display: block; }
+.guide-card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.guide-card h3 { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.guide-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px; }
+.guide-card .date { font-size: 12px; color: var(--text-light); }
+@media (max-width: 700px) { .guides-list { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "When to Promote an SDR to AE: Signals and Pitfalls",
+  "description": "When to promote an SDR to AE in B2B SaaS. Tenure benchmarks, promotion scorecard, ramp expectations, and the most common promotion mistakes inside sales teams.",
+  "url": "https://thegtmindex.com/guides/when-to-promote-an-sdr-to-ae/",
+  "datePublished": "2026-05-15",
+  "dateModified": "2026-05-15",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The GTM Index",
+    "url": "https://thegtmindex.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thegtmindex.com/guides/when-to-promote-an-sdr-to-ae/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://thegtmindex.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://thegtmindex.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "When to Promote an SDR to AE: Signals and Pitfalls",
+      "item": "https://thegtmindex.com/guides/when-to-promote-an-sdr-to-ae/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long should an SDR stay in the seat before promotion to AE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The median at well-managed teams is 18 to 24 months. The top quartile promotes at 12 to 15 months. The bottom quartile lingers past 30 months. The right answer depends more on scorecard readiness than on raw tenure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the right promotion scorecard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Five criteria: consistent quota attainment over 12 months, discovery skills beyond simple qualification, pipeline contribution credited with closed-won deals, product fluency including objection handling, and demonstrated coachability and growth. SDRs who meet four of five are usually ready."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does an AE comp jump from SDR comp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typically 50 to 80 percent in OTE at venture-backed B2B SaaS companies. A senior SDR earning 80K OTE moves to an entry-level AE seat at 140K to 180K OTE. The variable mix shifts from meeting-based to bookings-based variable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should a newly promoted AE get a high-stakes territory?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The cleanest setup is to assign the new AE to a mid-volume territory with a clear ICP and some inbound coverage. The new AE needs a few quick wins to build confidence. High-stakes enterprise territories should wait 12 to 18 months until the AE has a track record."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most common SDR to AE promotion mistake?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Promoting based on tenure rather than scorecard. An SDR who has been in the seat for 20 months but never developed discovery skills should not be promoted regardless of tenure. The second most common mistake is promoting the best SDR rather than the best future AE."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo">The GTM <span>Index</span></a>
+    <nav class="nav">
+      <a href="/#directories">Browse</a>
+      <a href="/about/">About</a>
+      <a href="/#subscribe">Newsletter</a>
+    </nav>
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('active');document.querySelector('.mobile-overlay').classList.toggle('active');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <a href="/#directories">Browse</a>
+  <a href="/about/">About</a>
+  <a href="/#subscribe">Newsletter</a>
+</nav>
+
+<div class="guide-wrap">
+  <nav class="rp-breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; <span>When to Promote an SDR to AE: Signals and Pitfalls</span>
+  </nav>
+
+  <h1>When to Promote an SDR to AE: Signals and Pitfalls</h1>
+  <div class="guide-meta">By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; Published May 15, 2026</div>
+
+  
+<p>The SDR to AE promotion is one of the most consequential decisions for early sales talent at a B2B SaaS company. Promoting too early produces a struggling AE who burns through their first quota cycle and exits. Promoting too late produces a frustrated SDR who finds an AE seat at another company and takes their pipeline knowledge with them.</p>
+
+<p>This guide covers the timing benchmarks, the promotion scorecard, the ramp expectations, and the most common promotion mistakes. The benchmarks come from Bridge Group SDR surveys, RepVue, Pavilion, and the practitioner data tracked at <a href="https://thesellerreport.com">The Seller Report</a>.</p>
+
+<h2>Tenure benchmarks</h2>
+
+<p>The median time from SDR to AE at well-managed B2B SaaS teams sits at 18 to 24 months. The top quartile promotes at 12 to 15 months. The bottom quartile lingers past 30 months, and at that point the SDR usually leaves for an external AE seat rather than waiting.</p>
+
+<p>Bridge Group benchmarks show the median has shortened slightly over the past five years as the SDR role has become more demanding and as AE openings have grown at scale-ups. The shorter median has produced some early promotions that fail, which has in turn pushed leadership teams to be more rigorous on the promotion scorecard.</p>
+
+<h2>The promotion scorecard</h2>
+
+<p>A working promotion scorecard covers five criteria:</p>
+
+<ol>
+<li>Consistent quota attainment: 12 months of meeting or exceeding SDR quota, with at least six months above 110 percent.</li>
+<li>Discovery skills: the SDR has been doing first-call discovery beyond simple qualification, producing notes that AEs use directly.</li>
+<li>Pipeline contribution: the SDR has been credited with a meaningful share of pipeline that resulted in closed-won deals, not just booked meetings.</li>
+<li>Product fluency: the SDR can answer the top 20 product objections and run a short demo without escalation.</li>
+<li>Coachability and growth: the SDR has been receiving and applying feedback well, with documented examples of skill development.</li>
+</ol>
+
+<p>SDRs who meet four of the five criteria are usually ready for promotion. SDRs who meet only one or two should not be promoted regardless of tenure. The scorecard is a forcing function against tenure-based promotions that ignore actual readiness.</p>
+
+<h2>Ramp expectations</h2>
+
+<p>A new AE coming from the SDR seat should ramp to full productivity in 4 to 9 months depending on ACV. The ramp is shorter than for an externally hired AE because the new AE already knows the product, the ICP, and the company. The ramp is longer than for a senior AE because the new AE is learning the full deal cycle for the first time.</p>
+
+<p>The first year of the AE seat should produce 60 to 100 percent of quota attainment for a strong promotion. Below 60 percent, the promotion was probably premature. Above 100 percent, the SDR was being held in the SDR seat for too long.</p>
+
+<h2>Comp transition</h2>
+
+<p>The comp jump from SDR to AE is typically 50 to 80 percent in OTE at venture-backed B2B SaaS companies. A senior SDR earning 80K OTE moves to an entry-level AE seat at 140K to 180K OTE. The variable mix also shifts, from a meeting-based variable on the SDR side to a bookings-based variable on the AE side.</p>
+
+<p>The cleanest companies define the AE entry-level OTE band before the promotion conversation. Negotiating comp at the promotion moment produces awkwardness and sometimes loses the SDR to a competitor with a higher external offer. The <a href="https://thesellerreport.com">Seller Report</a> tracks the benchmark data by segment.</p>
+
+<h2>Account assignment at promotion</h2>
+
+<p>The most important operational decision at promotion is which accounts the new AE gets. The cleanest setup is to assign the new AE to a mid-volume territory with a clear ICP and some inbound coverage, rather than a high-stakes named-account territory. The new AE needs a few quick wins to build confidence and a working close pattern, which a mid-volume territory produces more reliably than a high-stakes named-account list.</p>
+
+<p>The mistake to avoid is promoting an SDR and immediately assigning them a complex enterprise territory. The cycle is too long, the deal complexity too high, and the new AE has no track record of running deals at that scale. The promotion path should include 12 to 18 months in a mid-volume territory before any enterprise assignment.</p>
+
+<h2>Manager support</h2>
+
+<p>A newly promoted AE needs more coaching than either a senior AE or a tenured SDR. The promotion is the moment when many new AEs either ramp well or stall. The manager should plan for weekly 1:1s focused on deal coaching, twice-weekly pipeline reviews, and live call coaching on at least two deals per week for the first three months.</p>
+
+<p>Companies that promote SDRs without committing to the coaching investment produce promotions that fail. The cleanest companies treat the first 90 days post-promotion as a structured coaching window with documented goals and a clear evaluation milestone.</p>
+
+<h2>The two common promotion mistakes</h2>
+
+<p>The first common mistake is promoting based on tenure rather than scorecard. An SDR who has been in the seat for 20 months but never developed discovery skills should not be promoted regardless of tenure. The right move is either an extended SDR development plan or a graceful exit, not a doomed AE promotion.</p>
+
+<p>The second common mistake is promoting the best SDR rather than the best future AE. The skills that make a great SDR are not identical to the skills that make a great AE. Some SDRs are exceptional at outbound activity but never develop the relationship depth and consultative skills that close enterprise deals. Promoting them sets them up for failure.</p>
+
+<h2>The alternative paths</h2>
+
+<p>Not every SDR should become an AE. The career path options from senior SDR also include:</p>
+
+<ul>
+<li>Sales enablement: training, content, onboarding.</li>
+<li>Marketing operations or RevOps: systems, reporting, process design.</li>
+<li>Customer success: post-sale relationship work.</li>
+<li>Partner and channel sales: working with partners rather than direct.</li>
+<li>Senior SDR or SDR team lead: staying in the SDR seat at a more senior level.</li>
+</ul>
+
+<p>The cleanest companies discuss these paths with SDRs explicitly during 1:1s and quarterly reviews. The default assumption that every SDR becomes an AE produces forced promotions that fail and SDRs who feel pigeonholed into a path they did not choose.</p>
+
+<h2>Reverse moves and second chances</h2>
+
+<p>Some SDRs get promoted to AE, struggle for two quarters, and are then moved back to a senior SDR or sales enablement seat. The reverse move is usually treated as a failure, but it can be handled as a learning experience. The cleanest companies frame the reverse move as a development decision rather than a demotion.</p>
+
+<p>Reverse moves that are handled well preserve the employee and produce better future fits. Reverse moves that are handled poorly produce exits within three months and a damaged reputation in the broader sales talent market. The handling depends entirely on how the manager and HR frame the conversation.</p>
+
+<h2>What happens after the first year as an AE</h2>
+
+<p>A successful first-year AE coming from the SDR seat usually moves to a senior AE or mid-market AE seat at month 12 to 18, then to a senior mid-market or enterprise AE seat at month 24 to 36. The career path from there leads to sales manager, director of sales, or strategic AE depending on the candidate's preferences. The <a href="/guides/path-from-ae-to-sales-leader/">AE to sales leader</a> guide covers the longer career arc.</p>
+
+
+  <h2>Frequently asked questions</h2>
+  <div class="guide-faq">
+<details><summary>How long should an SDR stay in the seat before promotion to AE?</summary><p>The median at well-managed teams is 18 to 24 months. The top quartile promotes at 12 to 15 months. The bottom quartile lingers past 30 months. The right answer depends more on scorecard readiness than on raw tenure.</p></details>
+<details><summary>What is the right promotion scorecard?</summary><p>Five criteria: consistent quota attainment over 12 months, discovery skills beyond simple qualification, pipeline contribution credited with closed-won deals, product fluency including objection handling, and demonstrated coachability and growth. SDRs who meet four of five are usually ready.</p></details>
+<details><summary>How much does an AE comp jump from SDR comp?</summary><p>Typically 50 to 80 percent in OTE at venture-backed B2B SaaS companies. A senior SDR earning 80K OTE moves to an entry-level AE seat at 140K to 180K OTE. The variable mix shifts from meeting-based to bookings-based variable.</p></details>
+<details><summary>Should a newly promoted AE get a high-stakes territory?</summary><p>No. The cleanest setup is to assign the new AE to a mid-volume territory with a clear ICP and some inbound coverage. The new AE needs a few quick wins to build confidence. High-stakes enterprise territories should wait 12 to 18 months until the AE has a track record.</p></details>
+<details><summary>What is the most common SDR to AE promotion mistake?</summary><p>Promoting based on tenure rather than scorecard. An SDR who has been in the seat for 20 months but never developed discovery skills should not be promoted regardless of tenure. The second most common mistake is promoting the best SDR rather than the best future AE.</p></details>
+</div>
+
+  <div class="guide-related"><h2>Keep reading</h2><ul>
+<li><a href="/sellers/">B2B sellers directory</a></li>
+<li><a href="/sales-enablement/">Sales enablement directory</a></li>
+<li><a href="/customer-success/">Customer success directory</a></li>
+<li><a href="/revops/">RevOps directory</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report (SDR and AE comp)</a></li>
+<li><a href="https://thecroreport.com">The CRO Report (sales leadership)</a></li>
+</ul></div>
+</div>
+
+
+<section class="newsletter" id="subscribe">
+  <h2>Stay Updated</h2>
+  <p>Get notified when we add new directories or update existing ones.</p>
+  <form class="newsletter-form" id="signup-form" onsubmit="return handleSignup(event)">
+    <input type="email" name="email" placeholder="you@company.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <div class="msg" id="signup-msg"></div>
+</section>
+<script>
+async function handleSignup(e) {
+  e.preventDefault();
+  const form = e.target;
+  const email = form.email.value;
+  const btn = form.querySelector('button');
+  const msg = document.getElementById('signup-msg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  try {
+    const res = await fetch('https://newsletter-subscribe.rome-workers.workers.dev/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, list: 'gtm-index'})
+    });
+    const data = await res.json();
+    if (data.ok) {
+      msg.className = 'msg success';
+      msg.textContent = 'You\'re in. We\'ll keep you posted.';
+      form.email.value = '';
+    } else {
+      throw new Error(data.error || 'Something went wrong');
+    }
+  } catch(err) {
+    msg.className = 'msg error';
+    msg.textContent = err.message;
+  }
+  btn.disabled = false;
+  btn.textContent = 'Subscribe';
+}
+</script>
+
+<footer class="footer" style="padding:48px 24px 32px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px;font-size:13px;">
+      <div>
+        <div class="footer__brand" style="margin-bottom:16px;">The GTM <span>Index</span></div>
+        <p style="color:rgba(255,255,255,0.5);font-size:12px;line-height:1.5;">Curated directories for every go-to-market role.</p>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Sales & Revenue</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://thecroreport.com">The CRO Report</a></li>
+<li><a href="https://therevopsreport.com">The RevOps Report</a></li>
+<li><a href="https://b2bsalestools.com">B2B Sales Tools</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report</a></li>
+<li><a href="https://presalespulse.com">PreSales Pulse</a></li>
+<li><a href="https://senablers.com">SE Nablers</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Engineering & Data</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://gtmepulse.com">GTME Pulse</a></li>
+<li><a href="https://fdepulse.com">FDE Pulse</a></li>
+<li><a href="https://theaimarketpulse.com">AI Market Pulse</a></li>
+<li><a href="https://datastackguide.com">DataStack Guide</a></li>
+<li><a href="https://mopsreport.com">MOPs Report</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Strategy & Growth</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://fractionalpulse.com">Fractional Pulse</a></li>
+<li><a href="https://theabmpulse.com">The ABM Pulse</a></li>
+<li><a href="https://thecspulse.com">The CS Pulse</a></li>
+<li><a href="https://partnerchannels.com">Partner Channels</a></li>
+<li><a href="https://thedevicepulse.com">Device Pulse</a></li>
+<li><a href="https://sultanofsaas.com">Sultan of SaaS</a></li>
+<li><a href="https://thelaunchindex.com">The Launch Index</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="footer__copy">&copy; 2026 The GTM Index. All rights reserved.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);"><a href="/about/" style="color:rgba(255,255,255,0.5);">About</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Hire Your First AE: A B2B SaaS Founder Guide | The GTM Index</title>
+<meta name="description" content="How to hire your first AE in B2B SaaS. Pre-AE checklist, comp targets, profile by ACV segment, interview loop, and the early-stage AE hiring mistakes to avoid.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thegtmindex.com/guides/how-to-hire-your-first-account-executive/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thegtmindex.com/guides/how-to-hire-your-first-account-executive/">
+<meta property="og:title" content="How to Hire Your First AE: A B2B SaaS Founder Guide | The GTM Index">
+<meta property="og:description" content="How to hire your first AE in B2B SaaS. Pre-AE checklist, comp targets, profile by ACV segment, interview loop, and the early-stage AE hiring mistakes to avoid.">
+<meta property="og:site_name" content="The GTM Index">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Hire Your First AE: A B2B SaaS Founder Guide | The GTM Index">
+<meta name="twitter:description" content="How to hire your first AE in B2B SaaS. Pre-AE checklist, comp targets, profile by ACV segment, interview loop, and the early-stage AE hiring mistakes to avoid.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --navy: #1B2838;
+    --navy-deep: #0F1923;
+    --amber: #F59E0B;
+    --amber-light: #FBBF24;
+    --amber-dark: #D97706;
+    --bg: #FAFAFA;
+    --bg-white: #FFFFFF;
+    --text: #1F2937;
+    --text-muted: #6B7280;
+    --text-light: #94A3B8;
+    --border: #E5E7EB;
+    --icon-bg: #FEF3C7;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-hover: 0 4px 12px rgba(245,158,11,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Header */
+.header {
+    background: var(--navy);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+}
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo { font-size: 18px; font-weight: 700; color: var(--amber); }
+.logo span { color: #fff; }
+.nav { display: flex; gap: 24px; align-items: center; }
+.nav a { color: var(--text-light); font-size: 14px; font-weight: 500; transition: color 150ms; }
+.nav a:hover { color: #fff; }
+
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.menu-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; transition: 150ms; }
+
+/* Hero */
+.hero {
+    padding: 140px 24px 80px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+}
+.hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.15; }
+.hero h1 em { color: var(--amber); font-style: normal; }
+.hero p { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+.hero .cta { display: inline-block; background: var(--amber); color: var(--navy); padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 15px; transition: background 150ms; }
+.hero .cta:hover { background: var(--amber-light); }
+
+/* Stats */
+.stats { display: flex; justify-content: center; gap: 48px; margin-top: 48px; }
+.stat { text-align: center; }
+.stat__number { font-size: 32px; font-weight: 700; color: var(--amber); }
+.stat__label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+/* Cards Grid */
+.directories { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.directories h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.directories .subtitle { color: var(--text-muted); margin-bottom: 32px; font-size: 15px; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color 200ms, box-shadow 200ms; display: flex; flex-direction: column; }
+.card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.card__icon { width: 42px; height: 42px; background: var(--icon-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+.card h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.card p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; flex: 1; }
+.card__link { font-size: 13px; color: var(--amber-dark); font-weight: 600; }
+.card__link:hover { color: var(--amber); }
+
+/* Newsletter CTA */
+.newsletter { padding: 64px 24px; text-align: center; background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.newsletter h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.newsletter p { color: var(--text-muted); margin-bottom: 24px; font-size: 15px; }
+.newsletter-form { display: flex; max-width: 440px; margin: 0 auto; gap: 8px; }
+.newsletter-form input { flex: 1; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; }
+.newsletter-form input:focus { border-color: var(--amber); }
+.newsletter-form button { background: var(--amber); color: var(--navy); padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; transition: background 150ms; white-space: nowrap; }
+.newsletter-form button:hover { background: var(--amber-light); }
+.newsletter .msg { margin-top: 12px; font-size: 13px; }
+.newsletter .msg.success { color: #059669; }
+.newsletter .msg.error { color: #DC2626; }
+
+/* Footer */
+.footer { background: var(--navy); color: var(--text-light); padding: 48px 24px 32px; }
+.footer__inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer__brand { font-size: 16px; font-weight: 700; color: var(--amber); }
+.footer__brand span { color: #fff; }
+.footer__copy { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+/* About + Resource pages */
+.page { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.page h1 { font-size: 32px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; letter-spacing: -0.5px; }
+.page p { font-size: 16px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.7; }
+.page h2 { font-size: 20px; font-weight: 600; margin: 32px 0 12px; }
+.page a { color: var(--amber-dark); }
+.page a:hover { color: var(--amber); }
+
+/* Resource page specific */
+.rp-breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+.rp-breadcrumb a { text-decoration: none; color: var(--amber-dark); }
+.rp-intro { margin-bottom: 40px; }
+.rp-intro p { font-size: 16px; color: #4B5563; line-height: 1.7; margin-bottom: 12px; }
+.rp-section { margin-bottom: 48px; }
+.rp-section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #F3F4F6; color: var(--text); }
+.rp-item { margin-bottom: 24px; }
+.rp-item-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.rp-item-title a { text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; color: var(--text); }
+.rp-item-title a:hover { text-decoration-color: var(--text-muted); }
+.rp-item-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.rp-badge { display: inline-block; background: var(--icon-bg); color: #92400E; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; vertical-align: middle; margin-left: 4px; }
+.rp-curation { margin-top: 48px; padding: 32px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.rp-curation h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+.rp-curation p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+.rp-back { display: inline-block; margin-top: 32px; font-size: 14px; color: var(--amber-dark); font-weight: 500; }
+
+/* Mobile */
+.mobile-nav { display: none; position: fixed; top: 0; right: -100%; width: 260px; height: 100vh; background: var(--navy-deep); z-index: 200; padding: 80px 24px 24px; transition: right 250ms; }
+.mobile-nav.active { right: 0; }
+.mobile-nav a { display: block; color: var(--text-light); font-size: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mobile-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 199; }
+.mobile-overlay.active { display: block; }
+
+@media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .stats { gap: 32px; } }
+@media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } .nav { display: none; } .menu-toggle { display: block; } .hero { padding: 120px 20px 60px; } .hero p { font-size: 16px; } .stats { flex-direction: column; gap: 16px; } .newsletter-form { flex-direction: column; } .footer__inner { flex-direction: column; gap: 12px; text-align: center; } .page { padding: 80px 16px 48px; } .page h1 { font-size: 26px; } }
+.footer ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 150ms; }
+.footer ul li a:hover { color: var(--amber); }
+@media (max-width: 768px) { .footer div[style*="grid-template-columns"] { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 480px) { .footer div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
+</style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2GCLCTZHE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V2GCLCTZHE');
+</script>
+<style>
+/* Guide article styles */
+.guide-wrap { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.guide-wrap h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.5px; color: var(--text); }
+.guide-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; }
+.guide-meta a { color: var(--amber-dark); }
+.guide-wrap h2 { font-size: 24px; font-weight: 700; margin: 40px 0 12px; color: var(--text); letter-spacing: -0.3px; }
+.guide-wrap h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: var(--text); }
+.guide-wrap p { font-size: 16px; color: #374151; margin-bottom: 16px; line-height: 1.75; }
+.guide-wrap ul, .guide-wrap ol { margin: 0 0 20px 22px; color: #374151; }
+.guide-wrap li { font-size: 16px; line-height: 1.7; margin-bottom: 8px; }
+.guide-wrap a { color: var(--amber-dark); text-decoration: underline; text-decoration-color: #FCD34D; text-underline-offset: 3px; }
+.guide-wrap a:hover { color: var(--amber); }
+.guide-wrap blockquote { border-left: 3px solid var(--amber); padding: 4px 18px; margin: 20px 0; color: var(--text-muted); font-size: 15px; }
+.guide-table-wrap { overflow-x: auto; margin: 16px 0 24px; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.guide-table th, .guide-table td { padding: 10px 12px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+.guide-table th { background: #F9FAFB; font-weight: 600; }
+.guide-callout { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 10px; padding: 20px 22px; margin: 24px 0; }
+.guide-callout p { margin-bottom: 0; font-size: 15px; }
+.guide-faq { margin-top: 32px; }
+.guide-faq details { border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; background: var(--bg-white); }
+.guide-faq summary { font-weight: 600; cursor: pointer; font-size: 15px; color: var(--text); }
+.guide-faq details[open] summary { margin-bottom: 8px; }
+.guide-faq p { font-size: 15px; color: #4B5563; margin-bottom: 0; }
+.guide-related { margin-top: 48px; padding: 28px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.guide-related h2 { font-size: 18px; margin-top: 0; margin-bottom: 12px; }
+.guide-related ul { list-style: none; margin: 0; padding: 0; }
+.guide-related li { font-size: 14px; margin-bottom: 8px; }
+.guide-related a { color: var(--amber-dark); text-decoration: none; font-weight: 500; }
+.guide-related a:hover { text-decoration: underline; }
+.guides-grid { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.guides-grid h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 12px; letter-spacing: -0.5px; }
+.guides-grid .sub { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; }
+.guides-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.guide-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 10px; padding: 24px; transition: border-color 200ms, box-shadow 200ms; display: block; }
+.guide-card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.guide-card h3 { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.guide-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px; }
+.guide-card .date { font-size: 12px; color: var(--text-light); }
+@media (max-width: 700px) { .guides-list { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Hire Your First AE: A B2B SaaS Founder Guide",
+  "description": "How to hire your first AE in B2B SaaS. Pre-AE checklist, comp targets, profile by ACV segment, interview loop, and the early-stage AE hiring mistakes to avoid.",
+  "url": "https://thegtmindex.com/guides/how-to-hire-your-first-account-executive/",
+  "datePublished": "2026-05-15",
+  "dateModified": "2026-05-15",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The GTM Index",
+    "url": "https://thegtmindex.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thegtmindex.com/guides/how-to-hire-your-first-account-executive/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://thegtmindex.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://thegtmindex.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Hire Your First AE: A B2B SaaS Founder Guide",
+      "item": "https://thegtmindex.com/guides/how-to-hire-your-first-account-executive/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When should a B2B SaaS founder hire the first AE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At 500K to 1M ARR at the earliest, with the median move happening at 800K to 1.5M ARR at most venture-backed companies. The trigger is when the founder is the bottleneck on closing and has codified the sales playbook well enough to brief a new hire on it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What kind of AE should I hire first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Match the candidate profile to the ACV. A 15K ACV company needs a velocity AE with 2 to 4 years experience. A 100K ACV company needs a mid-market AE with 4 to 7 years experience. A 250K ACV company needs an enterprise AE with 6 to 10 years experience. Mismatching the profile is the most common first AE mistake."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should the first AE earn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pay at market for the segment. Mid-market first AE OTE runs 200K to 320K US dollars at venture-backed companies. Underpaying to save burn produces a weak candidate pool and high turnover, which costs more than the savings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should the ramp be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "4 to 9 months depending on ACV. SMB AEs ramp fastest, mid-market in 6 to 9 months, enterprise in 9 to 12 months. The ramp should include 30 days of product and ICP training, 60 days of shadowed deals, and a graduated quota that starts at 25 percent and reaches 100 percent at full ramp."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most common first AE mistake?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hiring the AE before the founder has codified the sales playbook. The AE arrives, runs their prior company's playbook, finds it does not work, and either stalls or exits. The fix is to close 15 to 25 customers through founder-led sales and document the discovery, multi-thread, and close motion before the hire."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo">The GTM <span>Index</span></a>
+    <nav class="nav">
+      <a href="/#directories">Browse</a>
+      <a href="/about/">About</a>
+      <a href="/#subscribe">Newsletter</a>
+    </nav>
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('active');document.querySelector('.mobile-overlay').classList.toggle('active');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <a href="/#directories">Browse</a>
+  <a href="/about/">About</a>
+  <a href="/#subscribe">Newsletter</a>
+</nav>
+
+<div class="guide-wrap">
+  <nav class="rp-breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; <span>How to Hire Your First AE: A B2B SaaS Founder Guide</span>
+  </nav>
+
+  <h1>How to Hire Your First AE: A B2B SaaS Founder Guide</h1>
+  <div class="guide-meta">By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; Published May 15, 2026</div>
+
+  
+<p>The first AE hire is the single most important hire a B2B SaaS founder makes after the founding team. The hire determines whether the company can move sales out of the founder's seat, scale repeatable bookings, and build a sales bench. Done well, the hire pays for itself inside two quarters. Done poorly, the hire sets the company back a year.</p>
+
+<p>This guide walks through the pre-AE checklist, the comp targets, the ACV-based candidate profile, the interview loop, and the operating cadence that produce a working first AE. The benchmarks come from Bridge Group, Pavilion, ICONIQ Growth, and SaaStr practitioner data.</p>
+
+<h2>The pre-AE checklist</h2>
+
+<p>Before hiring the first AE, the founder should have closed 15 to 25 customers through founder-led sales, written a coherent sales playbook documenting the discovery and close, identified an ICP that is detailed enough to brief a new hire on, and built a basic CRM with clean pipeline data. Without these foundations, the first AE hire is shipping into a vacuum.</p>
+
+<p>The most common founder mistake is hiring the first AE too early, expecting the AE to find product-market fit and run a sales process the founder has not yet codified. The AE arrives, runs the playbook they ran at their last company, finds it does not work, and either exits or stalls. The <a href="/guides/founder-led-sales-when-to-graduate/">founder-led sales graduation</a> guide covers the timing signals.</p>
+
+<h2>When the hire makes sense</h2>
+
+<p>The earliest reasonable time to hire is at 500K to 1M ARR, when the founder is the bottleneck on closing and the unit economics of an AE hire pay back inside three to four quarters. The latest reasonable time is 2M to 3M ARR. Past that, the founder is leaving compounding bookings on the table by continuing to close every deal personally.</p>
+
+<p>OpenView and SaaStr surveys both place the median first AE hire at 800K to 1.5M ARR at venture-backed B2B SaaS companies. The variance is driven mostly by ACV: companies with higher ACV often delay because the founder can sustain higher revenue alone, while companies with lower ACV often hire earlier because volume requires more closers.</p>
+
+<h2>The candidate profile by ACV</h2>
+
+<p>The right AE profile depends on the ACV the company sells at.</p>
+
+<div class="guide-table-wrap"><table class="guide-table">
+<thead><tr><th>ACV Range</th><th>Profile</th><th>Cycle</th><th>OTE Target</th></tr></thead>
+<tbody>
+<tr><td>5K to 25K</td><td>Velocity AE, 2 to 4 years experience</td><td>14 to 45 days</td><td>140K to 200K</td></tr>
+<tr><td>25K to 100K</td><td>Mid-market AE, 4 to 7 years experience</td><td>45 to 120 days</td><td>200K to 320K</td></tr>
+<tr><td>100K to 500K</td><td>Enterprise AE, 6 to 10 years experience</td><td>4 to 12 months</td><td>280K to 450K</td></tr>
+<tr><td>500K plus</td><td>Strategic AE, 8 plus years experience</td><td>6 to 18 months</td><td>350K to 600K</td></tr>
+</tbody>
+</table></div>
+
+<p>The mistake to avoid is hiring an enterprise AE for a mid-market motion or vice versa. The cycle, the buyer, the comp structure, and the activity model are different enough that the wrong profile fails within two quarters.</p>
+
+<h2>Comp structure</h2>
+
+<p>First AE comp at a venture-backed B2B SaaS company should follow standard market structure: a 50/50 or 60/40 base-to-variable split, with accelerators above 100 percent of quota. The base should land at market for the segment, and the variable should produce a meaningful upside at 120 to 150 percent of plan.</p>
+
+<p>Founders sometimes try to weight the comp toward variable to align incentives, but the math does not work for the first AE. A new AE at an unproven motion needs base stability to make the move, and the founder benefits from the AE not constantly stressing about cash flow. Pay base at market and let the variable handle the upside. The <a href="https://thesellerreport.com">Seller Report</a> tracks the benchmarks.</p>
+
+<h2>The interview loop</h2>
+
+<p>A five-stage loop runs well for a first AE hire:</p>
+
+<ol>
+<li>A 30-minute screen with the founder covering motivation, prior pipeline numbers, and a high-level fit check.</li>
+<li>A 60-minute deep dive into prior sales work, with detailed questions on a specific deal the candidate closed, including discovery, multi-thread, objection handling, and close.</li>
+<li>A live discovery exercise with a peer or a friendly customer playing the role of a prospect.</li>
+<li>A demo or pitch exercise where the candidate pitches the company's product to the founder after a one-hour prep.</li>
+<li>A reference call with the candidate's manager from the most recent role plus one peer reference.</li>
+</ol>
+
+<p>The pitch exercise is the highest-signal stage. A candidate who can absorb a product in an hour and deliver a coherent pitch is dramatically more likely to ramp quickly. A candidate who interviews well but cannot pitch will struggle through the first six months.</p>
+
+<h2>Ramp expectations</h2>
+
+<p>A first AE should ramp to full productivity in 4 to 9 months depending on ACV. SMB AEs ramp fastest, mid-market AEs in 6 to 9 months, and enterprise AEs in 9 to 12 months. The ramp should include 30 days of product and ICP training, 60 days of shadowed deals, and a graduated quota that starts at 25 percent of full plan in month one and reaches 100 percent by the end of the ramp window.</p>
+
+<p>The most common ramp mistake is firing the first AE at month four when the pipeline has not materialized. The cycle has not run long enough to produce closed-won deals at that point. Founders should commit to a six-month milestone with a clear evaluation framework before deciding on retention.</p>
+
+<h2>Onboarding plan</h2>
+
+<p>A working onboarding plan for the first AE includes:</p>
+
+<ul>
+<li>Week 1: product deep dive, ICP review, CRM and tool training.</li>
+<li>Week 2: customer call shadowing, win-loss review, competitive intel.</li>
+<li>Week 3: AE shadows the founder on three live deals, takes notes, debriefs.</li>
+<li>Week 4: AE runs first discovery calls with founder observation.</li>
+<li>Month 2: AE runs full deals with founder support on closes.</li>
+<li>Month 3: AE runs deals independently, founder reviews weekly.</li>
+</ul>
+
+<p>The plan should be written down before the AE starts. Founders who improvise the ramp produce AEs who feel adrift and either stall or exit.</p>
+
+<h2>Common founder mistakes</h2>
+
+<p>Four patterns recur. The first is hiring an AE with the wrong segment profile, which produces a mismatch on cycle, buyer, and comp structure. The second is hiring an AE before the playbook is documented, which produces an AE who runs their prior company's playbook against this company's product.</p>
+
+<p>The third is paying below market to save burn, which produces a weak candidate pool and high turnover. The fourth is firing the AE before the ramp completes, which destroys candidate goodwill in the broader market and forces the founder to start over. The fix to all four is to write the playbook, write the scorecard, pay at market, and commit to a six-month evaluation milestone before the hire starts.</p>
+
+<h2>What happens after the first AE</h2>
+
+<p>The second AE hire is dramatically easier than the first. The first AE proves the unit economics, validates the playbook, and gives the founder data on what works. The second AE hire should follow within two to four quarters of the first AE's first closed deal, and the third AE typically arrives 12 to 18 months later.</p>
+
+<p>By the time the AE bench reaches three to five reps, the company is ready to hire a sales manager. The <a href="/guides/how-to-hire-a-vp-of-sales/">how to hire a VP of Sales</a> guide covers the next step.</p>
+
+
+  <h2>Frequently asked questions</h2>
+  <div class="guide-faq">
+<details><summary>When should a B2B SaaS founder hire the first AE?</summary><p>At 500K to 1M ARR at the earliest, with the median move happening at 800K to 1.5M ARR at most venture-backed companies. The trigger is when the founder is the bottleneck on closing and has codified the sales playbook well enough to brief a new hire on it.</p></details>
+<details><summary>What kind of AE should I hire first?</summary><p>Match the candidate profile to the ACV. A 15K ACV company needs a velocity AE with 2 to 4 years experience. A 100K ACV company needs a mid-market AE with 4 to 7 years experience. A 250K ACV company needs an enterprise AE with 6 to 10 years experience. Mismatching the profile is the most common first AE mistake.</p></details>
+<details><summary>How much should the first AE earn?</summary><p>Pay at market for the segment. Mid-market first AE OTE runs 200K to 320K US dollars at venture-backed companies. Underpaying to save burn produces a weak candidate pool and high turnover, which costs more than the savings.</p></details>
+<details><summary>How long should the ramp be?</summary><p>4 to 9 months depending on ACV. SMB AEs ramp fastest, mid-market in 6 to 9 months, enterprise in 9 to 12 months. The ramp should include 30 days of product and ICP training, 60 days of shadowed deals, and a graduated quota that starts at 25 percent and reaches 100 percent at full ramp.</p></details>
+<details><summary>What is the most common first AE mistake?</summary><p>Hiring the AE before the founder has codified the sales playbook. The AE arrives, runs their prior company's playbook, finds it does not work, and either stalls or exits. The fix is to close 15 to 25 customers through founder-led sales and document the discovery, multi-thread, and close motion before the hire.</p></details>
+</div>
+
+  <div class="guide-related"><h2>Keep reading</h2><ul>
+<li><a href="/sellers/">B2B sellers directory</a></li>
+<li><a href="/sales-enablement/">Sales enablement directory</a></li>
+<li><a href="/presales/">Pre-sales directory</a></li>
+<li><a href="/revops/">RevOps directory</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report (AE comp data)</a></li>
+<li><a href="https://thecroreport.com">The CRO Report (sales leadership)</a></li>
+</ul></div>
+</div>
+
+
+<section class="newsletter" id="subscribe">
+  <h2>Stay Updated</h2>
+  <p>Get notified when we add new directories or update existing ones.</p>
+  <form class="newsletter-form" id="signup-form" onsubmit="return handleSignup(event)">
+    <input type="email" name="email" placeholder="you@company.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <div class="msg" id="signup-msg"></div>
+</section>
+<script>
+async function handleSignup(e) {
+  e.preventDefault();
+  const form = e.target;
+  const email = form.email.value;
+  const btn = form.querySelector('button');
+  const msg = document.getElementById('signup-msg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  try {
+    const res = await fetch('https://newsletter-subscribe.rome-workers.workers.dev/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, list: 'gtm-index'})
+    });
+    const data = await res.json();
+    if (data.ok) {
+      msg.className = 'msg success';
+      msg.textContent = 'You\'re in. We\'ll keep you posted.';
+      form.email.value = '';
+    } else {
+      throw new Error(data.error || 'Something went wrong');
+    }
+  } catch(err) {
+    msg.className = 'msg error';
+    msg.textContent = err.message;
+  }
+  btn.disabled = false;
+  btn.textContent = 'Subscribe';
+}
+</script>
+
+<footer class="footer" style="padding:48px 24px 32px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px;font-size:13px;">
+      <div>
+        <div class="footer__brand" style="margin-bottom:16px;">The GTM <span>Index</span></div>
+        <p style="color:rgba(255,255,255,0.5);font-size:12px;line-height:1.5;">Curated directories for every go-to-market role.</p>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Sales & Revenue</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://thecroreport.com">The CRO Report</a></li>
+<li><a href="https://therevopsreport.com">The RevOps Report</a></li>
+<li><a href="https://b2bsalestools.com">B2B Sales Tools</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report</a></li>
+<li><a href="https://presalespulse.com">PreSales Pulse</a></li>
+<li><a href="https://senablers.com">SE Nablers</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Engineering & Data</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://gtmepulse.com">GTME Pulse</a></li>
+<li><a href="https://fdepulse.com">FDE Pulse</a></li>
+<li><a href="https://theaimarketpulse.com">AI Market Pulse</a></li>
+<li><a href="https://datastackguide.com">DataStack Guide</a></li>
+<li><a href="https://mopsreport.com">MOPs Report</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Strategy & Growth</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://fractionalpulse.com">Fractional Pulse</a></li>
+<li><a href="https://theabmpulse.com">The ABM Pulse</a></li>
+<li><a href="https://thecspulse.com">The CS Pulse</a></li>
+<li><a href="https://partnerchannels.com">Partner Channels</a></li>
+<li><a href="https://thedevicepulse.com">Device Pulse</a></li>
+<li><a href="https://sultanofsaas.com">Sultan of SaaS</a></li>
+<li><a href="https://thelaunchindex.com">The Launch Index</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="footer__copy">&copy; 2026 The GTM Index. All rights reserved.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);"><a href="/about/" style="color:rgba(255,255,255,0.5);">About</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

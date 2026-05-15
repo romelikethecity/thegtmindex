@@ -667,6 +667,21 @@ GUIDES = [
     },
 ]
 
+# Import additional guide metadata and content
+from _guides_extra import GUIDE_EXTRAS
+from _guides_bodies import GUIDES_CONTENT
+from _guides_bodies2 import GUIDES_CONTENT2
+from _guides_bodies3 import GUIDES_CONTENT3
+
+# Merge content dictionaries
+_ALL_GUIDE_CONTENT = {}
+_ALL_GUIDE_CONTENT.update(GUIDES_CONTENT)
+_ALL_GUIDE_CONTENT.update(GUIDES_CONTENT2)
+_ALL_GUIDE_CONTENT.update(GUIDES_CONTENT3)
+
+# Extend GUIDES list with the new entries
+GUIDES.extend(GUIDE_EXTRAS)
+
 
 def _guide_head(g, schema_blocks):
     schema_script = ""
@@ -763,6 +778,13 @@ def _write_guide(g, body_html, faqs, related):
     words = len([w for w in text.split() if w.strip()])
     print(f"  Built: /guides/{g['slug']}/ ({words} words)")
     return words
+
+
+def build_guide_from_content(slug):
+    """Generic guide builder using _ALL_GUIDE_CONTENT."""
+    g = next(x for x in GUIDES if x["slug"] == slug)
+    body, faqs, related = _ALL_GUIDE_CONTENT[slug]
+    return _write_guide(g, body, faqs, related)
 
 
 def build_guide_gtm_engineer_vs_revops():
@@ -1444,6 +1466,10 @@ if __name__ == "__main__":
     build_guide_se_to_ae_ratio_benchmarks()
     build_guide_when_to_hire_fractional_gtm_leader()
     build_guide_ai_impact_b2b_gtm_stack_2026()
+
+    # Build all extended guides via generic builder
+    for _slug in _ALL_GUIDE_CONTENT.keys():
+        build_guide_from_content(_slug)
 
     print("")
     build_robots()

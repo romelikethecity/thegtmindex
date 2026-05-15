@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inside Sales vs Field Sales: A 2026 B2B Comparison | The GTM Index</title>
+<meta name="description" content="Inside sales vs field sales benchmarks. Quota, comp, ramp, segment fit, and how hybrid motions have changed the math in B2B SaaS and enterprise sales.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thegtmindex.com/guides/inside-sales-vs-field-sales/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thegtmindex.com/guides/inside-sales-vs-field-sales/">
+<meta property="og:title" content="Inside Sales vs Field Sales: A 2026 B2B Comparison | The GTM Index">
+<meta property="og:description" content="Inside sales vs field sales benchmarks. Quota, comp, ramp, segment fit, and how hybrid motions have changed the math in B2B SaaS and enterprise sales.">
+<meta property="og:site_name" content="The GTM Index">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Inside Sales vs Field Sales: A 2026 B2B Comparison | The GTM Index">
+<meta name="twitter:description" content="Inside sales vs field sales benchmarks. Quota, comp, ramp, segment fit, and how hybrid motions have changed the math in B2B SaaS and enterprise sales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --navy: #1B2838;
+    --navy-deep: #0F1923;
+    --amber: #F59E0B;
+    --amber-light: #FBBF24;
+    --amber-dark: #D97706;
+    --bg: #FAFAFA;
+    --bg-white: #FFFFFF;
+    --text: #1F2937;
+    --text-muted: #6B7280;
+    --text-light: #94A3B8;
+    --border: #E5E7EB;
+    --icon-bg: #FEF3C7;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-hover: 0 4px 12px rgba(245,158,11,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Header */
+.header {
+    background: var(--navy);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+}
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo { font-size: 18px; font-weight: 700; color: var(--amber); }
+.logo span { color: #fff; }
+.nav { display: flex; gap: 24px; align-items: center; }
+.nav a { color: var(--text-light); font-size: 14px; font-weight: 500; transition: color 150ms; }
+.nav a:hover { color: #fff; }
+
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.menu-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; transition: 150ms; }
+
+/* Hero */
+.hero {
+    padding: 140px 24px 80px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+}
+.hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.15; }
+.hero h1 em { color: var(--amber); font-style: normal; }
+.hero p { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+.hero .cta { display: inline-block; background: var(--amber); color: var(--navy); padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 15px; transition: background 150ms; }
+.hero .cta:hover { background: var(--amber-light); }
+
+/* Stats */
+.stats { display: flex; justify-content: center; gap: 48px; margin-top: 48px; }
+.stat { text-align: center; }
+.stat__number { font-size: 32px; font-weight: 700; color: var(--amber); }
+.stat__label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+/* Cards Grid */
+.directories { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.directories h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.directories .subtitle { color: var(--text-muted); margin-bottom: 32px; font-size: 15px; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color 200ms, box-shadow 200ms; display: flex; flex-direction: column; }
+.card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.card__icon { width: 42px; height: 42px; background: var(--icon-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+.card h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.card p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; flex: 1; }
+.card__link { font-size: 13px; color: var(--amber-dark); font-weight: 600; }
+.card__link:hover { color: var(--amber); }
+
+/* Newsletter CTA */
+.newsletter { padding: 64px 24px; text-align: center; background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.newsletter h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.newsletter p { color: var(--text-muted); margin-bottom: 24px; font-size: 15px; }
+.newsletter-form { display: flex; max-width: 440px; margin: 0 auto; gap: 8px; }
+.newsletter-form input { flex: 1; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; }
+.newsletter-form input:focus { border-color: var(--amber); }
+.newsletter-form button { background: var(--amber); color: var(--navy); padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; transition: background 150ms; white-space: nowrap; }
+.newsletter-form button:hover { background: var(--amber-light); }
+.newsletter .msg { margin-top: 12px; font-size: 13px; }
+.newsletter .msg.success { color: #059669; }
+.newsletter .msg.error { color: #DC2626; }
+
+/* Footer */
+.footer { background: var(--navy); color: var(--text-light); padding: 48px 24px 32px; }
+.footer__inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer__brand { font-size: 16px; font-weight: 700; color: var(--amber); }
+.footer__brand span { color: #fff; }
+.footer__copy { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+/* About + Resource pages */
+.page { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.page h1 { font-size: 32px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; letter-spacing: -0.5px; }
+.page p { font-size: 16px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.7; }
+.page h2 { font-size: 20px; font-weight: 600; margin: 32px 0 12px; }
+.page a { color: var(--amber-dark); }
+.page a:hover { color: var(--amber); }
+
+/* Resource page specific */
+.rp-breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+.rp-breadcrumb a { text-decoration: none; color: var(--amber-dark); }
+.rp-intro { margin-bottom: 40px; }
+.rp-intro p { font-size: 16px; color: #4B5563; line-height: 1.7; margin-bottom: 12px; }
+.rp-section { margin-bottom: 48px; }
+.rp-section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #F3F4F6; color: var(--text); }
+.rp-item { margin-bottom: 24px; }
+.rp-item-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.rp-item-title a { text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; color: var(--text); }
+.rp-item-title a:hover { text-decoration-color: var(--text-muted); }
+.rp-item-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.rp-badge { display: inline-block; background: var(--icon-bg); color: #92400E; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; vertical-align: middle; margin-left: 4px; }
+.rp-curation { margin-top: 48px; padding: 32px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.rp-curation h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+.rp-curation p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+.rp-back { display: inline-block; margin-top: 32px; font-size: 14px; color: var(--amber-dark); font-weight: 500; }
+
+/* Mobile */
+.mobile-nav { display: none; position: fixed; top: 0; right: -100%; width: 260px; height: 100vh; background: var(--navy-deep); z-index: 200; padding: 80px 24px 24px; transition: right 250ms; }
+.mobile-nav.active { right: 0; }
+.mobile-nav a { display: block; color: var(--text-light); font-size: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mobile-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 199; }
+.mobile-overlay.active { display: block; }
+
+@media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .stats { gap: 32px; } }
+@media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } .nav { display: none; } .menu-toggle { display: block; } .hero { padding: 120px 20px 60px; } .hero p { font-size: 16px; } .stats { flex-direction: column; gap: 16px; } .newsletter-form { flex-direction: column; } .footer__inner { flex-direction: column; gap: 12px; text-align: center; } .page { padding: 80px 16px 48px; } .page h1 { font-size: 26px; } }
+.footer ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 150ms; }
+.footer ul li a:hover { color: var(--amber); }
+@media (max-width: 768px) { .footer div[style*="grid-template-columns"] { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 480px) { .footer div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
+</style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2GCLCTZHE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V2GCLCTZHE');
+</script>
+<style>
+/* Guide article styles */
+.guide-wrap { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.guide-wrap h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.5px; color: var(--text); }
+.guide-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; }
+.guide-meta a { color: var(--amber-dark); }
+.guide-wrap h2 { font-size: 24px; font-weight: 700; margin: 40px 0 12px; color: var(--text); letter-spacing: -0.3px; }
+.guide-wrap h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: var(--text); }
+.guide-wrap p { font-size: 16px; color: #374151; margin-bottom: 16px; line-height: 1.75; }
+.guide-wrap ul, .guide-wrap ol { margin: 0 0 20px 22px; color: #374151; }
+.guide-wrap li { font-size: 16px; line-height: 1.7; margin-bottom: 8px; }
+.guide-wrap a { color: var(--amber-dark); text-decoration: underline; text-decoration-color: #FCD34D; text-underline-offset: 3px; }
+.guide-wrap a:hover { color: var(--amber); }
+.guide-wrap blockquote { border-left: 3px solid var(--amber); padding: 4px 18px; margin: 20px 0; color: var(--text-muted); font-size: 15px; }
+.guide-table-wrap { overflow-x: auto; margin: 16px 0 24px; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.guide-table th, .guide-table td { padding: 10px 12px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+.guide-table th { background: #F9FAFB; font-weight: 600; }
+.guide-callout { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 10px; padding: 20px 22px; margin: 24px 0; }
+.guide-callout p { margin-bottom: 0; font-size: 15px; }
+.guide-faq { margin-top: 32px; }
+.guide-faq details { border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; background: var(--bg-white); }
+.guide-faq summary { font-weight: 600; cursor: pointer; font-size: 15px; color: var(--text); }
+.guide-faq details[open] summary { margin-bottom: 8px; }
+.guide-faq p { font-size: 15px; color: #4B5563; margin-bottom: 0; }
+.guide-related { margin-top: 48px; padding: 28px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.guide-related h2 { font-size: 18px; margin-top: 0; margin-bottom: 12px; }
+.guide-related ul { list-style: none; margin: 0; padding: 0; }
+.guide-related li { font-size: 14px; margin-bottom: 8px; }
+.guide-related a { color: var(--amber-dark); text-decoration: none; font-weight: 500; }
+.guide-related a:hover { text-decoration: underline; }
+.guides-grid { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.guides-grid h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 12px; letter-spacing: -0.5px; }
+.guides-grid .sub { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; }
+.guides-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.guide-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 10px; padding: 24px; transition: border-color 200ms, box-shadow 200ms; display: block; }
+.guide-card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.guide-card h3 { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.guide-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px; }
+.guide-card .date { font-size: 12px; color: var(--text-light); }
+@media (max-width: 700px) { .guides-list { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Inside Sales vs Field Sales: A 2026 B2B Comparison",
+  "description": "Inside sales vs field sales benchmarks. Quota, comp, ramp, segment fit, and how hybrid motions have changed the math in B2B SaaS and enterprise sales.",
+  "url": "https://thegtmindex.com/guides/inside-sales-vs-field-sales/",
+  "datePublished": "2026-05-15",
+  "dateModified": "2026-05-15",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The GTM Index",
+    "url": "https://thegtmindex.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thegtmindex.com/guides/inside-sales-vs-field-sales/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://thegtmindex.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://thegtmindex.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Inside Sales vs Field Sales: A 2026 B2B Comparison",
+      "item": "https://thegtmindex.com/guides/inside-sales-vs-field-sales/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is field sales still relevant in B2B SaaS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, for deals above roughly 100K ACV. ICONIQ Growth surveys show enterprise buyers still expect on-site executive presence at key decision moments, even though 30 to 60 percent of seller interactions now happen remotely. The hybrid motion is the new default at most B2B SaaS companies past mid-market."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the quota difference between inside and field AEs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bridge Group benchmarks put mid-market inside AE quotas in a 600K to 1.4M annual band, while enterprise field AE quotas run 1.4M to 3M. The differential reflects the larger deal size, longer cycle, and higher seller cost of a field motion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do inside sales reps make less money?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OTE bands are lower on absolute dollars for inside than for field at the same company, but the ramp is shorter and the quota is more predictable. Top inside AEs at high-ACV mid-market companies can match or exceed field AE comp at slower-growing companies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How has remote work changed the split?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It collapsed the clean separation. Most enterprise sellers now run a hybrid motion with two to four travel trips per quarter rather than weekly territory travel. The label of inside or field is shorthand for the dominant mode, not the only mode."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should a company switch from inside to field?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When ACV crosses roughly 100K and competitive enterprise deals are being lost to vendors who travel. The transition is gradual, with mid-market AEs taking on hybrid coverage of larger accounts before a dedicated field bench is built out."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo">The GTM <span>Index</span></a>
+    <nav class="nav">
+      <a href="/#directories">Browse</a>
+      <a href="/about/">About</a>
+      <a href="/#subscribe">Newsletter</a>
+    </nav>
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('active');document.querySelector('.mobile-overlay').classList.toggle('active');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <a href="/#directories">Browse</a>
+  <a href="/about/">About</a>
+  <a href="/#subscribe">Newsletter</a>
+</nav>
+
+<div class="guide-wrap">
+  <nav class="rp-breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; <span>Inside Sales vs Field Sales: A 2026 B2B Comparison</span>
+  </nav>
+
+  <h1>Inside Sales vs Field Sales: A 2026 B2B Comparison</h1>
+  <div class="guide-meta">By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; Published May 15, 2026</div>
+
+  
+<p>Inside sales and field sales used to describe two clearly separate motions. Inside meant the seller worked from a desk, used the phone, ran demos over web conferencing, and closed remotely. Field meant the seller worked from a territory, visited customers in person, ran on-site discovery, and closed face to face.</p>
+
+<p>That clean split is mostly gone. Hybrid motions, post-pandemic remote work, and AI-augmented outbound have produced a middle ground where most enterprise sellers run a mix of remote and on-site work, and most SMB sellers never visit a customer in person. This guide walks through how the math has shifted and where the labels still mean something.</p>
+
+<h2>What inside sales means today</h2>
+
+<p>Inside sales today refers to a seller who runs the entire sales cycle remotely, from prospecting to discovery to demo to close. The motion runs on video, phone, and email. Travel is rare. The seller often handles a high volume of accounts in a defined territory, with deals closing in 30 to 90 days for mid-market and longer for enterprise hybrid work.</p>
+
+<p>Bridge Group inside sales benchmarks place quotas in a 600K to 1.4M annual band for mid-market AEs, with on-target earnings between 200K and 320K US dollars at most well-funded B2B SaaS companies. The <a href="/sellers/">sellers directory</a> and <a href="https://thesellerreport.com">The Seller Report</a> track comp by segment.</p>
+
+<h2>What field sales means today</h2>
+
+<p>Field sales today refers to a seller assigned to a geographic or vertical territory who spends meaningful time on-site with customers. The motion still uses video and phone, but the seller travels for major-account meetings, executive briefings, conferences, and key-decision moments. Deal cycles are longer, typically 6 to 18 months for enterprise software.</p>
+
+<p>Field AE quotas in B2B SaaS run in a 1.4M to 3M annual band at most companies, with on-target earnings between 280K and 450K US dollars. The pay premium reflects the longer cycle, the larger deal size, and the operational cost of running a territory. The <a href="/revenue-leaders/">revenue leaders directory</a> and <a href="https://thecroreport.com">The CRO Report</a> publish the benchmark data by segment.</p>
+
+<h2>Hybrid motions and the messy middle</h2>
+
+<p>Most B2B SaaS companies today run a hybrid motion that does not fit either label cleanly. Mid-market AEs might travel for two to four deals a quarter. Enterprise AEs might run 60 percent of their work remotely. The label that fits is the dominant mode, not the only mode.</p>
+
+<p>The shift accelerated during the pandemic and has held since. ICONIQ Growth surveys from 2024 and 2025 show enterprise software buyers now expect at least 30 percent of seller interactions to be remote, even on six-figure deals. The same surveys show field travel did not collapse to zero. Customers still want on-site executive presence for major decisions, on-site discovery for complex deployments, and on-site QBRs for strategic accounts.</p>
+
+<h2>Comp structure differences</h2>
+
+<p>Inside and field AEs are compensated on similar curves but with different absolute levels. Both use a base plus commission structure, with commission tied to quota attainment and accelerators above plan. Field AEs typically earn a smaller percentage of base from commission because the deal size is larger and the cycle is longer, which would create too much pay variance under a pure commission structure.</p>
+
+<p>The other structural difference is non-recoverable draw and territory ramp. Field AEs almost always get a 90 to 180 day non-recoverable draw and a defined ramp period of 9 to 12 months. Inside AEs get a similar structure but with a shorter ramp, typically 4 to 6 months, because the cycle compresses.</p>
+
+<h2>Headcount math by segment</h2>
+
+<div class="guide-table-wrap"><table class="guide-table">
+<thead><tr><th>Segment</th><th>Typical ACV</th><th>Quota Band</th><th>Cycle</th><th>Motion</th></tr></thead>
+<tbody>
+<tr><td>SMB</td><td>5K to 25K</td><td>500K to 900K</td><td>14 to 45 days</td><td>Inside</td></tr>
+<tr><td>Mid-market</td><td>25K to 100K</td><td>700K to 1.4M</td><td>45 to 120 days</td><td>Inside, light field</td></tr>
+<tr><td>Enterprise</td><td>100K to 500K</td><td>1.2M to 2.5M</td><td>4 to 12 months</td><td>Hybrid</td></tr>
+<tr><td>Strategic</td><td>500K plus</td><td>2M to 4M</td><td>6 to 18 months</td><td>Field</td></tr>
+</tbody>
+</table></div>
+
+<h2>Pre-sales support</h2>
+
+<p>The <a href="/presales/">pre-sales</a> ratio differs by motion. Inside SMB sellers rarely get a dedicated SE. Mid-market inside sellers often share one SE across three to five AEs. Enterprise hybrid sellers typically have one SE per two to three AEs. Field strategic sellers run with one or even two SEs per AE on the largest accounts. The <a href="/guides/se-to-ae-ratio-benchmarks/">SE to AE ratio</a> guide breaks down the math.</p>
+
+<h2>Where AI has changed the picture</h2>
+
+<p>AI tooling has compressed inside sales workflows more than field sales workflows. <a href="/ai-sdr/">AI SDR</a> systems and modern outbound platforms cover much of the prospecting and qualification work that inside reps used to do manually. AI-assisted research, call recording analysis, and CRM auto-update tools have reduced the time inside AEs spend on administrative work.</p>
+
+<p>Field sales has absorbed AI more slowly. The work is relationship-driven, multi-stakeholder, and dependent on on-site signal that AI tools cannot read well. Field AEs benefit from AI on the back end, in call summaries and account research, but the front end of the role still depends on human judgment and presence.</p>
+
+<h2>Which motion fits which company</h2>
+
+<p>The choice between inside and field is structurally determined by ACV and cycle, not by preference. A company with a 15K ACV cannot afford a field motion. A company with a 250K ACV cannot win competitive enterprise deals without on-site presence at key moments. The middle range is where the decision matters, and most B2B SaaS companies between 50K and 150K ACV run a hybrid motion by default.</p>
+
+<p>Pavilion and OpenView benchmarks both show that companies trying to run a pure inside motion at high ACV lose deals to competitors who travel. Companies trying to run a pure field motion at low ACV bleed margin and cannot scale headcount past a single quarter. The hybrid pattern wins because it matches investment to deal value.</p>
+
+<h2>Common mistakes</h2>
+
+<p>The three recurring mistakes in this category are easy to spot. The first is hiring a field AE profile for an inside role and paying them like a field rep, which produces an AE who does not run enough volume to hit quota. The second is the reverse, hiring an inside AE for a field role and underfunding their travel budget, which produces an AE who never visits accounts and loses competitive cycles to a competitor who does.</p>
+
+<p>The third is treating the motion as fixed rather than evolving. Companies that grow ACV from SMB into enterprise need to convert at least part of their AE bench to hybrid or field over 12 to 24 months. Companies that move down-market need to convert in the other direction. Either way, the seller profile, ramp, comp, and quota model all need to move together.</p>
+
+
+  <h2>Frequently asked questions</h2>
+  <div class="guide-faq">
+<details><summary>Is field sales still relevant in B2B SaaS?</summary><p>Yes, for deals above roughly 100K ACV. ICONIQ Growth surveys show enterprise buyers still expect on-site executive presence at key decision moments, even though 30 to 60 percent of seller interactions now happen remotely. The hybrid motion is the new default at most B2B SaaS companies past mid-market.</p></details>
+<details><summary>What is the quota difference between inside and field AEs?</summary><p>Bridge Group benchmarks put mid-market inside AE quotas in a 600K to 1.4M annual band, while enterprise field AE quotas run 1.4M to 3M. The differential reflects the larger deal size, longer cycle, and higher seller cost of a field motion.</p></details>
+<details><summary>Do inside sales reps make less money?</summary><p>OTE bands are lower on absolute dollars for inside than for field at the same company, but the ramp is shorter and the quota is more predictable. Top inside AEs at high-ACV mid-market companies can match or exceed field AE comp at slower-growing companies.</p></details>
+<details><summary>How has remote work changed the split?</summary><p>It collapsed the clean separation. Most enterprise sellers now run a hybrid motion with two to four travel trips per quarter rather than weekly territory travel. The label of inside or field is shorthand for the dominant mode, not the only mode.</p></details>
+<details><summary>When should a company switch from inside to field?</summary><p>When ACV crosses roughly 100K and competitive enterprise deals are being lost to vendors who travel. The transition is gradual, with mid-market AEs taking on hybrid coverage of larger accounts before a dedicated field bench is built out.</p></details>
+</div>
+
+  <div class="guide-related"><h2>Keep reading</h2><ul>
+<li><a href="/sellers/">B2B sellers directory</a></li>
+<li><a href="/revenue-leaders/">Revenue leaders directory</a></li>
+<li><a href="/presales/">Pre-sales and SE directory</a></li>
+<li><a href="/ai-sdr/">AI SDR and outbound directory</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report (comp data)</a></li>
+<li><a href="https://thecroreport.com">The CRO Report (leadership comp)</a></li>
+</ul></div>
+</div>
+
+
+<section class="newsletter" id="subscribe">
+  <h2>Stay Updated</h2>
+  <p>Get notified when we add new directories or update existing ones.</p>
+  <form class="newsletter-form" id="signup-form" onsubmit="return handleSignup(event)">
+    <input type="email" name="email" placeholder="you@company.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <div class="msg" id="signup-msg"></div>
+</section>
+<script>
+async function handleSignup(e) {
+  e.preventDefault();
+  const form = e.target;
+  const email = form.email.value;
+  const btn = form.querySelector('button');
+  const msg = document.getElementById('signup-msg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  try {
+    const res = await fetch('https://newsletter-subscribe.rome-workers.workers.dev/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, list: 'gtm-index'})
+    });
+    const data = await res.json();
+    if (data.ok) {
+      msg.className = 'msg success';
+      msg.textContent = 'You\'re in. We\'ll keep you posted.';
+      form.email.value = '';
+    } else {
+      throw new Error(data.error || 'Something went wrong');
+    }
+  } catch(err) {
+    msg.className = 'msg error';
+    msg.textContent = err.message;
+  }
+  btn.disabled = false;
+  btn.textContent = 'Subscribe';
+}
+</script>
+
+<footer class="footer" style="padding:48px 24px 32px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px;font-size:13px;">
+      <div>
+        <div class="footer__brand" style="margin-bottom:16px;">The GTM <span>Index</span></div>
+        <p style="color:rgba(255,255,255,0.5);font-size:12px;line-height:1.5;">Curated directories for every go-to-market role.</p>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Sales & Revenue</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://thecroreport.com">The CRO Report</a></li>
+<li><a href="https://therevopsreport.com">The RevOps Report</a></li>
+<li><a href="https://b2bsalestools.com">B2B Sales Tools</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report</a></li>
+<li><a href="https://presalespulse.com">PreSales Pulse</a></li>
+<li><a href="https://senablers.com">SE Nablers</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Engineering & Data</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://gtmepulse.com">GTME Pulse</a></li>
+<li><a href="https://fdepulse.com">FDE Pulse</a></li>
+<li><a href="https://theaimarketpulse.com">AI Market Pulse</a></li>
+<li><a href="https://datastackguide.com">DataStack Guide</a></li>
+<li><a href="https://mopsreport.com">MOPs Report</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Strategy & Growth</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://fractionalpulse.com">Fractional Pulse</a></li>
+<li><a href="https://theabmpulse.com">The ABM Pulse</a></li>
+<li><a href="https://thecspulse.com">The CS Pulse</a></li>
+<li><a href="https://partnerchannels.com">Partner Channels</a></li>
+<li><a href="https://thedevicepulse.com">Device Pulse</a></li>
+<li><a href="https://sultanofsaas.com">Sultan of SaaS</a></li>
+<li><a href="https://thelaunchindex.com">The Launch Index</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="footer__copy">&copy; 2026 The GTM Index. All rights reserved.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);"><a href="/about/" style="color:rgba(255,255,255,0.5);">About</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

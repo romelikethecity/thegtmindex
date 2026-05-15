@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Hire Your First SDR: A B2B Founder Guide | The GTM Index</title>
+<meta name="description" content="How to hire your first SDR in B2B SaaS. Timing signals, comp targets, scorecard, interview loop, and the most common founder mistakes in the first SDR hire.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thegtmindex.com/guides/how-to-hire-your-first-sdr/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thegtmindex.com/guides/how-to-hire-your-first-sdr/">
+<meta property="og:title" content="How to Hire Your First SDR: A B2B Founder Guide | The GTM Index">
+<meta property="og:description" content="How to hire your first SDR in B2B SaaS. Timing signals, comp targets, scorecard, interview loop, and the most common founder mistakes in the first SDR hire.">
+<meta property="og:site_name" content="The GTM Index">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Hire Your First SDR: A B2B Founder Guide | The GTM Index">
+<meta name="twitter:description" content="How to hire your first SDR in B2B SaaS. Timing signals, comp targets, scorecard, interview loop, and the most common founder mistakes in the first SDR hire.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --navy: #1B2838;
+    --navy-deep: #0F1923;
+    --amber: #F59E0B;
+    --amber-light: #FBBF24;
+    --amber-dark: #D97706;
+    --bg: #FAFAFA;
+    --bg-white: #FFFFFF;
+    --text: #1F2937;
+    --text-muted: #6B7280;
+    --text-light: #94A3B8;
+    --border: #E5E7EB;
+    --icon-bg: #FEF3C7;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-hover: 0 4px 12px rgba(245,158,11,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Header */
+.header {
+    background: var(--navy);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+}
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo { font-size: 18px; font-weight: 700; color: var(--amber); }
+.logo span { color: #fff; }
+.nav { display: flex; gap: 24px; align-items: center; }
+.nav a { color: var(--text-light); font-size: 14px; font-weight: 500; transition: color 150ms; }
+.nav a:hover { color: #fff; }
+
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.menu-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; transition: 150ms; }
+
+/* Hero */
+.hero {
+    padding: 140px 24px 80px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+}
+.hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.15; }
+.hero h1 em { color: var(--amber); font-style: normal; }
+.hero p { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+.hero .cta { display: inline-block; background: var(--amber); color: var(--navy); padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 15px; transition: background 150ms; }
+.hero .cta:hover { background: var(--amber-light); }
+
+/* Stats */
+.stats { display: flex; justify-content: center; gap: 48px; margin-top: 48px; }
+.stat { text-align: center; }
+.stat__number { font-size: 32px; font-weight: 700; color: var(--amber); }
+.stat__label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+/* Cards Grid */
+.directories { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.directories h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.directories .subtitle { color: var(--text-muted); margin-bottom: 32px; font-size: 15px; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color 200ms, box-shadow 200ms; display: flex; flex-direction: column; }
+.card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.card__icon { width: 42px; height: 42px; background: var(--icon-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+.card h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.card p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; flex: 1; }
+.card__link { font-size: 13px; color: var(--amber-dark); font-weight: 600; }
+.card__link:hover { color: var(--amber); }
+
+/* Newsletter CTA */
+.newsletter { padding: 64px 24px; text-align: center; background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.newsletter h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.newsletter p { color: var(--text-muted); margin-bottom: 24px; font-size: 15px; }
+.newsletter-form { display: flex; max-width: 440px; margin: 0 auto; gap: 8px; }
+.newsletter-form input { flex: 1; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; }
+.newsletter-form input:focus { border-color: var(--amber); }
+.newsletter-form button { background: var(--amber); color: var(--navy); padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; transition: background 150ms; white-space: nowrap; }
+.newsletter-form button:hover { background: var(--amber-light); }
+.newsletter .msg { margin-top: 12px; font-size: 13px; }
+.newsletter .msg.success { color: #059669; }
+.newsletter .msg.error { color: #DC2626; }
+
+/* Footer */
+.footer { background: var(--navy); color: var(--text-light); padding: 48px 24px 32px; }
+.footer__inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer__brand { font-size: 16px; font-weight: 700; color: var(--amber); }
+.footer__brand span { color: #fff; }
+.footer__copy { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+/* About + Resource pages */
+.page { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.page h1 { font-size: 32px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; letter-spacing: -0.5px; }
+.page p { font-size: 16px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.7; }
+.page h2 { font-size: 20px; font-weight: 600; margin: 32px 0 12px; }
+.page a { color: var(--amber-dark); }
+.page a:hover { color: var(--amber); }
+
+/* Resource page specific */
+.rp-breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+.rp-breadcrumb a { text-decoration: none; color: var(--amber-dark); }
+.rp-intro { margin-bottom: 40px; }
+.rp-intro p { font-size: 16px; color: #4B5563; line-height: 1.7; margin-bottom: 12px; }
+.rp-section { margin-bottom: 48px; }
+.rp-section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #F3F4F6; color: var(--text); }
+.rp-item { margin-bottom: 24px; }
+.rp-item-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.rp-item-title a { text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; color: var(--text); }
+.rp-item-title a:hover { text-decoration-color: var(--text-muted); }
+.rp-item-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.rp-badge { display: inline-block; background: var(--icon-bg); color: #92400E; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; vertical-align: middle; margin-left: 4px; }
+.rp-curation { margin-top: 48px; padding: 32px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.rp-curation h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+.rp-curation p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+.rp-back { display: inline-block; margin-top: 32px; font-size: 14px; color: var(--amber-dark); font-weight: 500; }
+
+/* Mobile */
+.mobile-nav { display: none; position: fixed; top: 0; right: -100%; width: 260px; height: 100vh; background: var(--navy-deep); z-index: 200; padding: 80px 24px 24px; transition: right 250ms; }
+.mobile-nav.active { right: 0; }
+.mobile-nav a { display: block; color: var(--text-light); font-size: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mobile-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 199; }
+.mobile-overlay.active { display: block; }
+
+@media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .stats { gap: 32px; } }
+@media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } .nav { display: none; } .menu-toggle { display: block; } .hero { padding: 120px 20px 60px; } .hero p { font-size: 16px; } .stats { flex-direction: column; gap: 16px; } .newsletter-form { flex-direction: column; } .footer__inner { flex-direction: column; gap: 12px; text-align: center; } .page { padding: 80px 16px 48px; } .page h1 { font-size: 26px; } }
+.footer ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 150ms; }
+.footer ul li a:hover { color: var(--amber); }
+@media (max-width: 768px) { .footer div[style*="grid-template-columns"] { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 480px) { .footer div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
+</style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2GCLCTZHE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V2GCLCTZHE');
+</script>
+<style>
+/* Guide article styles */
+.guide-wrap { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.guide-wrap h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.5px; color: var(--text); }
+.guide-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; }
+.guide-meta a { color: var(--amber-dark); }
+.guide-wrap h2 { font-size: 24px; font-weight: 700; margin: 40px 0 12px; color: var(--text); letter-spacing: -0.3px; }
+.guide-wrap h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: var(--text); }
+.guide-wrap p { font-size: 16px; color: #374151; margin-bottom: 16px; line-height: 1.75; }
+.guide-wrap ul, .guide-wrap ol { margin: 0 0 20px 22px; color: #374151; }
+.guide-wrap li { font-size: 16px; line-height: 1.7; margin-bottom: 8px; }
+.guide-wrap a { color: var(--amber-dark); text-decoration: underline; text-decoration-color: #FCD34D; text-underline-offset: 3px; }
+.guide-wrap a:hover { color: var(--amber); }
+.guide-wrap blockquote { border-left: 3px solid var(--amber); padding: 4px 18px; margin: 20px 0; color: var(--text-muted); font-size: 15px; }
+.guide-table-wrap { overflow-x: auto; margin: 16px 0 24px; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.guide-table th, .guide-table td { padding: 10px 12px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+.guide-table th { background: #F9FAFB; font-weight: 600; }
+.guide-callout { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 10px; padding: 20px 22px; margin: 24px 0; }
+.guide-callout p { margin-bottom: 0; font-size: 15px; }
+.guide-faq { margin-top: 32px; }
+.guide-faq details { border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; background: var(--bg-white); }
+.guide-faq summary { font-weight: 600; cursor: pointer; font-size: 15px; color: var(--text); }
+.guide-faq details[open] summary { margin-bottom: 8px; }
+.guide-faq p { font-size: 15px; color: #4B5563; margin-bottom: 0; }
+.guide-related { margin-top: 48px; padding: 28px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.guide-related h2 { font-size: 18px; margin-top: 0; margin-bottom: 12px; }
+.guide-related ul { list-style: none; margin: 0; padding: 0; }
+.guide-related li { font-size: 14px; margin-bottom: 8px; }
+.guide-related a { color: var(--amber-dark); text-decoration: none; font-weight: 500; }
+.guide-related a:hover { text-decoration: underline; }
+.guides-grid { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.guides-grid h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 12px; letter-spacing: -0.5px; }
+.guides-grid .sub { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; }
+.guides-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.guide-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 10px; padding: 24px; transition: border-color 200ms, box-shadow 200ms; display: block; }
+.guide-card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.guide-card h3 { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.guide-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px; }
+.guide-card .date { font-size: 12px; color: var(--text-light); }
+@media (max-width: 700px) { .guides-list { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Hire Your First SDR: A B2B Founder Guide",
+  "description": "How to hire your first SDR in B2B SaaS. Timing signals, comp targets, scorecard, interview loop, and the most common founder mistakes in the first SDR hire.",
+  "url": "https://thegtmindex.com/guides/how-to-hire-your-first-sdr/",
+  "datePublished": "2026-05-15",
+  "dateModified": "2026-05-15",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The GTM Index",
+    "url": "https://thegtmindex.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thegtmindex.com/guides/how-to-hire-your-first-sdr/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://thegtmindex.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://thegtmindex.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Hire Your First SDR: A B2B Founder Guide",
+      "item": "https://thegtmindex.com/guides/how-to-hire-your-first-sdr/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When should a B2B SaaS founder hire the first SDR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When the founder has closed 10 to 20 customers through founder-led sales, knows the ICP in detail, has an AE or founder-AE to receive meetings, and has 50K to 100K MRR to absorb the cost. The latest reasonable time is 1M to 2M ARR. Past that, the founder is leaving pipeline on the table."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the first-year OTE for an SDR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bridge Group benchmarks place first-year SDR OTE at venture-backed B2B SaaS companies between 60K and 85K US dollars, with a 65 to 75 percent base. Below market pay produces a weak candidate pool, a slow ramp, and turnover within a year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should the first SDR have prior SDR experience?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. The most predictive traits are outbound activity tolerance, coachability, curiosity, and resilience. Some of the best first SDR hires come from teaching, retail management, athletics, or non-sales corporate roles. Prior SDR experience is a plus but not a requirement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should the first SDR's ramp be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "60 to 90 days, structured across product training, ICP training, tool training, shadowing, and live outbound. Quota should ramp from 25 percent in month one to 75 percent in month three, with full quota by month four or five."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most common founder mistake with the first SDR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hiring without a designated manager. The first SDR needs a weekly 1:1, a daily standup, and live call coaching. Without manager support the rep flounders, falls behind on the script, and exits within six to nine months. The fix is to assign one person to own the SDR's success."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo">The GTM <span>Index</span></a>
+    <nav class="nav">
+      <a href="/#directories">Browse</a>
+      <a href="/about/">About</a>
+      <a href="/#subscribe">Newsletter</a>
+    </nav>
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('active');document.querySelector('.mobile-overlay').classList.toggle('active');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <a href="/#directories">Browse</a>
+  <a href="/about/">About</a>
+  <a href="/#subscribe">Newsletter</a>
+</nav>
+
+<div class="guide-wrap">
+  <nav class="rp-breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; <span>How to Hire Your First SDR: A B2B Founder Guide</span>
+  </nav>
+
+  <h1>How to Hire Your First SDR: A B2B Founder Guide</h1>
+  <div class="guide-meta">By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; Published May 15, 2026</div>
+
+  
+<p>The first SDR hire is one of the most expensive and least understood early hires a B2B SaaS founder makes. Done well, the hire opens a pipeline channel that scales for years. Done poorly, the hire produces 90 days of low activity, a sour candidate experience, and a founder convinced that outbound does not work for their business.</p>
+
+<p>This guide walks through the timing signals, the comp targets, the scorecard, the interview loop, and the operating cadence that turn a first SDR hire into a working pipeline channel. The benchmarks come from Bridge Group SDR surveys, Pavilion practitioner data, and the patterns documented at <a href="https://thesellerreport.com">The Seller Report</a>.</p>
+
+<h2>When to make the hire</h2>
+
+<p>The earliest reasonable time to hire a first SDR is when three conditions are met. The first is that the founder has personally closed 10 to 20 customers through founder-led sales and knows what an ICP customer looks like in detail. The second is that an AE or founder-AE exists who can receive the meetings the SDR will book. The third is that the company has 50K to 100K in monthly recurring revenue, enough to absorb the first-year cost of an SDR hire without straining cash.</p>
+
+<p>The latest reasonable time is at 1M to 2M ARR. Past that, the founder is leaving pipeline on the table by waiting. The <a href="/guides/founder-led-sales-when-to-graduate/">founder-led sales graduation</a> guide covers the broader signals.</p>
+
+<h2>What the role should do</h2>
+
+<p>The first SDR's job is to source meetings. Not to qualify leads. Not to nurture inbound. Not to run discovery. Just to book qualified first meetings with target accounts. Founders who load the first SDR with too many functions end up with a generalist who does none well.</p>
+
+<p>The output target is 8 to 15 qualified meetings per month after a 60 to 90 day ramp. Below 8, the role is underperforming. Above 15, the role is well above average for a first SDR at an early-stage company. The conversion from booked meeting to qualified opportunity should run 30 to 60 percent, and from qualified opportunity to closed-won should run 10 to 25 percent depending on segment and ACV.</p>
+
+<h2>Comp targets</h2>
+
+<p>Bridge Group benchmarks place first-year SDR OTE at venture-backed B2B SaaS companies between 60K and 85K US dollars, with a 65 to 75 percent base. The variable component ties to meetings booked, qualified opportunities sourced, or pipeline created.</p>
+
+<p>Founders sometimes try to underpay the first SDR to save on burn. The math does not work. A below-market comp package produces a weak candidate pool, a slow ramp, and turnover within a year. Pay at market and recoup the investment by hiring well.</p>
+
+<h2>The scorecard</h2>
+
+<p>The hiring scorecard for a first SDR should include four criteria.</p>
+
+<ol>
+<li>Outbound activity tolerance. Can the candidate make 60 to 80 outbound touches a day for nine months and not burn out?</li>
+<li>Coachability. Will the candidate take feedback from a founder who is teaching the script in real time?</li>
+<li>Curiosity about the product and the customer. Can the candidate hold a one-minute coherent description of the product and the ICP three weeks in?</li>
+<li>Resilience to rejection. Can the candidate handle 95 percent ignore rates without losing motivation?</li>
+</ol>
+
+<p>What is not on the list: prior SDR experience. Some of the best first SDR hires come from teaching, retail management, athletics, or non-sales corporate roles. What matters is the four traits above, not whether the candidate has used Outreach or Salesloft before.</p>
+
+<h2>The interview loop</h2>
+
+<p>A four-stage loop runs well for a first SDR hire:</p>
+
+<ol>
+<li>A 30-minute screen with the founder or hiring manager covering motivation, prior work, and a high-level product walkthrough.</li>
+<li>A 45-minute interview focused on the four scorecard criteria, with structured behavioral questions.</li>
+<li>A practical exercise: the candidate writes a cold email to a real target account based on a one-page brief, and the founder reviews the output.</li>
+<li>A reference call with the candidate's direct manager from the prior role.</li>
+</ol>
+
+<p>The practical exercise is the highest-signal stage. A candidate who can write a coherent, customer-relevant cold email after a one-page brief is dramatically more likely to succeed than a candidate who interviews well but writes poorly. The <a href="/sales-enablement/">sales enablement directory</a> and <a href="/sellers/">sellers directory</a> cover the resources first-time SDRs use to learn the craft.</p>
+
+<h2>Onboarding and ramp</h2>
+
+<p>The first SDR's ramp should be 60 to 90 days. The plan should include product training in week one, ICP and persona training in week two, tool training in week three, shadowing the founder on calls in week four, and live outbound starting week five. Quota should ramp from 25 percent of full quota in month one to 75 percent in month three.</p>
+
+<p>Founders who skip the structured ramp because they are busy produce SDRs who never develop the underlying instincts. The 60 to 90 day investment pays back in the next 12 months of pipeline. Shortcutting the ramp does not save time. It loses pipeline.</p>
+
+<h2>Manager support</h2>
+
+<p>A first SDR needs a manager. At early-stage companies, the manager is usually the founder or the founder-AE. The manager role does not require a full-time commitment, but it does require a weekly 1:1, a daily 15-minute pipeline standup, and live call coaching on at least two cold calls per week.</p>
+
+<p>Companies that hire the first SDR without a designated manager produce a rep who flounders without coaching, falls behind on the script, and exits within six to nine months. The fix is to assign one person to own the SDR's success and to budget time for that ownership.</p>
+
+<h2>Tool stack for the first SDR</h2>
+
+<p>The minimum stack is a CRM, an outbound sequencer, a meeting scheduler, and a data source. Salesforce or HubSpot for the CRM. Outreach, Salesloft, or Apollo for the sequencer. Calendly or Chili Piper for scheduling. ZoomInfo, Apollo, or a clay-based stack for data. The <a href="/sellers/">sellers directory</a> and <a href="https://thesellerreport.com">The Seller Report</a> cover the active options.</p>
+
+<p>Spending heavily on the stack before hiring the SDR is the wrong order. The first stack should be minimal and the SDR should grow into more advanced tooling as the pipeline channel matures.</p>
+
+<h2>Common founder mistakes</h2>
+
+<p>Four patterns recur. The first is hiring a senior SDR who cannot tolerate the early-stage chaos and exits within six months. The second is hiring a junior SDR with no manager support and watching the rep fail through no fault of their own.</p>
+
+<p>The third is loading the first SDR with too many functions, including inbound qualification, customer support, and event coordination, which produces a generalist who books no meetings. The fourth is firing the first SDR at month four when the pipeline has not materialized, before the ramp has completed. The cleanest founders set a 90-day evaluation milestone and a 180-day promotion decision and stick to both regardless of pressure.</p>
+
+<h2>The 12-month picture</h2>
+
+<p>A working first SDR hire produces 80 to 150 qualified opportunities and 25 to 60 closed-won deals over the first 12 months at a B2B SaaS company with 20K to 80K ACV. The pipeline contribution justifies the comp investment and produces the data needed to hire a second SDR or promote the first SDR to AE.</p>
+
+<p>The <a href="/guides/when-to-promote-an-sdr-to-ae/">SDR to AE promotion</a> guide covers the next step in the path. The <a href="/guides/how-to-hire-your-first-account-executive/">first AE hire</a> guide covers the related decision on the closer side.</p>
+
+
+  <h2>Frequently asked questions</h2>
+  <div class="guide-faq">
+<details><summary>When should a B2B SaaS founder hire the first SDR?</summary><p>When the founder has closed 10 to 20 customers through founder-led sales, knows the ICP in detail, has an AE or founder-AE to receive meetings, and has 50K to 100K MRR to absorb the cost. The latest reasonable time is 1M to 2M ARR. Past that, the founder is leaving pipeline on the table.</p></details>
+<details><summary>What is the first-year OTE for an SDR?</summary><p>Bridge Group benchmarks place first-year SDR OTE at venture-backed B2B SaaS companies between 60K and 85K US dollars, with a 65 to 75 percent base. Below market pay produces a weak candidate pool, a slow ramp, and turnover within a year.</p></details>
+<details><summary>Should the first SDR have prior SDR experience?</summary><p>Not necessarily. The most predictive traits are outbound activity tolerance, coachability, curiosity, and resilience. Some of the best first SDR hires come from teaching, retail management, athletics, or non-sales corporate roles. Prior SDR experience is a plus but not a requirement.</p></details>
+<details><summary>How long should the first SDR's ramp be?</summary><p>60 to 90 days, structured across product training, ICP training, tool training, shadowing, and live outbound. Quota should ramp from 25 percent in month one to 75 percent in month three, with full quota by month four or five.</p></details>
+<details><summary>What is the most common founder mistake with the first SDR?</summary><p>Hiring without a designated manager. The first SDR needs a weekly 1:1, a daily standup, and live call coaching. Without manager support the rep flounders, falls behind on the script, and exits within six to nine months. The fix is to assign one person to own the SDR's success.</p></details>
+</div>
+
+  <div class="guide-related"><h2>Keep reading</h2><ul>
+<li><a href="/sellers/">B2B sellers directory</a></li>
+<li><a href="/sales-enablement/">Sales enablement directory</a></li>
+<li><a href="/ai-sdr/">AI SDR and outbound directory</a></li>
+<li><a href="/revops/">RevOps directory</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report (SDR comp data)</a></li>
+<li><a href="https://gtmepulse.com">GTME Pulse (GTM engineer benchmarks)</a></li>
+</ul></div>
+</div>
+
+
+<section class="newsletter" id="subscribe">
+  <h2>Stay Updated</h2>
+  <p>Get notified when we add new directories or update existing ones.</p>
+  <form class="newsletter-form" id="signup-form" onsubmit="return handleSignup(event)">
+    <input type="email" name="email" placeholder="you@company.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <div class="msg" id="signup-msg"></div>
+</section>
+<script>
+async function handleSignup(e) {
+  e.preventDefault();
+  const form = e.target;
+  const email = form.email.value;
+  const btn = form.querySelector('button');
+  const msg = document.getElementById('signup-msg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  try {
+    const res = await fetch('https://newsletter-subscribe.rome-workers.workers.dev/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, list: 'gtm-index'})
+    });
+    const data = await res.json();
+    if (data.ok) {
+      msg.className = 'msg success';
+      msg.textContent = 'You\'re in. We\'ll keep you posted.';
+      form.email.value = '';
+    } else {
+      throw new Error(data.error || 'Something went wrong');
+    }
+  } catch(err) {
+    msg.className = 'msg error';
+    msg.textContent = err.message;
+  }
+  btn.disabled = false;
+  btn.textContent = 'Subscribe';
+}
+</script>
+
+<footer class="footer" style="padding:48px 24px 32px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px;font-size:13px;">
+      <div>
+        <div class="footer__brand" style="margin-bottom:16px;">The GTM <span>Index</span></div>
+        <p style="color:rgba(255,255,255,0.5);font-size:12px;line-height:1.5;">Curated directories for every go-to-market role.</p>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Sales & Revenue</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://thecroreport.com">The CRO Report</a></li>
+<li><a href="https://therevopsreport.com">The RevOps Report</a></li>
+<li><a href="https://b2bsalestools.com">B2B Sales Tools</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report</a></li>
+<li><a href="https://presalespulse.com">PreSales Pulse</a></li>
+<li><a href="https://senablers.com">SE Nablers</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Engineering & Data</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://gtmepulse.com">GTME Pulse</a></li>
+<li><a href="https://fdepulse.com">FDE Pulse</a></li>
+<li><a href="https://theaimarketpulse.com">AI Market Pulse</a></li>
+<li><a href="https://datastackguide.com">DataStack Guide</a></li>
+<li><a href="https://mopsreport.com">MOPs Report</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Strategy & Growth</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://fractionalpulse.com">Fractional Pulse</a></li>
+<li><a href="https://theabmpulse.com">The ABM Pulse</a></li>
+<li><a href="https://thecspulse.com">The CS Pulse</a></li>
+<li><a href="https://partnerchannels.com">Partner Channels</a></li>
+<li><a href="https://thedevicepulse.com">Device Pulse</a></li>
+<li><a href="https://sultanofsaas.com">Sultan of SaaS</a></li>
+<li><a href="https://thelaunchindex.com">The Launch Index</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="footer__copy">&copy; 2026 The GTM Index. All rights reserved.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);"><a href="/about/" style="color:rgba(255,255,255,0.5);">About</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

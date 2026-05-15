@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Hire a Fractional CMO: Scope, Cost, and Fit | The GTM Index</title>
+<meta name="description" content="How to hire a fractional CMO. Pricing benchmarks, scope templates, success criteria, and how to decide between fractional and full-time CMO in B2B SaaS.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thegtmindex.com/guides/how-to-hire-a-fractional-cmo/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thegtmindex.com/guides/how-to-hire-a-fractional-cmo/">
+<meta property="og:title" content="How to Hire a Fractional CMO: Scope, Cost, and Fit | The GTM Index">
+<meta property="og:description" content="How to hire a fractional CMO. Pricing benchmarks, scope templates, success criteria, and how to decide between fractional and full-time CMO in B2B SaaS.">
+<meta property="og:site_name" content="The GTM Index">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Hire a Fractional CMO: Scope, Cost, and Fit | The GTM Index">
+<meta name="twitter:description" content="How to hire a fractional CMO. Pricing benchmarks, scope templates, success criteria, and how to decide between fractional and full-time CMO in B2B SaaS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --navy: #1B2838;
+    --navy-deep: #0F1923;
+    --amber: #F59E0B;
+    --amber-light: #FBBF24;
+    --amber-dark: #D97706;
+    --bg: #FAFAFA;
+    --bg-white: #FFFFFF;
+    --text: #1F2937;
+    --text-muted: #6B7280;
+    --text-light: #94A3B8;
+    --border: #E5E7EB;
+    --icon-bg: #FEF3C7;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-hover: 0 4px 12px rgba(245,158,11,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Header */
+.header {
+    background: var(--navy);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+}
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo { font-size: 18px; font-weight: 700; color: var(--amber); }
+.logo span { color: #fff; }
+.nav { display: flex; gap: 24px; align-items: center; }
+.nav a { color: var(--text-light); font-size: 14px; font-weight: 500; transition: color 150ms; }
+.nav a:hover { color: #fff; }
+
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.menu-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; transition: 150ms; }
+
+/* Hero */
+.hero {
+    padding: 140px 24px 80px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+}
+.hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.15; }
+.hero h1 em { color: var(--amber); font-style: normal; }
+.hero p { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+.hero .cta { display: inline-block; background: var(--amber); color: var(--navy); padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 15px; transition: background 150ms; }
+.hero .cta:hover { background: var(--amber-light); }
+
+/* Stats */
+.stats { display: flex; justify-content: center; gap: 48px; margin-top: 48px; }
+.stat { text-align: center; }
+.stat__number { font-size: 32px; font-weight: 700; color: var(--amber); }
+.stat__label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+/* Cards Grid */
+.directories { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.directories h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.directories .subtitle { color: var(--text-muted); margin-bottom: 32px; font-size: 15px; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color 200ms, box-shadow 200ms; display: flex; flex-direction: column; }
+.card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.card__icon { width: 42px; height: 42px; background: var(--icon-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+.card h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.card p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; flex: 1; }
+.card__link { font-size: 13px; color: var(--amber-dark); font-weight: 600; }
+.card__link:hover { color: var(--amber); }
+
+/* Newsletter CTA */
+.newsletter { padding: 64px 24px; text-align: center; background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.newsletter h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.newsletter p { color: var(--text-muted); margin-bottom: 24px; font-size: 15px; }
+.newsletter-form { display: flex; max-width: 440px; margin: 0 auto; gap: 8px; }
+.newsletter-form input { flex: 1; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; }
+.newsletter-form input:focus { border-color: var(--amber); }
+.newsletter-form button { background: var(--amber); color: var(--navy); padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; transition: background 150ms; white-space: nowrap; }
+.newsletter-form button:hover { background: var(--amber-light); }
+.newsletter .msg { margin-top: 12px; font-size: 13px; }
+.newsletter .msg.success { color: #059669; }
+.newsletter .msg.error { color: #DC2626; }
+
+/* Footer */
+.footer { background: var(--navy); color: var(--text-light); padding: 48px 24px 32px; }
+.footer__inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer__brand { font-size: 16px; font-weight: 700; color: var(--amber); }
+.footer__brand span { color: #fff; }
+.footer__copy { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+/* About + Resource pages */
+.page { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.page h1 { font-size: 32px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; letter-spacing: -0.5px; }
+.page p { font-size: 16px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.7; }
+.page h2 { font-size: 20px; font-weight: 600; margin: 32px 0 12px; }
+.page a { color: var(--amber-dark); }
+.page a:hover { color: var(--amber); }
+
+/* Resource page specific */
+.rp-breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+.rp-breadcrumb a { text-decoration: none; color: var(--amber-dark); }
+.rp-intro { margin-bottom: 40px; }
+.rp-intro p { font-size: 16px; color: #4B5563; line-height: 1.7; margin-bottom: 12px; }
+.rp-section { margin-bottom: 48px; }
+.rp-section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #F3F4F6; color: var(--text); }
+.rp-item { margin-bottom: 24px; }
+.rp-item-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.rp-item-title a { text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; color: var(--text); }
+.rp-item-title a:hover { text-decoration-color: var(--text-muted); }
+.rp-item-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.rp-badge { display: inline-block; background: var(--icon-bg); color: #92400E; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; vertical-align: middle; margin-left: 4px; }
+.rp-curation { margin-top: 48px; padding: 32px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.rp-curation h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+.rp-curation p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+.rp-back { display: inline-block; margin-top: 32px; font-size: 14px; color: var(--amber-dark); font-weight: 500; }
+
+/* Mobile */
+.mobile-nav { display: none; position: fixed; top: 0; right: -100%; width: 260px; height: 100vh; background: var(--navy-deep); z-index: 200; padding: 80px 24px 24px; transition: right 250ms; }
+.mobile-nav.active { right: 0; }
+.mobile-nav a { display: block; color: var(--text-light); font-size: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mobile-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 199; }
+.mobile-overlay.active { display: block; }
+
+@media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .stats { gap: 32px; } }
+@media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } .nav { display: none; } .menu-toggle { display: block; } .hero { padding: 120px 20px 60px; } .hero p { font-size: 16px; } .stats { flex-direction: column; gap: 16px; } .newsletter-form { flex-direction: column; } .footer__inner { flex-direction: column; gap: 12px; text-align: center; } .page { padding: 80px 16px 48px; } .page h1 { font-size: 26px; } }
+.footer ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 150ms; }
+.footer ul li a:hover { color: var(--amber); }
+@media (max-width: 768px) { .footer div[style*="grid-template-columns"] { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 480px) { .footer div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
+</style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2GCLCTZHE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V2GCLCTZHE');
+</script>
+<style>
+/* Guide article styles */
+.guide-wrap { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.guide-wrap h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.5px; color: var(--text); }
+.guide-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; }
+.guide-meta a { color: var(--amber-dark); }
+.guide-wrap h2 { font-size: 24px; font-weight: 700; margin: 40px 0 12px; color: var(--text); letter-spacing: -0.3px; }
+.guide-wrap h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: var(--text); }
+.guide-wrap p { font-size: 16px; color: #374151; margin-bottom: 16px; line-height: 1.75; }
+.guide-wrap ul, .guide-wrap ol { margin: 0 0 20px 22px; color: #374151; }
+.guide-wrap li { font-size: 16px; line-height: 1.7; margin-bottom: 8px; }
+.guide-wrap a { color: var(--amber-dark); text-decoration: underline; text-decoration-color: #FCD34D; text-underline-offset: 3px; }
+.guide-wrap a:hover { color: var(--amber); }
+.guide-wrap blockquote { border-left: 3px solid var(--amber); padding: 4px 18px; margin: 20px 0; color: var(--text-muted); font-size: 15px; }
+.guide-table-wrap { overflow-x: auto; margin: 16px 0 24px; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.guide-table th, .guide-table td { padding: 10px 12px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+.guide-table th { background: #F9FAFB; font-weight: 600; }
+.guide-callout { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 10px; padding: 20px 22px; margin: 24px 0; }
+.guide-callout p { margin-bottom: 0; font-size: 15px; }
+.guide-faq { margin-top: 32px; }
+.guide-faq details { border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; background: var(--bg-white); }
+.guide-faq summary { font-weight: 600; cursor: pointer; font-size: 15px; color: var(--text); }
+.guide-faq details[open] summary { margin-bottom: 8px; }
+.guide-faq p { font-size: 15px; color: #4B5563; margin-bottom: 0; }
+.guide-related { margin-top: 48px; padding: 28px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.guide-related h2 { font-size: 18px; margin-top: 0; margin-bottom: 12px; }
+.guide-related ul { list-style: none; margin: 0; padding: 0; }
+.guide-related li { font-size: 14px; margin-bottom: 8px; }
+.guide-related a { color: var(--amber-dark); text-decoration: none; font-weight: 500; }
+.guide-related a:hover { text-decoration: underline; }
+.guides-grid { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.guides-grid h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 12px; letter-spacing: -0.5px; }
+.guides-grid .sub { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; }
+.guides-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.guide-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 10px; padding: 24px; transition: border-color 200ms, box-shadow 200ms; display: block; }
+.guide-card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.guide-card h3 { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.guide-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px; }
+.guide-card .date { font-size: 12px; color: var(--text-light); }
+@media (max-width: 700px) { .guides-list { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Hire a Fractional CMO: Scope, Cost, and Fit",
+  "description": "How to hire a fractional CMO. Pricing benchmarks, scope templates, success criteria, and how to decide between fractional and full-time CMO in B2B SaaS.",
+  "url": "https://thegtmindex.com/guides/how-to-hire-a-fractional-cmo/",
+  "datePublished": "2026-05-15",
+  "dateModified": "2026-05-15",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The GTM Index",
+    "url": "https://thegtmindex.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thegtmindex.com/guides/how-to-hire-a-fractional-cmo/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://thegtmindex.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://thegtmindex.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Hire a Fractional CMO: Scope, Cost, and Fit",
+      "item": "https://thegtmindex.com/guides/how-to-hire-a-fractional-cmo/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When should a SaaS company hire a fractional CMO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most commonly at 500K to 8M ARR. Below 500K, the founder usually still owns marketing personally. Above 8M, the company needs daily executive presence for brand authorship and product launches, which a fractional cannot sustain at scale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a fractional CMO cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fractional CMO engagements typically price at 8K to 22K US dollars per month for two to three days a week. The lower end covers strategic advisory work. The upper end covers operational engagements with senior public-company executive experience. Equity is sometimes included at 0.1 to 0.5 percent for early-stage engagements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should a fractional CMO run paid campaigns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The right fractional engagement focuses on positioning, channel strategy, operating cadence, hiring plan, and coaching. Campaign execution stays with junior marketing hires or with the founder until the full-time CMO is in seat. Using a fractional CMO for campaign execution wastes the engagement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should the engagement run?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Six to twelve months. Under six, the cycle of brand work and team building does not complete. Past twelve, the engagement usually signals a permanent fractional state that should have transitioned to full-time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the single most valuable deliverable from a fractional CMO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The positioning and messaging framework. A working framework gets adopted by sales, reflected on the website, and referenced by product. A framework that lives in a deck and never reaches the rest of the company has failed regardless of brand quality."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo">The GTM <span>Index</span></a>
+    <nav class="nav">
+      <a href="/#directories">Browse</a>
+      <a href="/about/">About</a>
+      <a href="/#subscribe">Newsletter</a>
+    </nav>
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('active');document.querySelector('.mobile-overlay').classList.toggle('active');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <a href="/#directories">Browse</a>
+  <a href="/about/">About</a>
+  <a href="/#subscribe">Newsletter</a>
+</nav>
+
+<div class="guide-wrap">
+  <nav class="rp-breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; <span>How to Hire a Fractional CMO: Scope, Cost, and Fit</span>
+  </nav>
+
+  <h1>How to Hire a Fractional CMO: Scope, Cost, and Fit</h1>
+  <div class="guide-meta">By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; Published May 15, 2026</div>
+
+  
+<p>The fractional CMO hire is most common at B2B SaaS companies between 1M and 8M ARR, where the founder needs senior marketing leadership but cannot yet justify a full-time CMO comp package. The right engagement produces a working marketing operating model, a documented brand and messaging foundation, and a hiring plan for the marketing bench. The wrong engagement produces brand decks that never reach the market.</p>
+
+<p>This guide covers the timing, the scope, the pricing, and the evaluation criteria for a fractional CMO engagement. The benchmarks come from Pavilion, the CMO Council, and the practitioner data tracked at the <a href="/fractional/">fractional executives directory</a> and <a href="https://fractionalpulse.com">Fractional Pulse</a>.</p>
+
+<h2>When the engagement makes sense</h2>
+
+<p>Three timing patterns work for a fractional CMO. The first is at 500K to 2M ARR, when the founder has been doing marketing personally and needs senior strategic input on positioning, messaging, and channel mix. The second is at 2M to 8M ARR, when the company has a junior marketing hire and needs senior coaching plus operating model design. The third is during a leadership transition, when the prior CMO has exited and the company needs continuity while the full-time search runs.</p>
+
+<p>The engagement does not work as a permanent substitute past 10M ARR. Marketing leadership at scale requires daily presence, executive partnership, and brand authorship that a fractional cannot sustain.</p>
+
+<h2>What a fractional CMO produces</h2>
+
+<p>A working engagement produces five deliverables across six to twelve months:</p>
+
+<ol>
+<li>A documented positioning and messaging framework: ICP, value props, competitive positioning, and category narrative.</li>
+<li>A channel strategy: paid, content, events, partnerships, and the priority order for the next 12 months.</li>
+<li>A marketing operating cadence: weekly stand-up, monthly review, quarterly planning.</li>
+<li>A hiring plan for the marketing bench, with scorecards and comp ranges.</li>
+<li>Coaching for the existing marketing hires or the founder on marketing decisions.</li>
+</ol>
+
+<p>What the engagement should not include is daily campaign execution. A fractional CMO is not a campaign manager. Founders who expect the fractional to write every email and run every paid channel are paying for senior strategic work and using it for tactical execution, which wastes the engagement.</p>
+
+<h2>Pricing benchmarks</h2>
+
+<p>Fractional CMO engagements typically price at 8K to 22K US dollars per month for two to three days a week. The lower end of the band covers strategic advisory roles. The upper end covers operational engagements with senior public-company executive experience. Equity is sometimes included at 0.1 to 0.5 percent for early-stage engagements.</p>
+
+<p>The pricing tends to run slightly lower than fractional CRO pricing because the role is more advisory and less operationally accountable for revenue. The <a href="https://fractionalpulse.com">Fractional Pulse</a> tracks the active marketplaces and the comp benchmarks practitioners see.</p>
+
+<h2>Scope template</h2>
+
+<p>The scope document should cover:</p>
+
+<ul>
+<li>The objective in one sentence.</li>
+<li>The five deliverables listed above.</li>
+<li>The time commitment per week.</li>
+<li>The reporting structure and weekly review cadence.</li>
+<li>The success criteria as observable outcomes.</li>
+<li>The transition plan to a full-time CMO or VP Marketing.</li>
+</ul>
+
+<p>Engagements without a written scope tend to drift toward whichever marketing problem feels most urgent that week. The result is a fractional who runs tickets rather than building operating capacity.</p>
+
+<h2>How to evaluate candidates</h2>
+
+<p>The right fractional CMO has a track record of operating as a full-time CMO or VP Marketing at a B2B SaaS company in a similar segment. They have built marketing operating models, hired marketing benches, and shipped positioning that the sales team adopted. They have at least one prior fractional engagement with reference contacts willing to talk.</p>
+
+<p>The interview loop should include a working session where the candidate scopes the engagement, walks through their 30-day plan, and identifies what they would not commit to. Candidates who oversell the scope produce engagements that fail. Candidates who under-scope realistically produce engagements that deliver.</p>
+
+<h2>Fractional vs full-time CMO</h2>
+
+<p>The fractional path works when the company is below 8M ARR and cannot afford a full-time CMO comp package, when the work is strategic and structural rather than daily execution, and when the company has a credible plan to either hire full-time later or continue with a strong VP Marketing who can absorb the operating model.</p>
+
+<p>The full-time path works when the company is past 8M ARR, when daily executive presence is required for brand authorship and product launches, or when the company is preparing for a fundraise that needs a permanent CMO on the cap table. The decision is usually triggered when the marketing complexity exceeds what a two-day-a-week engagement can sustain.</p>
+
+<h2>Engagement length</h2>
+
+<p>Six to twelve months is the working window. Engagements under six months rarely produce operating change because the cycle of brand work, channel design, and team building runs longer. Engagements past twelve months usually signal a permanent fractional state that should have transitioned to full-time.</p>
+
+<p>The cleanest engagements have a defined end date with a renewal option. The end date forces both parties to plan the transition. The renewal option allows extension if the full-time search takes longer than expected.</p>
+
+<h2>Tool stack handoff</h2>
+
+<p>A working engagement also produces a tool stack decision: which marketing automation platform to use, which paid acquisition platforms to invest in, which content platform, and which analytics platforms. The fractional should document the rationale for each choice and the conditions under which to change.</p>
+
+<p>The <a href="/marketing-ops/">marketing operations directory</a> and <a href="https://mopsreport.com">MOPs Report</a> track the active platforms. The <a href="/demand-gen/">demand generation directory</a> covers the channel side.</p>
+
+<h2>Common mistakes</h2>
+
+<p>Four patterns recur. The first is hiring a fractional without a written scope, which produces drift. The second is treating the fractional as a campaign executor, which underuses senior talent. The third is hiring a fractional too early, before product-market fit, which produces a positioning framework that does not match the actual buyer.</p>
+
+<p>The fourth is failing to plan the transition to full-time, which leaves the company in a permanent fractional state. The fix to all four is to write the scope, define the deliverables, and plan the transition before the engagement starts.</p>
+
+<h2>Brand and messaging foundations</h2>
+
+<p>The single most valuable deliverable from a fractional CMO is the positioning and messaging framework. The framework anchors the company's narrative through the next two years and serves as the foundation for every campaign, sales asset, and product launch. A working framework is observable: the sales team uses it on calls without prompting, the website reflects it in copy, and the product team references it when planning launches.</p>
+
+<p>A framework that lives in a deck and never reaches the rest of the company is not a working framework. Fractional engagements that produce decks without adoption have failed regardless of the brand quality of the work.</p>
+
+<h2>What the fractional leaves behind</h2>
+
+<p>A successful engagement leaves the company with five things: a positioning and messaging framework, a channel strategy, an operating cadence, a marketing hiring plan, and a transition plan. The artifacts should be documented and adopted by the team, not held in the fractional's head. Anything less leaves the next CMO hire to rebuild from scratch.</p>
+
+
+  <h2>Frequently asked questions</h2>
+  <div class="guide-faq">
+<details><summary>When should a SaaS company hire a fractional CMO?</summary><p>Most commonly at 500K to 8M ARR. Below 500K, the founder usually still owns marketing personally. Above 8M, the company needs daily executive presence for brand authorship and product launches, which a fractional cannot sustain at scale.</p></details>
+<details><summary>What does a fractional CMO cost?</summary><p>Fractional CMO engagements typically price at 8K to 22K US dollars per month for two to three days a week. The lower end covers strategic advisory work. The upper end covers operational engagements with senior public-company executive experience. Equity is sometimes included at 0.1 to 0.5 percent for early-stage engagements.</p></details>
+<details><summary>Should a fractional CMO run paid campaigns?</summary><p>No. The right fractional engagement focuses on positioning, channel strategy, operating cadence, hiring plan, and coaching. Campaign execution stays with junior marketing hires or with the founder until the full-time CMO is in seat. Using a fractional CMO for campaign execution wastes the engagement.</p></details>
+<details><summary>How long should the engagement run?</summary><p>Six to twelve months. Under six, the cycle of brand work and team building does not complete. Past twelve, the engagement usually signals a permanent fractional state that should have transitioned to full-time.</p></details>
+<details><summary>What is the single most valuable deliverable from a fractional CMO?</summary><p>The positioning and messaging framework. A working framework gets adopted by sales, reflected on the website, and referenced by product. A framework that lives in a deck and never reaches the rest of the company has failed regardless of brand quality.</p></details>
+</div>
+
+  <div class="guide-related"><h2>Keep reading</h2><ul>
+<li><a href="/fractional/">Fractional executives directory</a></li>
+<li><a href="/demand-gen/">Demand generation directory</a></li>
+<li><a href="/marketing-ops/">Marketing operations directory</a></li>
+<li><a href="/abm/">ABM platforms and resources</a></li>
+<li><a href="https://fractionalpulse.com">Fractional Pulse (marketplaces, comp)</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider (channel benchmarks)</a></li>
+</ul></div>
+</div>
+
+
+<section class="newsletter" id="subscribe">
+  <h2>Stay Updated</h2>
+  <p>Get notified when we add new directories or update existing ones.</p>
+  <form class="newsletter-form" id="signup-form" onsubmit="return handleSignup(event)">
+    <input type="email" name="email" placeholder="you@company.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <div class="msg" id="signup-msg"></div>
+</section>
+<script>
+async function handleSignup(e) {
+  e.preventDefault();
+  const form = e.target;
+  const email = form.email.value;
+  const btn = form.querySelector('button');
+  const msg = document.getElementById('signup-msg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  try {
+    const res = await fetch('https://newsletter-subscribe.rome-workers.workers.dev/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, list: 'gtm-index'})
+    });
+    const data = await res.json();
+    if (data.ok) {
+      msg.className = 'msg success';
+      msg.textContent = 'You\'re in. We\'ll keep you posted.';
+      form.email.value = '';
+    } else {
+      throw new Error(data.error || 'Something went wrong');
+    }
+  } catch(err) {
+    msg.className = 'msg error';
+    msg.textContent = err.message;
+  }
+  btn.disabled = false;
+  btn.textContent = 'Subscribe';
+}
+</script>
+
+<footer class="footer" style="padding:48px 24px 32px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px;font-size:13px;">
+      <div>
+        <div class="footer__brand" style="margin-bottom:16px;">The GTM <span>Index</span></div>
+        <p style="color:rgba(255,255,255,0.5);font-size:12px;line-height:1.5;">Curated directories for every go-to-market role.</p>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Sales & Revenue</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://thecroreport.com">The CRO Report</a></li>
+<li><a href="https://therevopsreport.com">The RevOps Report</a></li>
+<li><a href="https://b2bsalestools.com">B2B Sales Tools</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report</a></li>
+<li><a href="https://presalespulse.com">PreSales Pulse</a></li>
+<li><a href="https://senablers.com">SE Nablers</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Engineering & Data</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://gtmepulse.com">GTME Pulse</a></li>
+<li><a href="https://fdepulse.com">FDE Pulse</a></li>
+<li><a href="https://theaimarketpulse.com">AI Market Pulse</a></li>
+<li><a href="https://datastackguide.com">DataStack Guide</a></li>
+<li><a href="https://mopsreport.com">MOPs Report</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Strategy & Growth</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://fractionalpulse.com">Fractional Pulse</a></li>
+<li><a href="https://theabmpulse.com">The ABM Pulse</a></li>
+<li><a href="https://thecspulse.com">The CS Pulse</a></li>
+<li><a href="https://partnerchannels.com">Partner Channels</a></li>
+<li><a href="https://thedevicepulse.com">Device Pulse</a></li>
+<li><a href="https://sultanofsaas.com">Sultan of SaaS</a></li>
+<li><a href="https://thelaunchindex.com">The Launch Index</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="footer__copy">&copy; 2026 The GTM Index. All rights reserved.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);"><a href="/about/" style="color:rgba(255,255,255,0.5);">About</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
