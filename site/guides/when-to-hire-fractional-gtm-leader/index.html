@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When to Hire a Fractional GTM Leader: A Founder Guide | The GTM Index</title>
+<meta name="description" content="Signals it is time to hire a fractional CRO, CMO, or RevOps leader. Pricing benchmarks, scope templates, and how to evaluate fractional vs a full-time hire.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thegtmindex.com/guides/when-to-hire-fractional-gtm-leader/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thegtmindex.com/guides/when-to-hire-fractional-gtm-leader/">
+<meta property="og:title" content="When to Hire a Fractional GTM Leader: A Founder Guide | The GTM Index">
+<meta property="og:description" content="Signals it is time to hire a fractional CRO, CMO, or RevOps leader. Pricing benchmarks, scope templates, and how to evaluate fractional vs a full-time hire.">
+<meta property="og:site_name" content="The GTM Index">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="When to Hire a Fractional GTM Leader: A Founder Guide | The GTM Index">
+<meta name="twitter:description" content="Signals it is time to hire a fractional CRO, CMO, or RevOps leader. Pricing benchmarks, scope templates, and how to evaluate fractional vs a full-time hire.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --navy: #1B2838;
+    --navy-deep: #0F1923;
+    --amber: #F59E0B;
+    --amber-light: #FBBF24;
+    --amber-dark: #D97706;
+    --bg: #FAFAFA;
+    --bg-white: #FFFFFF;
+    --text: #1F2937;
+    --text-muted: #6B7280;
+    --text-light: #94A3B8;
+    --border: #E5E7EB;
+    --icon-bg: #FEF3C7;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-hover: 0 4px 12px rgba(245,158,11,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Header */
+.header {
+    background: var(--navy);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+}
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo { font-size: 18px; font-weight: 700; color: var(--amber); }
+.logo span { color: #fff; }
+.nav { display: flex; gap: 24px; align-items: center; }
+.nav a { color: var(--text-light); font-size: 14px; font-weight: 500; transition: color 150ms; }
+.nav a:hover { color: #fff; }
+
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.menu-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; transition: 150ms; }
+
+/* Hero */
+.hero {
+    padding: 140px 24px 80px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+}
+.hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.15; }
+.hero h1 em { color: var(--amber); font-style: normal; }
+.hero p { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+.hero .cta { display: inline-block; background: var(--amber); color: var(--navy); padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 15px; transition: background 150ms; }
+.hero .cta:hover { background: var(--amber-light); }
+
+/* Stats */
+.stats { display: flex; justify-content: center; gap: 48px; margin-top: 48px; }
+.stat { text-align: center; }
+.stat__number { font-size: 32px; font-weight: 700; color: var(--amber); }
+.stat__label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+/* Cards Grid */
+.directories { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.directories h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.directories .subtitle { color: var(--text-muted); margin-bottom: 32px; font-size: 15px; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color 200ms, box-shadow 200ms; display: flex; flex-direction: column; }
+.card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.card__icon { width: 42px; height: 42px; background: var(--icon-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+.card h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.card p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; flex: 1; }
+.card__link { font-size: 13px; color: var(--amber-dark); font-weight: 600; }
+.card__link:hover { color: var(--amber); }
+
+/* Newsletter CTA */
+.newsletter { padding: 64px 24px; text-align: center; background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.newsletter h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.newsletter p { color: var(--text-muted); margin-bottom: 24px; font-size: 15px; }
+.newsletter-form { display: flex; max-width: 440px; margin: 0 auto; gap: 8px; }
+.newsletter-form input { flex: 1; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; }
+.newsletter-form input:focus { border-color: var(--amber); }
+.newsletter-form button { background: var(--amber); color: var(--navy); padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; transition: background 150ms; white-space: nowrap; }
+.newsletter-form button:hover { background: var(--amber-light); }
+.newsletter .msg { margin-top: 12px; font-size: 13px; }
+.newsletter .msg.success { color: #059669; }
+.newsletter .msg.error { color: #DC2626; }
+
+/* Footer */
+.footer { background: var(--navy); color: var(--text-light); padding: 48px 24px 32px; }
+.footer__inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer__brand { font-size: 16px; font-weight: 700; color: var(--amber); }
+.footer__brand span { color: #fff; }
+.footer__copy { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+/* About + Resource pages */
+.page { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.page h1 { font-size: 32px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; letter-spacing: -0.5px; }
+.page p { font-size: 16px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.7; }
+.page h2 { font-size: 20px; font-weight: 600; margin: 32px 0 12px; }
+.page a { color: var(--amber-dark); }
+.page a:hover { color: var(--amber); }
+
+/* Resource page specific */
+.rp-breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+.rp-breadcrumb a { text-decoration: none; color: var(--amber-dark); }
+.rp-intro { margin-bottom: 40px; }
+.rp-intro p { font-size: 16px; color: #4B5563; line-height: 1.7; margin-bottom: 12px; }
+.rp-section { margin-bottom: 48px; }
+.rp-section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #F3F4F6; color: var(--text); }
+.rp-item { margin-bottom: 24px; }
+.rp-item-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.rp-item-title a { text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; color: var(--text); }
+.rp-item-title a:hover { text-decoration-color: var(--text-muted); }
+.rp-item-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.rp-badge { display: inline-block; background: var(--icon-bg); color: #92400E; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; vertical-align: middle; margin-left: 4px; }
+.rp-curation { margin-top: 48px; padding: 32px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.rp-curation h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+.rp-curation p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+.rp-back { display: inline-block; margin-top: 32px; font-size: 14px; color: var(--amber-dark); font-weight: 500; }
+
+/* Mobile */
+.mobile-nav { display: none; position: fixed; top: 0; right: -100%; width: 260px; height: 100vh; background: var(--navy-deep); z-index: 200; padding: 80px 24px 24px; transition: right 250ms; }
+.mobile-nav.active { right: 0; }
+.mobile-nav a { display: block; color: var(--text-light); font-size: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mobile-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 199; }
+.mobile-overlay.active { display: block; }
+
+@media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .stats { gap: 32px; } }
+@media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } .nav { display: none; } .menu-toggle { display: block; } .hero { padding: 120px 20px 60px; } .hero p { font-size: 16px; } .stats { flex-direction: column; gap: 16px; } .newsletter-form { flex-direction: column; } .footer__inner { flex-direction: column; gap: 12px; text-align: center; } .page { padding: 80px 16px 48px; } .page h1 { font-size: 26px; } }
+.footer ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 150ms; }
+.footer ul li a:hover { color: var(--amber); }
+@media (max-width: 768px) { .footer div[style*="grid-template-columns"] { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 480px) { .footer div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
+</style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2GCLCTZHE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V2GCLCTZHE');
+</script>
+<style>
+/* Guide article styles */
+.guide-wrap { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.guide-wrap h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.5px; color: var(--text); }
+.guide-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; }
+.guide-meta a { color: var(--amber-dark); }
+.guide-wrap h2 { font-size: 24px; font-weight: 700; margin: 40px 0 12px; color: var(--text); letter-spacing: -0.3px; }
+.guide-wrap h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: var(--text); }
+.guide-wrap p { font-size: 16px; color: #374151; margin-bottom: 16px; line-height: 1.75; }
+.guide-wrap ul, .guide-wrap ol { margin: 0 0 20px 22px; color: #374151; }
+.guide-wrap li { font-size: 16px; line-height: 1.7; margin-bottom: 8px; }
+.guide-wrap a { color: var(--amber-dark); text-decoration: underline; text-decoration-color: #FCD34D; text-underline-offset: 3px; }
+.guide-wrap a:hover { color: var(--amber); }
+.guide-wrap blockquote { border-left: 3px solid var(--amber); padding: 4px 18px; margin: 20px 0; color: var(--text-muted); font-size: 15px; }
+.guide-table-wrap { overflow-x: auto; margin: 16px 0 24px; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.guide-table th, .guide-table td { padding: 10px 12px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+.guide-table th { background: #F9FAFB; font-weight: 600; }
+.guide-callout { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 10px; padding: 20px 22px; margin: 24px 0; }
+.guide-callout p { margin-bottom: 0; font-size: 15px; }
+.guide-faq { margin-top: 32px; }
+.guide-faq details { border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; background: var(--bg-white); }
+.guide-faq summary { font-weight: 600; cursor: pointer; font-size: 15px; color: var(--text); }
+.guide-faq details[open] summary { margin-bottom: 8px; }
+.guide-faq p { font-size: 15px; color: #4B5563; margin-bottom: 0; }
+.guide-related { margin-top: 48px; padding: 28px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.guide-related h2 { font-size: 18px; margin-top: 0; margin-bottom: 12px; }
+.guide-related ul { list-style: none; margin: 0; padding: 0; }
+.guide-related li { font-size: 14px; margin-bottom: 8px; }
+.guide-related a { color: var(--amber-dark); text-decoration: none; font-weight: 500; }
+.guide-related a:hover { text-decoration: underline; }
+.guides-grid { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.guides-grid h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 12px; letter-spacing: -0.5px; }
+.guides-grid .sub { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; }
+.guides-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.guide-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 10px; padding: 24px; transition: border-color 200ms, box-shadow 200ms; display: block; }
+.guide-card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.guide-card h3 { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.guide-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px; }
+.guide-card .date { font-size: 12px; color: var(--text-light); }
+@media (max-width: 700px) { .guides-list { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "When to Hire a Fractional GTM Leader: A Founder Guide",
+  "description": "Signals it is time to hire a fractional CRO, CMO, or RevOps leader. Pricing benchmarks, scope templates, and how to evaluate fractional vs a full-time hire.",
+  "url": "https://thegtmindex.com/guides/when-to-hire-fractional-gtm-leader/",
+  "datePublished": "2026-05-14",
+  "dateModified": "2026-05-14",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The GTM Index",
+    "url": "https://thegtmindex.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thegtmindex.com/guides/when-to-hire-fractional-gtm-leader/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://thegtmindex.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://thegtmindex.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "When to Hire a Fractional GTM Leader: A Founder Guide",
+      "item": "https://thegtmindex.com/guides/when-to-hire-fractional-gtm-leader/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a fractional CRO cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most US fractional CRO engagements run $10K to $25K monthly for one to two days per week. Engagements above $15K monthly sometimes include a small equity grant in the 0.10 to 0.50 percent range, vesting over the term of the engagement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I hire a fractional CRO instead of a full-time VP Sales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A fractional CRO is the right call when the long-term shape of the GTM motion is still uncertain, or when a specific scoped problem has a defined endpoint. A full-time VP Sales is the right call when daily team management, active deal participation, and continuous coaching are the core need."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between fractional and interim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fractional engagements are part-time and run six to eighteen months while a company decides on the full-time shape of the role. Interim engagements are full-time and cover a defined window, often three to nine months, between two full-time hires."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should a fractional engagement last?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most successful fractional engagements run six to twelve months, with the strongest ones ending in a planned handoff to a full-time hire the fractional leader helped recruit. Engagements past eighteen months without a transition plan tend to drift."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do fractional leaders take equity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sometimes. Pavilion data shows roughly a third of fractional engagements above $15K monthly include a small equity grant. Below that retainer level, equity is uncommon and the engagement runs on cash."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo">The GTM <span>Index</span></a>
+    <nav class="nav">
+      <a href="/#directories">Browse</a>
+      <a href="/about/">About</a>
+      <a href="/#subscribe">Newsletter</a>
+    </nav>
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('active');document.querySelector('.mobile-overlay').classList.toggle('active');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <a href="/#directories">Browse</a>
+  <a href="/about/">About</a>
+  <a href="/#subscribe">Newsletter</a>
+</nav>
+
+<div class="guide-wrap">
+  <nav class="rp-breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; <span>When to Hire a Fractional GTM Leader: A Founder Guide</span>
+  </nav>
+
+  <h1>When to Hire a Fractional GTM Leader: A Founder Guide</h1>
+  <div class="guide-meta">By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; Published May 14, 2026</div>
+
+  
+<p>Fractional GTM leadership has gone from a niche offering to a real category in the past four years. Fractional CROs, CMOs, VPs of Sales, and RevOps leaders now show up in seed-stage hiring conversations as a default option rather than an exception. The market for these engagements has matured enough that <a href="/fractional/">fractional directories</a>, dedicated marketplaces, and standardized scope templates now exist.</p>
+
+<p>The question is not whether fractional leadership works. It does, when applied to the right problem at the right stage. The question is when to use it, how to scope it, and how to evaluate a candidate against a full-time hire.</p>
+
+<h2>The two signals that say fractional is the right move</h2>
+
+<p>The first signal is uncertainty about the long-term shape of the role. If you do not know whether your company needs a sales-led, marketing-led, or product-led GTM motion in two years, a fractional leader gives you working senior thinking without locking in a full-time hire who matches one motion. This is the most common reason early-stage CEOs hire fractional CROs.</p>
+
+<p>The second signal is a specific gap with a known endpoint. A fractional RevOps leader to design a comp plan and migrate a CRM. A fractional CMO to brief a new positioning effort and hand off to a director-level hire. A fractional VP Sales to build a hiring scorecard and onboard the first two AEs. These engagements work because both sides know what done looks like and when the engagement ends.</p>
+
+<h2>When fractional is the wrong call</h2>
+
+<p>Fractional leadership is the wrong call when the work requires full-time presence with the team. New AE coaching, daily forecast calls, large team management, and active deal participation all require enough hours that a fractional engagement either fails to deliver or expands until it costs more than a full-time hire.</p>
+
+<p>It is also the wrong call when the underlying problem is product-market fit, pricing, or positioning. A fractional CRO cannot fix a product that does not retain customers. SaaStr and First Round have both written about the pattern where a fractional sales leader is hired to fix what is in fact a product problem, and the engagement ends with a sales process that works against a product that still does not.</p>
+
+<h2>Pricing benchmarks</h2>
+
+<p>Fractional engagements in the US tend to land in a few standard pricing brackets. Pavilion, BUILT IN, and the marketplaces tracked at <a href="https://fractionalpulse.com">Fractional Pulse</a> show consistent ranges.</p>
+
+<div class="guide-table-wrap"><table class="guide-table">
+<thead><tr><th>Role</th><th>Engagement size</th><th>Monthly retainer</th></tr></thead>
+<tbody>
+<tr><td>Fractional CRO</td><td>1 to 2 days per week</td><td>$10K to $25K</td></tr>
+<tr><td>Fractional CMO</td><td>1 to 2 days per week</td><td>$8K to $20K</td></tr>
+<tr><td>Fractional VP Sales</td><td>2 to 3 days per week</td><td>$10K to $20K</td></tr>
+<tr><td>Fractional RevOps</td><td>1 to 2 days per week</td><td>$6K to $15K</td></tr>
+<tr><td>Fractional head of demand</td><td>1 to 2 days per week</td><td>$8K to $18K</td></tr>
+</tbody>
+</table></div>
+
+<p>Equity grants are uncommon at the lower end of the range and frequent at the upper end. Pavilion's fractional executive surveys show roughly a third of engagements above $15K monthly include a small equity component, usually between 0.10 and 0.50 percent, vesting over the term of the engagement.</p>
+
+<h2>How to scope the engagement</h2>
+
+<p>Three elements separate a working fractional engagement from a failed one. The first is a defined deliverable list. Generic monthly hours engagements fail more often than scoped ones because neither side ever agrees on what done looks like.</p>
+
+<p>The second is a clear reporting cadence. Strong fractional engagements include a weekly working session with the CEO or the next functional leader, a monthly written update, and a quarterly review against the original scope. Looser cadences tend to drift into advisory mode, which costs more than it returns.</p>
+
+<p>The third is a transition plan from day one. The best fractional engagements name the full-time hire they are setting up, even when that hire is six or twelve months out. A fractional CRO who is also defining the eventual full-time VP Sales scorecard returns more value than one who is operating in isolation.</p>
+
+<h2>Where to find candidates</h2>
+
+<p>Three channels produce most fractional placements. Founder and operator networks remain the highest signal source, especially for CRO and CMO roles where references matter more than resume scans. Pavilion's fractional pod and a small number of curated marketplaces produce the next tier of candidates. LinkedIn searches with the right boolean filters can produce the rest, though signal-to-noise gets worse there.</p>
+
+<p>For role-specific resources and active communities, the <a href="/fractional/">fractional directory</a> on this site collects the better marketplaces and playbook resources. The <a href="/revenue-leaders/">revenue leaders directory</a> and <a href="/revops/">RevOps directory</a> cover the practitioner communities where many fractional candidates are active.</p>
+
+<h2>Evaluation criteria</h2>
+
+<p>Three questions sort strong fractional candidates from weak ones. First, ask for the last three engagements they ran and the outcomes. Strong candidates can name the deliverable, the timeline, and what shifted afterward. Weak candidates describe activities rather than outcomes.</p>
+
+<p>Second, ask how they handle the handoff to a full-time hire. Strong candidates have a template, a scorecard, and a calibration process. Weak candidates plan to stay involved indefinitely.</p>
+
+<p>Third, ask about a project that did not work. Fractional leaders who can name a failure and what they learned tend to be calibrated. Those who cannot are usually selling a generalized resume rather than a specific operator track record.</p>
+
+<h2>Fractional versus interim</h2>
+
+<p>The two terms get used interchangeably and should not be. A fractional leader operates part-time over a sustained period, often six to eighteen months, while a company decides on the full-time shape of the role. An interim leader operates full-time for a defined window, often three to nine months, between two full-time hires or during a leave.</p>
+
+<p>Interim engagements look like a higher-cost retainer because they are full-time. Pricing for interim CROs and CMOs typically runs $25K to $50K monthly with a one to three month minimum, often plus a placement bonus on a successful full-time hire identified during the term. Pavilion and senior search firms both track this market separately from fractional.</p>
+
+<h2>When the fractional engagement should end</h2>
+
+<p>Two endings are healthy. The first is the planned handoff to a full-time hire who the fractional leader helped recruit and onboard. The second is the discovery that the work was either smaller than expected or already absorbed by other functions, with the engagement closed cleanly.</p>
+
+<p>One ending is a warning sign. Fractional engagements that drift past eighteen months without a transition plan usually indicate either that the company is using fractional as a permanent solution for a full-time problem, or that the fractional leader has become operationally indispensable in a way that resists the original intent. The first case usually ends in a missed quarter. The second usually ends in a difficult separation.</p>
+
+<h2>Common fractional engagement shapes</h2>
+
+<p>Four shapes show up most often in the data tracked at <a href="https://fractionalpulse.com">Fractional Pulse</a> and in Pavilion's annual surveys. The first is the launch shape, a six-month engagement designed to stand up a function from scratch and hand it off. This is the most common fractional CMO and fractional RevOps pattern at seed and Series A.</p>
+
+<p>The second is the bridge shape, three to six months covering a gap between a departed full-time leader and the replacement. The third is the advisor-plus shape, where a fractional leader runs a small number of strategic projects in parallel with light operational involvement, often paired with a board observer seat. The fourth is the playbook shape, where a fractional CRO or CMO designs a specific motion, like a new outbound program or a partner channel, with a defined go-live date.</p>
+
+<h2>Common failure modes</h2>
+
+<p>Three failure modes account for most fractional engagements that end poorly. The first is scope creep, where a clearly defined initial project absorbs operational responsibilities the company should have hired into directly. The fix is a written deliverable list reviewed every 30 days.</p>
+
+<p>The second is misaligned hours. A two-day-per-week engagement that the company expects to behave like a full-time role produces frustration on both sides. The fix is to be explicit about what the fractional leader is not doing, including which meetings they will not attend and which decisions they will not own.</p>
+
+<p>The third is the missing internal owner. Even strong fractional leaders need a counterpart inside the company who owns daily execution. Engagements without that counterpart turn into a one-person consulting project, with the company paying for ideas it has no path to implement.</p>
+
+
+  <h2>Frequently asked questions</h2>
+  <div class="guide-faq">
+<details><summary>How much does a fractional CRO cost?</summary><p>Most US fractional CRO engagements run $10K to $25K monthly for one to two days per week. Engagements above $15K monthly sometimes include a small equity grant in the 0.10 to 0.50 percent range, vesting over the term of the engagement.</p></details>
+<details><summary>When should I hire a fractional CRO instead of a full-time VP Sales?</summary><p>A fractional CRO is the right call when the long-term shape of the GTM motion is still uncertain, or when a specific scoped problem has a defined endpoint. A full-time VP Sales is the right call when daily team management, active deal participation, and continuous coaching are the core need.</p></details>
+<details><summary>What is the difference between fractional and interim?</summary><p>Fractional engagements are part-time and run six to eighteen months while a company decides on the full-time shape of the role. Interim engagements are full-time and cover a defined window, often three to nine months, between two full-time hires.</p></details>
+<details><summary>How long should a fractional engagement last?</summary><p>Most successful fractional engagements run six to twelve months, with the strongest ones ending in a planned handoff to a full-time hire the fractional leader helped recruit. Engagements past eighteen months without a transition plan tend to drift.</p></details>
+<details><summary>Do fractional leaders take equity?</summary><p>Sometimes. Pavilion data shows roughly a third of fractional engagements above $15K monthly include a small equity grant. Below that retainer level, equity is uncommon and the engagement runs on cash.</p></details>
+</div>
+
+  <div class="guide-related"><h2>Keep reading</h2><ul>
+<li><a href="/fractional/">Fractional executives directory</a></li>
+<li><a href="/revenue-leaders/">Revenue leaders directory</a></li>
+<li><a href="/revops/">RevOps directory</a></li>
+<li><a href="/demand-gen/">Demand generation directory</a></li>
+<li><a href="https://fractionalpulse.com">Fractional Pulse (marketplaces and pricing)</a></li>
+<li><a href="https://thecroreport.com">The CRO Report (compensation data)</a></li>
+</ul></div>
+</div>
+
+
+<section class="newsletter" id="subscribe">
+  <h2>Stay Updated</h2>
+  <p>Get notified when we add new directories or update existing ones.</p>
+  <form class="newsletter-form" id="signup-form" onsubmit="return handleSignup(event)">
+    <input type="email" name="email" placeholder="you@company.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <div class="msg" id="signup-msg"></div>
+</section>
+<script>
+async function handleSignup(e) {
+  e.preventDefault();
+  const form = e.target;
+  const email = form.email.value;
+  const btn = form.querySelector('button');
+  const msg = document.getElementById('signup-msg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  try {
+    const res = await fetch('https://newsletter-subscribe.rome-workers.workers.dev/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, list: 'gtm-index'})
+    });
+    const data = await res.json();
+    if (data.ok) {
+      msg.className = 'msg success';
+      msg.textContent = 'You\'re in. We\'ll keep you posted.';
+      form.email.value = '';
+    } else {
+      throw new Error(data.error || 'Something went wrong');
+    }
+  } catch(err) {
+    msg.className = 'msg error';
+    msg.textContent = err.message;
+  }
+  btn.disabled = false;
+  btn.textContent = 'Subscribe';
+}
+</script>
+
+<footer class="footer" style="padding:48px 24px 32px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px;font-size:13px;">
+      <div>
+        <div class="footer__brand" style="margin-bottom:16px;">The GTM <span>Index</span></div>
+        <p style="color:rgba(255,255,255,0.5);font-size:12px;line-height:1.5;">Curated directories for every go-to-market role.</p>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Sales & Revenue</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://thecroreport.com">The CRO Report</a></li>
+<li><a href="https://therevopsreport.com">The RevOps Report</a></li>
+<li><a href="https://b2bsalestools.com">B2B Sales Tools</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report</a></li>
+<li><a href="https://presalespulse.com">PreSales Pulse</a></li>
+<li><a href="https://senablers.com">SE Nablers</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Engineering & Data</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://gtmepulse.com">GTME Pulse</a></li>
+<li><a href="https://fdepulse.com">FDE Pulse</a></li>
+<li><a href="https://theaimarketpulse.com">AI Market Pulse</a></li>
+<li><a href="https://datastackguide.com">DataStack Guide</a></li>
+<li><a href="https://mopsreport.com">MOPs Report</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Strategy & Growth</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://fractionalpulse.com">Fractional Pulse</a></li>
+<li><a href="https://theabmpulse.com">The ABM Pulse</a></li>
+<li><a href="https://thecspulse.com">The CS Pulse</a></li>
+<li><a href="https://partnerchannels.com">Partner Channels</a></li>
+<li><a href="https://thedevicepulse.com">Device Pulse</a></li>
+<li><a href="https://sultanofsaas.com">Sultan of SaaS</a></li>
+<li><a href="https://thelaunchindex.com">The Launch Index</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="footer__copy">&copy; 2026 The GTM Index. All rights reserved.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);"><a href="/about/" style="color:rgba(255,255,255,0.5);">About</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

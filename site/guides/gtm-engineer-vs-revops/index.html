@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTM Engineer vs RevOps: How These Two Roles Differ | The GTM Index</title>
+<meta name="description" content="GTM Engineer vs RevOps, side by side. What each role owns, comp benchmarks, reporting lines, and which one your B2B SaaS team should hire first in 2026.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thegtmindex.com/guides/gtm-engineer-vs-revops/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thegtmindex.com/guides/gtm-engineer-vs-revops/">
+<meta property="og:title" content="GTM Engineer vs RevOps: How These Two Roles Differ | The GTM Index">
+<meta property="og:description" content="GTM Engineer vs RevOps, side by side. What each role owns, comp benchmarks, reporting lines, and which one your B2B SaaS team should hire first in 2026.">
+<meta property="og:site_name" content="The GTM Index">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GTM Engineer vs RevOps: How These Two Roles Differ | The GTM Index">
+<meta name="twitter:description" content="GTM Engineer vs RevOps, side by side. What each role owns, comp benchmarks, reporting lines, and which one your B2B SaaS team should hire first in 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --navy: #1B2838;
+    --navy-deep: #0F1923;
+    --amber: #F59E0B;
+    --amber-light: #FBBF24;
+    --amber-dark: #D97706;
+    --bg: #FAFAFA;
+    --bg-white: #FFFFFF;
+    --text: #1F2937;
+    --text-muted: #6B7280;
+    --text-light: #94A3B8;
+    --border: #E5E7EB;
+    --icon-bg: #FEF3C7;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-hover: 0 4px 12px rgba(245,158,11,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Header */
+.header {
+    background: var(--navy);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+}
+.header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo { font-size: 18px; font-weight: 700; color: var(--amber); }
+.logo span { color: #fff; }
+.nav { display: flex; gap: 24px; align-items: center; }
+.nav a { color: var(--text-light); font-size: 14px; font-weight: 500; transition: color 150ms; }
+.nav a:hover { color: #fff; }
+
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.menu-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; transition: 150ms; }
+
+/* Hero */
+.hero {
+    padding: 140px 24px 80px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+}
+.hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; color: #fff; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.15; }
+.hero h1 em { color: var(--amber); font-style: normal; }
+.hero p { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+.hero .cta { display: inline-block; background: var(--amber); color: var(--navy); padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 15px; transition: background 150ms; }
+.hero .cta:hover { background: var(--amber-light); }
+
+/* Stats */
+.stats { display: flex; justify-content: center; gap: 48px; margin-top: 48px; }
+.stat { text-align: center; }
+.stat__number { font-size: 32px; font-weight: 700; color: var(--amber); }
+.stat__label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+/* Cards Grid */
+.directories { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.directories h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.directories .subtitle { color: var(--text-muted); margin-bottom: 32px; font-size: 15px; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color 200ms, box-shadow 200ms; display: flex; flex-direction: column; }
+.card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.card__icon { width: 42px; height: 42px; background: var(--icon-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+.card h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.card p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; flex: 1; }
+.card__link { font-size: 13px; color: var(--amber-dark); font-weight: 600; }
+.card__link:hover { color: var(--amber); }
+
+/* Newsletter CTA */
+.newsletter { padding: 64px 24px; text-align: center; background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.newsletter h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.newsletter p { color: var(--text-muted); margin-bottom: 24px; font-size: 15px; }
+.newsletter-form { display: flex; max-width: 440px; margin: 0 auto; gap: 8px; }
+.newsletter-form input { flex: 1; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; }
+.newsletter-form input:focus { border-color: var(--amber); }
+.newsletter-form button { background: var(--amber); color: var(--navy); padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; transition: background 150ms; white-space: nowrap; }
+.newsletter-form button:hover { background: var(--amber-light); }
+.newsletter .msg { margin-top: 12px; font-size: 13px; }
+.newsletter .msg.success { color: #059669; }
+.newsletter .msg.error { color: #DC2626; }
+
+/* Footer */
+.footer { background: var(--navy); color: var(--text-light); padding: 48px 24px 32px; }
+.footer__inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer__brand { font-size: 16px; font-weight: 700; color: var(--amber); }
+.footer__brand span { color: #fff; }
+.footer__copy { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+/* About + Resource pages */
+.page { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.page h1 { font-size: 32px; font-weight: 700; margin-bottom: 20px; line-height: 1.2; letter-spacing: -0.5px; }
+.page p { font-size: 16px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.7; }
+.page h2 { font-size: 20px; font-weight: 600; margin: 32px 0 12px; }
+.page a { color: var(--amber-dark); }
+.page a:hover { color: var(--amber); }
+
+/* Resource page specific */
+.rp-breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+.rp-breadcrumb a { text-decoration: none; color: var(--amber-dark); }
+.rp-intro { margin-bottom: 40px; }
+.rp-intro p { font-size: 16px; color: #4B5563; line-height: 1.7; margin-bottom: 12px; }
+.rp-section { margin-bottom: 48px; }
+.rp-section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #F3F4F6; color: var(--text); }
+.rp-item { margin-bottom: 24px; }
+.rp-item-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.rp-item-title a { text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; color: var(--text); }
+.rp-item-title a:hover { text-decoration-color: var(--text-muted); }
+.rp-item-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.rp-badge { display: inline-block; background: var(--icon-bg); color: #92400E; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; vertical-align: middle; margin-left: 4px; }
+.rp-curation { margin-top: 48px; padding: 32px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.rp-curation h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+.rp-curation p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+.rp-back { display: inline-block; margin-top: 32px; font-size: 14px; color: var(--amber-dark); font-weight: 500; }
+
+/* Mobile */
+.mobile-nav { display: none; position: fixed; top: 0; right: -100%; width: 260px; height: 100vh; background: var(--navy-deep); z-index: 200; padding: 80px 24px 24px; transition: right 250ms; }
+.mobile-nav.active { right: 0; }
+.mobile-nav a { display: block; color: var(--text-light); font-size: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.mobile-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 199; }
+.mobile-overlay.active { display: block; }
+
+@media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .stats { gap: 32px; } }
+@media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } .nav { display: none; } .menu-toggle { display: block; } .hero { padding: 120px 20px 60px; } .hero p { font-size: 16px; } .stats { flex-direction: column; gap: 16px; } .newsletter-form { flex-direction: column; } .footer__inner { flex-direction: column; gap: 12px; text-align: center; } .page { padding: 80px 16px 48px; } .page h1 { font-size: 26px; } }
+.footer ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 150ms; }
+.footer ul li a:hover { color: var(--amber); }
+@media (max-width: 768px) { .footer div[style*="grid-template-columns"] { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 480px) { .footer div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
+</style>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2GCLCTZHE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V2GCLCTZHE');
+</script>
+<style>
+/* Guide article styles */
+.guide-wrap { padding: 100px 24px 64px; max-width: 760px; margin: 0 auto; }
+.guide-wrap h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.5px; color: var(--text); }
+.guide-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; }
+.guide-meta a { color: var(--amber-dark); }
+.guide-wrap h2 { font-size: 24px; font-weight: 700; margin: 40px 0 12px; color: var(--text); letter-spacing: -0.3px; }
+.guide-wrap h3 { font-size: 18px; font-weight: 600; margin: 28px 0 10px; color: var(--text); }
+.guide-wrap p { font-size: 16px; color: #374151; margin-bottom: 16px; line-height: 1.75; }
+.guide-wrap ul, .guide-wrap ol { margin: 0 0 20px 22px; color: #374151; }
+.guide-wrap li { font-size: 16px; line-height: 1.7; margin-bottom: 8px; }
+.guide-wrap a { color: var(--amber-dark); text-decoration: underline; text-decoration-color: #FCD34D; text-underline-offset: 3px; }
+.guide-wrap a:hover { color: var(--amber); }
+.guide-wrap blockquote { border-left: 3px solid var(--amber); padding: 4px 18px; margin: 20px 0; color: var(--text-muted); font-size: 15px; }
+.guide-table-wrap { overflow-x: auto; margin: 16px 0 24px; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.guide-table th, .guide-table td { padding: 10px 12px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+.guide-table th { background: #F9FAFB; font-weight: 600; }
+.guide-callout { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 10px; padding: 20px 22px; margin: 24px 0; }
+.guide-callout p { margin-bottom: 0; font-size: 15px; }
+.guide-faq { margin-top: 32px; }
+.guide-faq details { border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; background: var(--bg-white); }
+.guide-faq summary { font-weight: 600; cursor: pointer; font-size: 15px; color: var(--text); }
+.guide-faq details[open] summary { margin-bottom: 8px; }
+.guide-faq p { font-size: 15px; color: #4B5563; margin-bottom: 0; }
+.guide-related { margin-top: 48px; padding: 28px; background: #F9FAFB; border-radius: 12px; border: 1px solid var(--border); }
+.guide-related h2 { font-size: 18px; margin-top: 0; margin-bottom: 12px; }
+.guide-related ul { list-style: none; margin: 0; padding: 0; }
+.guide-related li { font-size: 14px; margin-bottom: 8px; }
+.guide-related a { color: var(--amber-dark); text-decoration: none; font-weight: 500; }
+.guide-related a:hover { text-decoration: underline; }
+.guides-grid { padding: 64px 24px 80px; max-width: 1100px; margin: 0 auto; }
+.guides-grid h1 { font-size: clamp(28px, 4vw, 38px); font-weight: 700; margin-bottom: 12px; letter-spacing: -0.5px; }
+.guides-grid .sub { color: var(--text-muted); font-size: 16px; margin-bottom: 32px; }
+.guides-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.guide-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: 10px; padding: 24px; transition: border-color 200ms, box-shadow 200ms; display: block; }
+.guide-card:hover { border-color: var(--amber); box-shadow: var(--shadow-hover); }
+.guide-card h3 { font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.guide-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 10px; }
+.guide-card .date { font-size: 12px; color: var(--text-light); }
+@media (max-width: 700px) { .guides-list { grid-template-columns: 1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GTM Engineer vs RevOps: How These Two Roles Differ",
+  "description": "GTM Engineer vs RevOps, side by side. What each role owns, comp benchmarks, reporting lines, and which one your B2B SaaS team should hire first in 2026.",
+  "url": "https://thegtmindex.com/guides/gtm-engineer-vs-revops/",
+  "datePublished": "2026-05-14",
+  "dateModified": "2026-05-14",
+  "author": {
+    "@type": "Person",
+    "name": "Rome Thorndike",
+    "url": "https://www.linkedin.com/in/romethorndike/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The GTM Index",
+    "url": "https://thegtmindex.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thegtmindex.com/guides/gtm-engineer-vs-revops/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://thegtmindex.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://thegtmindex.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "GTM Engineer vs RevOps: How These Two Roles Differ",
+      "item": "https://thegtmindex.com/guides/gtm-engineer-vs-revops/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is GTM engineer a real job title or a rebrand of marketing ops?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a distinct role. Marketing ops owns the marketing automation platform, lead scoring, and campaign infrastructure. A GTM engineer ships automations and integrations across sales and marketing, often using tools like Clay, n8n, and AI agents that marketing ops platforms do not cover."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can one person do both RevOps and GTM engineering?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At companies under about $5M ARR, often yes. Past that, the planning and process work in RevOps usually expands to fill a full role, and the engineering work expands to fill another. Hiring one person to do both at scale tends to leave one half of the job unowned."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which role pays more?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At similar seniority, base salaries are close. RevOps directors and VPs typically out-earn senior GTM engineers because the role carries broader scope. GTM engineers at AI-native outbound companies can match or exceed that comp when equity is included."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a GTM engineer need to know how to code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The role assumes fluency in SQL, comfort with APIs and webhooks, and at least intermediate Python or JavaScript. Strong candidates also ship in Clay, n8n, Make, or similar tools without writing code, but the engineering background is what makes the rest reliable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does a GTM engineer report?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most often into marketing, RevOps, or a head of growth. Reporting to engineering is rare and usually creates friction because the work is paced by GTM priorities, not engineering sprints."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="logo">The GTM <span>Index</span></a>
+    <nav class="nav">
+      <a href="/#directories">Browse</a>
+      <a href="/about/">About</a>
+      <a href="/#subscribe">Newsletter</a>
+    </nav>
+    <button class="menu-toggle" onclick="document.querySelector('.mobile-nav').classList.toggle('active');document.querySelector('.mobile-overlay').classList.toggle('active');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <a href="/#directories">Browse</a>
+  <a href="/about/">About</a>
+  <a href="/#subscribe">Newsletter</a>
+</nav>
+
+<div class="guide-wrap">
+  <nav class="rp-breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; <span>GTM Engineer vs RevOps: How These Two Roles Differ</span>
+  </nav>
+
+  <h1>GTM Engineer vs RevOps: How These Two Roles Differ</h1>
+  <div class="guide-meta">By <a href="https://www.linkedin.com/in/romethorndike/" target="_blank" rel="noopener">Rome Thorndike</a> &middot; Published May 14, 2026</div>
+
+  
+<p>GTM engineers and revenue operations leaders both sit at the seam between sales, marketing, and the tools that power them. Both can write SQL. Both touch Salesforce, HubSpot, and the data warehouse. Both report into a revenue or marketing leader more often than into engineering. That overlap makes the roles easy to confuse, and easy to hire wrong.</p>
+
+<p>The shortest distinction: a RevOps lead designs the revenue system. A GTM engineer builds inside it. RevOps owns process, planning, forecasting, and tool selection. A GTM engineer ships automations, enrichments, and integrations that move pipeline. Companies that treat them as interchangeable end up with a RevOps manager writing brittle Python scripts at midnight, or a GTM engineer asked to run a forecast call they were never trained for.</p>
+
+<h2>What a RevOps lead owns</h2>
+
+<p>The Pavilion State of RevOps and similar practitioner surveys put four responsibilities at the center of the function: planning, process, systems, and insights. In plain language, that means quota and territory design, the lead-to-cash process, the CRM and adjacent stack, and the dashboards leadership reads on Monday morning.</p>
+
+<p>A senior RevOps leader spends their week on quarterly planning models, pipeline reviews, deal desk approvals, comp plan questions, and the small group of dashboards that anchor the forecast. They write SQL when needed, but they spend more time in spreadsheets, Salesforce reports, and meetings with sales and finance than they spend in code.</p>
+
+<h2>What a GTM engineer owns</h2>
+
+<p>The GTM engineer title only became common around 2023, popularized by writers like Mark Kosoglow and the team at Clay. The job is closer to a full-stack engineer who picked revenue as their problem space. Outbound automation, AI SDR plumbing, signal-based routing, custom enrichment pipelines, scraping, webhook glue, and the messy integration layer between RevOps tools all fall on this person.</p>
+
+<p>A GTM engineer ships things. A typical week includes a new Clay table feeding an outbound sequence, a Cursor or Make scenario that pulls product usage data into a sales playbook, a Slack alert that fires when an account hits a high-intent signal, and one or two broken integrations to fix. Salary data from <a href="https://gtmepulse.com">GTME Pulse</a> tracks the comp curve, which has moved up sharply as AI-native outbound stacks have spread.</p>
+
+<h2>Where they overlap</h2>
+
+<p>Both roles read SQL fluently. Both can build a Salesforce report and both speak in funnel stages. The overlap is real, and at smaller companies a single hire often covers both. What sets them apart is the center of gravity.</p>
+
+<div class="guide-table-wrap"><table class="guide-table">
+<thead><tr><th>Dimension</th><th>RevOps</th><th>GTM Engineer</th></tr></thead>
+<tbody>
+<tr><td>Primary output</td><td>Plans, models, processes</td><td>Working automations and integrations</td></tr>
+<tr><td>Tool depth</td><td>Salesforce, HubSpot, BI, planning tools</td><td>Clay, n8n, Make, scripts, APIs, AI agents</td></tr>
+<tr><td>Time horizon</td><td>Quarterly and annual</td><td>Daily and weekly shipping</td></tr>
+<tr><td>Stakeholder</td><td>CRO, CFO, VP Sales</td><td>VP Marketing, head of demand gen, RevOps lead</td></tr>
+<tr><td>Reporting line</td><td>CRO or COO</td><td>CMO, VP Marketing, or RevOps</td></tr>
+</tbody>
+</table></div>
+
+<h2>Comp benchmarks</h2>
+
+<p>Pavilion, RepVue, and Bridge Group all publish RevOps benchmarks that put senior individual contributor base salaries in a similar band, with senior managers and directors taking a clear step up. Equity ranges widely depending on stage. The <a href="https://therevopsreport.com">RevOps Report</a> tracks the moving averages by title and segment.</p>
+
+<p>GTM engineer comp is less mature as a benchmark category because the title is younger. Practitioner-led pay data from <a href="https://gtmepulse.com">GTME Pulse</a> shows base salaries similar to senior RevOps ICs at well-funded startups, with bonus and equity structures closer to a marketing or engineering role than to a sales role. The premium goes to engineers who can credibly build AI-native pipelines, since the role of <a href="/ai-sdr/">AI SDR systems</a> and <a href="/workflow-automation/">workflow automation</a> has expanded what a single engineer can ship in a quarter.</p>
+
+<h2>Which one to hire first</h2>
+
+<p>If you have nothing, hire RevOps first. A company under roughly $5M ARR without a clean CRM, a working forecast, or a defined lead-to-cash process needs the planner before it needs the builder. Without that foundation, a GTM engineer ends up automating broken process and shipping faster paths to bad data.</p>
+
+<p>Once the system is in place, the math changes. Companies that already have a RevOps lead, a clean CRM, and an outbound motion get more return from a GTM engineer than from a second RevOps hire. The Bessemer and ICONIQ Growth benchmarks both point to the same conclusion in different words: at scale, the marginal hour of a planner gives back less pipeline than the marginal hour of a builder who can wire a new signal into a working sequence.</p>
+
+<p>A third pattern is also common. Some companies hire one person with both skill sets and call them "RevOps engineer" or "head of revenue systems." That works when the candidate exists, which is rare. More often the title hides a tradeoff, and one half of the job goes unowned.</p>
+
+<h2>Reporting structure</h2>
+
+<p>RevOps usually reports to the CRO at companies past Series B, or to the CEO or COO earlier. The function is a cross-functional service, not a sales function, even when it lives under sales on the org chart. GTM engineers most often report into marketing, into RevOps, or into a head of growth, depending on where the highest-impact automations live. Some report directly to the CMO when paid acquisition and outbound are the main growth engines.</p>
+
+<p>Neither role belongs in a generic engineering org. Both need daily contact with sellers and marketers to do their job well. The <a href="/revops/">RevOps directory</a> and <a href="/gtm-engineers/">GTM engineers directory</a> on this site collect the communities, newsletters, and tools each role draws on.</p>
+
+<h2>Hiring signals to watch for</h2>
+
+<p>For RevOps, look for evidence of building a forecast process from scratch, designing a comp plan, leading a CRM migration, and shipping a planning model that the CFO trusted. Ask about a quota or territory model they built and what changed after it shipped.</p>
+
+<p>For a GTM engineer, look at the projects portfolio first. Ask for a walkthrough of a Clay table, a custom enrichment chain, or an outbound sequence with branching logic. Ask what they would do with a list of 5,000 accounts and one week. Strong candidates show you the system on screen instead of describing it.</p>
+
+<h2>The headcount math</h2>
+
+<p>A reasonable starting ratio in a SaaS company past $10M ARR is one senior RevOps lead per 30 to 60 quota-carrying reps, with one or two GTM engineers supporting the outbound and marketing motion underneath. Bridge Group SDR benchmarks and ICONIQ Growth reports converge on similar headcount math, with adjustments for ACV and segment.</p>
+
+<p>The exact numbers matter less than the principle. RevOps headcount scales with the size of the sales team it supports. GTM engineering headcount scales with the volume and complexity of automated touches a company runs. A high-volume outbound program with three sequences and minimal signal triggers needs less GTM engineering than a signal-heavy program running across 12 plays and 30 sources.</p>
+
+<h2>Common organizational mistakes</h2>
+
+<p>Four mistakes recur in the hiring patterns published in Pavilion and OpenView surveys. The first is hiring a GTM engineer before the CRM is clean. Without a trusted data layer, every automation the engineer ships either breaks against bad records or amplifies bad routing.</p>
+
+<p>The second is hiring a RevOps lead with no executive sponsor. RevOps work crosses sales, marketing, finance, and customer success, and an unsponsored RevOps hire ends up running tickets for whichever leader shouts loudest. The fix is to set the reporting line and the weekly executive standing meeting before the hire starts.</p>
+
+<p>The third is treating GTM engineering as an extension of IT. A GTM engineer who reports to an IT or general engineering function will deliver against engineering priorities, not revenue priorities, and the planned outbound velocity rarely materializes. The fourth is hiring both roles into the same job description in the hope of saving headcount. The combined role attracts generalists who do neither half well.</p>
+
+<h2>Career path differences</h2>
+
+<p>The two roles also lead to different next jobs. RevOps senior managers move into director and VP RevOps roles, into chief of staff positions, or into VP Strategy roles at growth-stage companies. Some move into operations leadership at investment firms. The career path is well-defined and compensation curves are predictable.</p>
+
+<p>GTM engineers tend to move along one of two paths. Some grow into heads of growth engineering or platform owners inside marketing or RevOps. Others move laterally into founding engineer roles at early-stage startups, since the skill set transfers cleanly to building zero-to-one revenue systems. The second path produces more equity outcomes. The first path produces more title progression.</p>
+
+
+  <h2>Frequently asked questions</h2>
+  <div class="guide-faq">
+<details><summary>Is GTM engineer a real job title or a rebrand of marketing ops?</summary><p>It is a distinct role. Marketing ops owns the marketing automation platform, lead scoring, and campaign infrastructure. A GTM engineer ships automations and integrations across sales and marketing, often using tools like Clay, n8n, and AI agents that marketing ops platforms do not cover.</p></details>
+<details><summary>Can one person do both RevOps and GTM engineering?</summary><p>At companies under about $5M ARR, often yes. Past that, the planning and process work in RevOps usually expands to fill a full role, and the engineering work expands to fill another. Hiring one person to do both at scale tends to leave one half of the job unowned.</p></details>
+<details><summary>Which role pays more?</summary><p>At similar seniority, base salaries are close. RevOps directors and VPs typically out-earn senior GTM engineers because the role carries broader scope. GTM engineers at AI-native outbound companies can match or exceed that comp when equity is included.</p></details>
+<details><summary>Does a GTM engineer need to know how to code?</summary><p>Yes. The role assumes fluency in SQL, comfort with APIs and webhooks, and at least intermediate Python or JavaScript. Strong candidates also ship in Clay, n8n, Make, or similar tools without writing code, but the engineering background is what makes the rest reliable.</p></details>
+<details><summary>Where does a GTM engineer report?</summary><p>Most often into marketing, RevOps, or a head of growth. Reporting to engineering is rare and usually creates friction because the work is paced by GTM priorities, not engineering sprints.</p></details>
+</div>
+
+  <div class="guide-related"><h2>Keep reading</h2><ul>
+<li><a href="/revops/">RevOps tools, newsletters, and communities</a></li>
+<li><a href="/gtm-engineers/">GTM engineers directory</a></li>
+<li><a href="/ai-sdr/">AI SDR and outbound platforms</a></li>
+<li><a href="/marketing-ops/">Marketing operations resources</a></li>
+<li><a href="https://therevopsreport.com">RevOps Report (salary and tool reviews)</a></li>
+<li><a href="https://gtmepulse.com">GTME Pulse (GTM engineer salary data)</a></li>
+</ul></div>
+</div>
+
+
+<section class="newsletter" id="subscribe">
+  <h2>Stay Updated</h2>
+  <p>Get notified when we add new directories or update existing ones.</p>
+  <form class="newsletter-form" id="signup-form" onsubmit="return handleSignup(event)">
+    <input type="email" name="email" placeholder="you@company.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <div class="msg" id="signup-msg"></div>
+</section>
+<script>
+async function handleSignup(e) {
+  e.preventDefault();
+  const form = e.target;
+  const email = form.email.value;
+  const btn = form.querySelector('button');
+  const msg = document.getElementById('signup-msg');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  try {
+    const res = await fetch('https://newsletter-subscribe.rome-workers.workers.dev/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, list: 'gtm-index'})
+    });
+    const data = await res.json();
+    if (data.ok) {
+      msg.className = 'msg success';
+      msg.textContent = 'You\'re in. We\'ll keep you posted.';
+      form.email.value = '';
+    } else {
+      throw new Error(data.error || 'Something went wrong');
+    }
+  } catch(err) {
+    msg.className = 'msg error';
+    msg.textContent = err.message;
+  }
+  btn.disabled = false;
+  btn.textContent = 'Subscribe';
+}
+</script>
+
+<footer class="footer" style="padding:48px 24px 32px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px;font-size:13px;">
+      <div>
+        <div class="footer__brand" style="margin-bottom:16px;">The GTM <span>Index</span></div>
+        <p style="color:rgba(255,255,255,0.5);font-size:12px;line-height:1.5;">Curated directories for every go-to-market role.</p>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Sales & Revenue</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://thecroreport.com">The CRO Report</a></li>
+<li><a href="https://therevopsreport.com">The RevOps Report</a></li>
+<li><a href="https://b2bsalestools.com">B2B Sales Tools</a></li>
+<li><a href="https://thesellerreport.com">The Seller Report</a></li>
+<li><a href="https://presalespulse.com">PreSales Pulse</a></li>
+<li><a href="https://senablers.com">SE Nablers</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Engineering & Data</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://gtmepulse.com">GTME Pulse</a></li>
+<li><a href="https://fdepulse.com">FDE Pulse</a></li>
+<li><a href="https://theaimarketpulse.com">AI Market Pulse</a></li>
+<li><a href="https://datastackguide.com">DataStack Guide</a></li>
+<li><a href="https://mopsreport.com">MOPs Report</a></li>
+<li><a href="https://demandgeninsider.com">Demand Gen Insider</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;margin-bottom:12px;font-size:13px;">Strategy & Growth</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li><a href="https://fractionalpulse.com">Fractional Pulse</a></li>
+<li><a href="https://theabmpulse.com">The ABM Pulse</a></li>
+<li><a href="https://thecspulse.com">The CS Pulse</a></li>
+<li><a href="https://partnerchannels.com">Partner Channels</a></li>
+<li><a href="https://thedevicepulse.com">Device Pulse</a></li>
+<li><a href="https://sultanofsaas.com">Sultan of SaaS</a></li>
+<li><a href="https://thelaunchindex.com">The Launch Index</a></li>
+
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:16px;display:flex;justify-content:space-between;align-items:center;">
+      <div class="footer__copy">&copy; 2026 The GTM Index. All rights reserved.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);"><a href="/about/" style="color:rgba(255,255,255,0.5);">About</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
